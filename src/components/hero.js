@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import heroImg from './hero-img.jpg';
@@ -15,10 +16,12 @@ const Hero = props => (
         Click on a course to view youth projects from {props.semester}
       </ProjectSubTitle>
       <ButtonContainer>
-        <GhostButton primaryColor="papayawhip" hoverColor="palevioletred">
-          Test
-        </GhostButton>
-        <GhostButton>Test 2</GhostButton>
+        <Link to="/cs-core">
+          <GhostButton onLeft>CS Core</GhostButton>
+        </Link>
+        <Link to="/fab-core">
+          <GhostButton onRight>Fab Core</GhostButton>
+        </Link>
       </ButtonContainer>
     </CTAContainer>
   </Masthead>
