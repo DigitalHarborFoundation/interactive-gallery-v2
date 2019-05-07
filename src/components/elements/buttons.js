@@ -11,8 +11,8 @@ export const Button = styled.button`
   padding: 1.6rem 2.4rem;
   text-align: center;
 
-  margin-right: ${props => props.onLeft && '2.4rem'};
   margin-left: ${props => props.onRight && '2.4rem'};
+  margin-right: ${props => props.onLeft && '2.4rem'};
 
   &:focus {
     outline: 0;

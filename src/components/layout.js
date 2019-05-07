@@ -4,6 +4,7 @@ import { StaticQuery, graphql } from 'gatsby';
 import { GlobalStyle } from './globalStyle';
 import { AppWrapper } from './elements/layout-components';
 import Hero from '../components/hero';
+import DHFFooter from './dhf-footer';
 import Footer from './footer';
 
 const Layout = ({ children }) => (
@@ -24,6 +25,7 @@ const Layout = ({ children }) => (
         <AppWrapper>
           <Hero semester={data.site.siteMetadata.semester} />
           <main>{children}</main>
+          <DHFFooter />
           <Footer />
         </AppWrapper>
       </>
