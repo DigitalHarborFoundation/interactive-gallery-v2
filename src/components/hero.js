@@ -1,16 +1,34 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 import heroImg from './hero-img.jpg';
 import DHFHeader from '../components/dhf-header';
+import { ButtonContainer } from './elements/layout-components';
+import { GhostButton } from './elements/buttons';
 
-const Hero = () => (
+const Hero = props => (
   <Masthead>
     <DHFHeader />
     <CTAContainer>
       <ProjectTitle>Interactive Project Gallery</ProjectTitle>
+      <ProjectSubTitle>
+        Click on a course to view youth projects from {props.semester}
+      </ProjectSubTitle>
+      <ButtonContainer>
+        <GhostButton>Test</GhostButton>
+        <GhostButton>Test 2</GhostButton>
+      </ButtonContainer>
     </CTAContainer>
   </Masthead>
 );
+
+Hero.propTypes = {
+  semester: PropTypes.node.isRequired,
+};
+
+Hero.defaultProps = {
+  semester: 'Spring 2019',
+};
 
 export default Hero;
 
@@ -47,6 +65,16 @@ const ProjectTitle = styled.h2`
   color: #fafafa;
   margin-bottom: 6vh;
 
+  @media only screen and (max-width: 1000px) {
+  }
+`;
+
+const ProjectSubTitle = styled.h3`
+  font-size: 3rem;
+  font-weight: 300;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  color: #fafafa;
   @media only screen and (max-width: 1000px) {
   }
 `;

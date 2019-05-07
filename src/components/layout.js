@@ -13,6 +13,7 @@ const Layout = ({ children }) => (
         site {
           siteMetadata {
             title
+            semester
           }
         }
       }
@@ -21,7 +22,7 @@ const Layout = ({ children }) => (
       <>
         <GlobalStyle />
         <AppWrapper>
-          <Hero />
+          <Hero semester={data.site.siteMetadata.semester} />
           <main>{children}</main>
           <Footer />
         </AppWrapper>

@@ -2,6 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Digital Harbor Foundation Interactive Project Gallery`,
     description: `This is an interactive project gallery for the projects created during Digital Harbor Foundation's youth programs.`,
+    semester: `Spring 2019`,
     author: `@jonathanprozzi`,
   },
   plugins: [

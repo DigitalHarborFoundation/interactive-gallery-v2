@@ -13,6 +13,19 @@ export const AppWrapper = styled.div`
   }
 `;
 
+export const ButtonContainer = styled.div`
+  display: flex;
+  margin-bottom: 7rem;
+  flex-direction: row;
+  justify-items: center;
+  align-items: center;
+  @media only screen and (max-width: 1000px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+`;
+
 export const Container = styled.div`
   margin: 0 auto;
   max-width: 1280px;
