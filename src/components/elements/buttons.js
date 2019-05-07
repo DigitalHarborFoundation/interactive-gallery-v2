@@ -41,13 +41,15 @@ export const Button = styled.button`
 `;
 
 export const GhostButton = styled(Button)`
-  border: 2px solid #fafafa;
+  border: 2px solid;
+  border-color: ${props => props.primaryColor || '#fafafa'};
   background-color: rgba(196, 196, 196, 0);
   color: ${props => props.primaryColor || '#fafafa'};
   transition: all ease 0.5s;
 
   &:hover {
-    border: 2px solid #e96544;
+    border: 2px solid;
+    border-color: ${props => props.hoverColor || '#e96544'};
     color: ${props => props.hoverColor || '#e96544'};
     cursor: pointer;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);

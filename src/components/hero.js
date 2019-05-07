@@ -15,7 +15,9 @@ const Hero = props => (
         Click on a course to view youth projects from {props.semester}
       </ProjectSubTitle>
       <ButtonContainer>
-        <GhostButton>Test</GhostButton>
+        <GhostButton primaryColor="papayawhip" hoverColor="palevioletred">
+          Test
+        </GhostButton>
         <GhostButton>Test 2</GhostButton>
       </ButtonContainer>
     </CTAContainer>
