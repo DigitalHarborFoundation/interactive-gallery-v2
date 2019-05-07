@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter w/ styled-componets`,
-    description: `Gatsby starter using styled-components`,
-    author: `@blakenoll`,
+    title: `Digital Harbor Foundation Interactive Project Gallery`,
+    description: `"This is an interactive project gallery for the youth projects during Digital Harbor Foundation's Fall 2018 semester.`,
+    author: `@jonathanprozzi`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -27,9 +27,8 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    `gatsby-plugin-modal-routing`,
     `gatsby-plugin-styled-components`,
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.app/offline
-    // 'gatsby-plugin-offline',
+    `gatsby-plugin-offline`,
   ],
-}
+};
