@@ -26,6 +26,36 @@ export const ButtonContainer = styled.div`
   }
 `;
 
+export const ContentWrapper = styled.div`
+  width: 80%;
+  max-width: 80%;
+  margin: ${props => props.allMargin || '10vh auto'};
+`;
+
+export const ImageContainer = styled.div`
+  width: 100%;
+  margin: auto;
+`;
+
+export const FlexColumnContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const GridThreeColumnContainer = styled.div`
+  display: grid;
+  grid-template: 1fr 1fr 1fr;
+  grid-column-gap: ${props => props.columnGap || '2vw'};
+  grid-row-gap: ${props => props.rowGap || '10vh'};
+  margin-top: ${props => props.marginTop || '5rem'};
+
+  @media only screen and (max-width: 1000px) {
+    grid-template-columns: 1fr;
+  }
+`;
+
 export const Container = styled.div`
   margin: 0 auto;
   max-width: 1280px;

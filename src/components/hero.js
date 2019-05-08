@@ -16,10 +16,10 @@ const Hero = props => (
         Click on a course to view youth projects from {props.semester}
       </ProjectSubTitle>
       <ButtonContainer>
-        <Link to="/cs-core">
+        <Link to="/courses/cs-core">
           <GhostButton onLeft>CS Core</GhostButton>
         </Link>
-        <Link to="/fab-core">
+        <Link to="/courses/fab-core">
           <GhostButton onRight>Fab Core</GhostButton>
         </Link>
       </ButtonContainer>
