@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import heroImg from './hero-img.jpg';
+import heroImg from '../images/hero-img.jpg';
 import DHFHeader from '../components/dhf-header';
 import { ButtonContainer } from './elements/layout-components';
 import { GhostButton } from './elements/buttons';

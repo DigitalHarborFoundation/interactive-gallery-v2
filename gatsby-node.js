@@ -11,7 +11,6 @@ exports.createPages = ({ graphql, actions }) => {
               frontmatter {
                 title
                 slug
-                course
               }
             }
           }

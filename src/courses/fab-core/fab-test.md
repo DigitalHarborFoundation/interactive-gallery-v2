@@ -1,4 +1,5 @@
 ---
+youthName:
 slug: 'fab-test'
 course: 'fab-core'
 title: 'FAB Test'
