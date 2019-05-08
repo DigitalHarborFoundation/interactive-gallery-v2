@@ -14,13 +14,40 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `pages`,
+        path: `${__dirname}/src/pages`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `courses`,
+        path: `${__dirname}/src/courses`,
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              // Adjust based on determined max-width in the image container
+              maxWidth: 600,
+              quality: 100,
+              wrapperStyle: `margin-left: 0px; margin-right: 0px;`,
+            },
+          },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Digital Harbor Foundation Interactive Gallery`,
-        short_name: `pi-portal-v1`,
+        short_name: `DHF Interactive Gallery`,
         start_url: `/`,
         background_color: `#fafafa`,
         theme_color: `#0091c9`,
