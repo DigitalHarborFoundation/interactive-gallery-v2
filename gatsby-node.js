@@ -1,7 +1,33 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
+const path = require('path');
 
-// You can delete this file if you're not using it
+exports.createPages = ({ graphql, actions }) => {
+  const { createPage } = actions;
+  return new Promise((resolve, reject) => {
+    graphql(`
+      {
+        allMarkdownRemark {
+          edges {
+            node {
+              frontmatter {
+                title
+                slug
+                course
+              }
+            }
+          }
+        }
+      }
+    `).then(results => {
+      results.data.allMarkdownRemark.edges.forEach(({ node }) =>
+        createPage({
+          path: `/courses/${node.frontmatter.course}/${node.frontmatter.slug}`,
+          component: path.resolve(`./src/templates/entry-template.js`),
+          context: {
+            slug: node.frontmatter.slug,
+          },
+        })
+      );
+    });
+    resolve();
+  });
+};

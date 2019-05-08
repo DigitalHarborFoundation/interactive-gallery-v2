@@ -43,6 +43,9 @@ module.exports = {
               wrapperStyle: `margin-left: 0px; margin-right: 0px;`,
             },
           },
+        ],
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
