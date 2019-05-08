@@ -9,8 +9,10 @@ exports.createPages = ({ graphql, actions }) => {
           edges {
             node {
               frontmatter {
+                youth
                 title
                 course
+                semester
                 slug
               }
             }
@@ -20,7 +22,9 @@ exports.createPages = ({ graphql, actions }) => {
     `).then(results => {
       results.data.allMarkdownRemark.edges.forEach(({ node }) =>
         createPage({
-          path: `/courses/${node.frontmatter.course}/${node.frontmatter.slug}`,
+          path: `/courses/${node.frontmatter.course}/${
+            node.frontmatter.semester
+          }/${node.frontmatter.youth}`,
           component: path.resolve(`./src/templates/entry-template.js`),
           context: {
             slug: node.frontmatter.slug,
