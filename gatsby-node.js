@@ -20,14 +20,14 @@ exports.createPages = ({ graphql, actions }) => {
         }
       }
     `).then(results => {
-      results.data.allMarkdownRemark.edges.forEach(({ node }) =>
+      results.data.allMarkdownRemark.edges.forEach(({ node: entry }) =>
         createPage({
-          path: `/courses/${node.frontmatter.course}/${
-            node.frontmatter.semester
-          }/${node.frontmatter.youth}`,
+          path: `/courses/${entry.frontmatter.course}/${
+            entry.frontmatter.semester
+          }/${entry.frontmatter.youth}`,
           component: path.resolve(`./src/templates/entry-template.js`),
           context: {
-            slug: node.frontmatter.slug,
+            slug: entry.frontmatter.slug,
           },
         })
       );
