@@ -18,7 +18,7 @@ const EntryTemplate = props => {
   const { Entries } = props.data;
   return (
     <div>
-      <h1>{capitalizeFirstLetter(Entries.frontmatter.title)})</h1>
+      <h1>{capitalizeFirstLetter(Entries.frontmatter.title)}</h1>
       <p>Youth: {capitalizeFirstLetter(Entries.frontmatter.youth)}</p>
     </div>
   );

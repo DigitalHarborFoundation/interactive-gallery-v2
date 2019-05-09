@@ -1,10 +1,12 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import { Link, graphql } from 'gatsby';
 
-const CSCore = () => (
-  <>
-    <h1>CS CORE LANDING PAGE</h1>
-  </>
-);
+const CSCorePage = props => {
+  return (
+    <div>
+      <h1>HELLO FROM CS CORE PAGE</h1>
+    </div>
+  );
+};
 
-export default CSCore;
+export default CSCorePage;
