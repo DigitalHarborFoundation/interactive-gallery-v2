@@ -14,7 +14,6 @@ exports.createPages = ({ graphql, actions }) => {
                 title
                 course
                 semester
-                slug
               }
             }
           }

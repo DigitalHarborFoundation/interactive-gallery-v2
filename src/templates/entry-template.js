@@ -7,6 +7,7 @@ export const query = graphql`
     Entries: markdownRemark(id: { eq: $id }) {
       frontmatter {
         title
+        youth
       }
     }
   }
@@ -17,7 +18,12 @@ const EntryTemplate = props => {
   return (
     <div>
       <h1>{Entries.frontmatter.title}</h1>
-      <p>FROM TEMPLATE</p>
+      <p>
+        Youth:{' '}
+        {`${Entries.frontmatter.youth
+          .charAt(0)
+          .toUpperCase()}${Entries.frontmatter.youth.slice(1)}`}
+      </p>
     </div>
   );
 };
