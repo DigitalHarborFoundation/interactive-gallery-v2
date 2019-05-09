@@ -1,6 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import styled from 'styled-components';
+import { capitalizeFirstLetter } from '../components/utilities/helpers';
 
 export const query = graphql`
   query EntryQuery($id: String!) {
@@ -12,9 +13,6 @@ export const query = graphql`
     }
   }
 `;
-
-const capitalizeFirstLetter = stringToTransform =>
-  `${stringToTransform.charAt(0).toUpperCase()}${stringToTransform.slice(1)}`;
 
 const EntryTemplate = props => {
   const { Entries } = props.data;
