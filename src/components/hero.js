@@ -4,7 +4,6 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import heroImg from '../images/hero-img.jpg';
 import DHFHeader from '../components/dhf-header';
-import { ButtonContainer } from './elements/layout-components';
 import { GhostButton } from './elements/buttons';
 
 const Hero = props => (
@@ -16,12 +15,18 @@ const Hero = props => (
         Click on a course to view youth projects from {props.semester}
       </ProjectSubTitle>
       <ButtonContainer>
-        <Link to="/courses/cs-core">
-          <GhostButton onLeft>CS Core</GhostButton>
-        </Link>
-        <Link to="/courses/fab-core">
-          <GhostButton onRight>Fab Core</GhostButton>
-        </Link>
+        <FlexLink to="/courses/cs-core">
+          <GhostButton>CS Core</GhostButton>
+        </FlexLink>
+        <FlexLink to="/courses/fab-core">
+          <GhostButton>Fab Core</GhostButton>
+        </FlexLink>
+        <FlexLink to="/courses/ccbc-digifab-cohort">
+          <GhostButton>CCBC Digifab Cohort</GhostButton>
+        </FlexLink>
+        <FlexLink to="/courses/independent-study">
+          <GhostButton>Independent Study</GhostButton>
+        </FlexLink>
       </ButtonContainer>
     </CTAContainer>
   </Masthead>
@@ -56,11 +61,27 @@ const CTAContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   margin-top: 5vh;
 
   @media only screen and (max-width: 1000px) {
     text-align: center;
+  }
+`;
+
+export const ButtonContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 7rem;
+  flex-direction: row;
+  justify-items: center;
+  align-items: center;
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
+
+  @media only screen and (max-width: 1000px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 `;
 
@@ -82,4 +103,9 @@ const ProjectSubTitle = styled.h3`
   color: #fafafa;
   @media only screen and (max-width: 1000px) {
   }
+`;
+
+const FlexLink = styled(Link)`
+  flex: 1 0 45%;
+  padding: 0 1rem 1rem;
 `;

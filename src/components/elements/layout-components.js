@@ -15,6 +15,7 @@ export const AppWrapper = styled.div`
 
 export const ButtonContainer = styled.div`
   display: flex;
+  flex-wrap: wrap;
   margin-bottom: 7rem;
   flex-direction: row;
   justify-items: center;
