@@ -5,7 +5,7 @@ exports.createPages = ({ graphql, actions }) => {
   return new Promise((resolve, reject) => {
     graphql(`
       {
-        allMarkdownRemark {
+        Entries: allMarkdownRemark {
           edges {
             node {
               id
@@ -20,7 +20,7 @@ exports.createPages = ({ graphql, actions }) => {
         }
       }
     `).then(results => {
-      results.data.allMarkdownRemark.edges.forEach(({ node: entry }) =>
+      results.data.Entries.edges.forEach(({ node: entry }) =>
         createPage({
           path: `/courses/${entry.frontmatter.course}/${
             entry.frontmatter.semester
