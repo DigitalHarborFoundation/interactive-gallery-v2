@@ -28,7 +28,6 @@ const Layout = ({ children }) => (
         <AppWrapper>
           <Hero semester={data.site.siteMetadata.semester} />
           <main>{children}</main>
-          <ProjectCardGrid />
           <DHFFooter />
           <Footer />
         </AppWrapper>

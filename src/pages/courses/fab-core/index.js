@@ -1,5 +1,6 @@
 import React from 'react';
 import { graphql, StaticQuery } from 'gatsby';
+import Layout from '../../../../src/components/layout';
 import ProjectCard from '../../../../src/components/project-card';
 import {
   ContentWrapper,
@@ -31,19 +32,21 @@ const FabCorePage = () => (
   <StaticQuery
     query={FAB_CORE_QUERY}
     render={({ FabCoreEntry }) => (
-      <ContentWrapper>
-        <h2>Fab Core Entries</h2>
-        <GridThreeColumnContainer>
-          {FabCoreEntry.edges.map(edge => (
-            <ProjectCard
-              youth={edge.node.frontmatter.youth}
-              semester={edge.node.frontmatter.semester}
-              title={edge.node.frontmatter.title}
-              key={edge.node.id}
-            />
-          ))}
-        </GridThreeColumnContainer>
-      </ContentWrapper>
+      <Layout>
+        <ContentWrapper>
+          <h2>Fab Core Entries</h2>
+          <GridThreeColumnContainer>
+            {FabCoreEntry.edges.map(edge => (
+              <ProjectCard
+                youth={edge.node.frontmatter.youth}
+                semester={edge.node.frontmatter.semester}
+                title={edge.node.frontmatter.title}
+                key={edge.node.id}
+              />
+            ))}
+          </GridThreeColumnContainer>
+        </ContentWrapper>
+      </Layout>
     )}
   />
 );
