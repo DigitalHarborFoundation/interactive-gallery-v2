@@ -5,6 +5,8 @@ import { GlobalStyle } from './globalStyle';
 import { AppWrapper } from './elements/layout-components';
 import { ImageCard } from '../components/elements/cards';
 import Hero from '../components/hero';
+import ProjectCardGrid from '../components/project-card-grid';
+import ProjectCard from '../components/project-card';
 import DHFFooter from './dhf-footer';
 import Footer from './footer';
 
@@ -26,8 +28,7 @@ const Layout = ({ children }) => (
         <AppWrapper>
           <Hero semester={data.site.siteMetadata.semester} />
           <main>{children}</main>
-          <ImageCard>Non-animated Card</ImageCard>
-          <ImageCard animated>Animated Card</ImageCard>
+          <ProjectCardGrid />
           <DHFFooter />
           <Footer />
         </AppWrapper>

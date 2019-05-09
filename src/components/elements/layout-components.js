@@ -46,7 +46,7 @@ export const FlexColumnContainer = styled.div`
 
 export const GridThreeColumnContainer = styled.div`
   display: grid;
-  grid-template: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-column-gap: ${props => props.columnGap || '2vw'};
   grid-row-gap: ${props => props.rowGap || '10vh'};
   margin-top: ${props => props.marginTop || '5rem'};
