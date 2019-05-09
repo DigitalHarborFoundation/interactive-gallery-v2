@@ -9,9 +9,7 @@ import {
 
 const ProjectCardGrid = () => (
   <ContentWrapper>
-    <GridThreeColumnContainer>
-      <ProjectCard />
-    </GridThreeColumnContainer>
+    <GridThreeColumnContainer />
   </ContentWrapper>
 );
 

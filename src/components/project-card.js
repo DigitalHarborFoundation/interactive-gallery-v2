@@ -8,8 +8,12 @@ import {
 import { ImageCard } from '../components/elements/cards';
 import testImg from '../images/tester-card.jpg';
 import { useSiteMetadata } from './utilities/queries';
+import {
+  capitalizeFirstLetter,
+  transformSemester,
+} from '../components/utilities/helpers';
 
-const ProjectCard = () => {
+const ProjectCard = props => {
   return (
     <ImageCard animated>
       <ImageContainer>
@@ -24,7 +28,7 @@ const ProjectCard = () => {
             paddingBottom: '0.25rem',
           }}
         >
-          Jonathan
+          {capitalizeFirstLetter(props.youth)}
         </p>
         <p
           style={{
@@ -35,7 +39,7 @@ const ProjectCard = () => {
             padding: '0',
           }}
         >
-          Spring 2019
+          {transformSemester(props.semester)}
         </p>
       </FlexColumnContainer>
     </ImageCard>
