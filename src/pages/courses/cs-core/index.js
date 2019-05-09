@@ -25,6 +25,8 @@ const CS_CORE_QUERY = graphql`
   }
 `;
 
+// TODO: Make the project list more accessible by adding ul and li elements
+
 const CSCorePage = () => (
   <StaticQuery
     query={CS_CORE_QUERY}
