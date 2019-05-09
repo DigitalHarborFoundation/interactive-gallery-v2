@@ -17,7 +17,7 @@ const ProjectCard = props => {
   return (
     <ImageCard animated>
       <ImageContainer>
-        <ProjectImage src={testImg} />
+        <ProjectImage src={testImg} alt={props.title} />
       </ImageContainer>
       <FlexColumnContainer marginAll="4rem 0">
         <p

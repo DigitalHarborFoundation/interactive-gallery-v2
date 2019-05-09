@@ -8,7 +8,9 @@ import {
 
 const CS_CORE_QUERY = graphql`
   query CSCoreQuery {
-    allMarkdownRemark(filter: { frontmatter: { course: { eq: "cs-core" } } }) {
+    Entry: allMarkdownRemark(
+      filter: { frontmatter: { course: { eq: "cs-core" } } }
+    ) {
       edges {
         node {
           id
@@ -26,16 +28,17 @@ const CS_CORE_QUERY = graphql`
 const CSCorePage = () => (
   <StaticQuery
     query={CS_CORE_QUERY}
-    render={({ allMarkdownRemark }) => (
+    render={({ Entry }) => (
       <ContentWrapper>
         <h2>CS Core Entries</h2>
-        {allMarkdownRemark.edges.map(edge => (
+        {Entry.edges.map(edge => (
           <GridThreeColumnContainer>
             <ul>
               <li style={{ listStyle: 'none' }}>
                 <ProjectCard
                   youth={edge.node.frontmatter.youth}
                   semester={edge.node.frontmatter.semester}
+                  title={edge.node.frontmatter.title}
                   key={edge.node.id}
                 />
               </li>
