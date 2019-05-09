@@ -3,8 +3,8 @@ import { graphql } from 'gatsby';
 import styled from 'styled-components';
 
 export const query = graphql`
-  query EntryQuery($slug: String!) {
-    Entries: markdownRemark(frontmatter: { slug: { eq: $slug } }) {
+  query EntryQuery($id: String!) {
+    Entries: markdownRemark(id: { eq: $id }) {
       frontmatter {
         title
       }

@@ -8,6 +8,7 @@ exports.createPages = ({ graphql, actions }) => {
         allMarkdownRemark {
           edges {
             node {
+              id
               frontmatter {
                 youth
                 title
@@ -27,7 +28,7 @@ exports.createPages = ({ graphql, actions }) => {
           }/${entry.frontmatter.youth}`,
           component: path.resolve(`./src/templates/entry-template.js`),
           context: {
-            slug: entry.frontmatter.slug,
+            id: entry.id,
           },
         })
       );
