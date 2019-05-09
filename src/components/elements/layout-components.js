@@ -42,6 +42,7 @@ export const FlexColumnContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin: ${props => props.marginAll && props.marginAll};
 `;
 
 export const GridThreeColumnContainer = styled.div`

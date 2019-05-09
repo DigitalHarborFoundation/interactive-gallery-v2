@@ -11,8 +11,6 @@ const ProjectCardGrid = () => (
   <ContentWrapper>
     <GridThreeColumnContainer>
       <ProjectCard />
-      <ProjectCard />
-      <ProjectCard />
     </GridThreeColumnContainer>
   </ContentWrapper>
 );
