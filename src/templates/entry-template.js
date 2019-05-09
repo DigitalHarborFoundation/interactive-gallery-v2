@@ -13,17 +13,15 @@ export const query = graphql`
   }
 `;
 
+const capitalizeFirstLetter = stringToTransform =>
+  `${stringToTransform.charAt(0).toUpperCase()}${stringToTransform.slice(1)}`;
+
 const EntryTemplate = props => {
   const { Entries } = props.data;
   return (
     <div>
-      <h1>{Entries.frontmatter.title}</h1>
-      <p>
-        Youth:{' '}
-        {`${Entries.frontmatter.youth
-          .charAt(0)
-          .toUpperCase()}${Entries.frontmatter.youth.slice(1)}`}
-      </p>
+      <h1>{capitalizeFirstLetter(Entries.frontmatter.title)}</h1>
+      <p>Youth: {capitalizeFirstLetter(Entries.frontmatter.youth)}</p>
     </div>
   );
 };

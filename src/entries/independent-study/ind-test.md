@@ -1,6 +1,6 @@
 ---
 youth: 'jonathan'
-title: 'Ind Study Test'
+title: 'test ind Study Test'
 course: 'independent-study'
 semester: '2019spring'
 photo: '../../images/tester-card.jpg'
