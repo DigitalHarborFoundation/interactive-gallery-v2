@@ -31,20 +31,16 @@ const CSCorePage = () => (
     render={({ CSCoreEntry }) => (
       <ContentWrapper>
         <h2>CS Core Entries</h2>
-        {CSCoreEntry.edges.map(edge => (
-          <GridThreeColumnContainer>
-            <ul>
-              <li style={{ listStyle: 'none' }}>
-                <ProjectCard
-                  youth={edge.node.frontmatter.youth}
-                  semester={edge.node.frontmatter.semester}
-                  title={edge.node.frontmatter.title}
-                  key={edge.node.id}
-                />
-              </li>
-            </ul>
-          </GridThreeColumnContainer>
-        ))}
+        <GridThreeColumnContainer>
+          {CSCoreEntry.edges.map(edge => (
+            <ProjectCard
+              youth={edge.node.frontmatter.youth}
+              semester={edge.node.frontmatter.semester}
+              title={edge.node.frontmatter.title}
+              key={edge.node.id}
+            />
+          ))}
+        </GridThreeColumnContainer>
       </ContentWrapper>
     )}
   />
