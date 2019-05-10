@@ -26,3 +26,20 @@ export const ImageCard = styled.div`
 //     transform: translate3D(0, -1px, 0) scale(1.04);
 //   }
 // `;
+
+export const ModalCard = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  position: relative;
+  background: #ffffff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  z-index: 10;
+
+  @media only screen and (max-width: 1000px) {
+    flex-direction: column;
+  }
+`;

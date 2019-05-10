@@ -24,12 +24,26 @@ export const ImageContainer = styled.div`
   margin: auto;
 `;
 
+export const ModalImageContainer = styled(ImageContainer)`
+  width: 100%;
+  padding-top: 0;
+  padding-bottom: 0;
+  border-radius: 10px;
+`;
+
 export const FlexColumnContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   margin: ${props => props.marginAll && props.marginAll};
+`;
+
+export const FlexRowContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
 `;
 
 export const GridThreeColumnContainer = styled.div`
@@ -42,6 +56,17 @@ export const GridThreeColumnContainer = styled.div`
   @media only screen and (max-width: 1000px) {
     grid-template-columns: 1fr;
   }
+`;
+
+export const ModalWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 `;
 
 export const Container = styled.div`
