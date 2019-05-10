@@ -18,34 +18,36 @@ const ProjectCard = props => {
   return (
     <>
       <GlobalStyle />
-      <ImageCard animated>
-        <ImageContainer>
-          <ProjectImage src={testImg} alt={props.title} />
-        </ImageContainer>
-        <FlexColumnContainer marginAll="4rem 0">
-          <p
-            style={{
-              color: '#000',
-              fontSize: '3.2rem',
-              margin: '0',
-              paddingBottom: '0.25rem',
-            }}
-          >
-            {capitalizeFirstLetter(props.youth)}
-          </p>
-          <p
-            style={{
-              color: '#5c5f5f',
-              fontSize: '2.4rem',
-              fontWeight: '300',
-              margin: '0',
-              padding: '0',
-            }}
-          >
-            {transformSemester(props.semester)}
-          </p>
-        </FlexColumnContainer>
-      </ImageCard>
+      <Link style={{ textDecoration: 'none' }} to="/">
+        <ImageCard animated>
+          <ImageContainer>
+            <ProjectImage src={testImg} alt={props.title} />
+          </ImageContainer>
+          <FlexColumnContainer marginAll="4rem 0">
+            <p
+              style={{
+                color: '#000',
+                fontSize: '3.2rem',
+                margin: '0',
+                paddingBottom: '0.25rem',
+              }}
+            >
+              {capitalizeFirstLetter(props.youth)}
+            </p>
+            <p
+              style={{
+                color: '#5c5f5f',
+                fontSize: '2.4rem',
+                fontWeight: '300',
+                margin: '0',
+                padding: '0',
+              }}
+            >
+              {transformSemester(props.semester)}
+            </p>
+          </FlexColumnContainer>
+        </ImageCard>
+      </Link>
     </>
   );
 };
