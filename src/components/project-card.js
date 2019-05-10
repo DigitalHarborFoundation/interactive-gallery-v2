@@ -18,7 +18,10 @@ const ProjectCard = props => {
   return (
     <>
       <GlobalStyle />
-      <Link style={{ textDecoration: 'none' }} to="/">
+      <Link
+        style={{ textDecoration: 'none' }}
+        to={`/courses/${props.course}/${props.semester}/${props.youth}`}
+      >
         <ImageCard animated>
           <ImageContainer>
             <ProjectImage src={testImg} alt={props.title} />

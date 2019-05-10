@@ -19,6 +19,7 @@ const CS_CORE_QUERY = graphql`
             title
             youth
             semester
+            course
           }
         }
       }
@@ -38,6 +39,7 @@ const CSCorePage = () => (
           <GridThreeColumnContainer>
             {CSCoreEntry.edges.map(edge => (
               <ProjectCard
+                course={edge.node.frontmatter.course}
                 youth={edge.node.frontmatter.youth}
                 semester={edge.node.frontmatter.semester}
                 title={edge.node.frontmatter.title}
