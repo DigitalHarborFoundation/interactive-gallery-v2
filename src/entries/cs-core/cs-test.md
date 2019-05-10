@@ -5,4 +5,4 @@ course: 'cs-core'
 semester: '2019spring'
 ---
 
-# HELLO CS
+Foam siphon sit cultivar iced cultivar latte lungo. Cinnamon, est kopi-luwak acerbic seasonal, breve french press froth fair trade macchiato aroma arabica.

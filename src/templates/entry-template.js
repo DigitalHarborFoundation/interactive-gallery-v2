@@ -19,6 +19,7 @@ import testImg from '../images/tester-card.jpg';
 export const query = graphql`
   query EntryQuery($id: String!) {
     Entries: markdownRemark(id: { eq: $id }) {
+      html
       frontmatter {
         youth
         title
@@ -73,13 +74,8 @@ const EntryTemplate = props => {
                 margin: '0 auto',
                 padding: '4rem 4rem',
               }}
-            >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
-              voluptatibus assumenda eveniet adipisci. Tenetur hic minus
-              quibusdam. Nam, corrupti aut. Dolores architecto perspiciatis
-              cupiditate doloribus inventore. Corrupti, voluptatibus officia?
-              Exercitationem!
-            </p>
+              dangerouslySetInnerHTML={{ __html: Entries.html }}
+            />
           </FlexColumnContainer>
         </ModalCard>
       </ModalWrapper>
