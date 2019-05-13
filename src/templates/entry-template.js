@@ -15,6 +15,8 @@ import {
   transformSemester,
 } from '../components/utilities/helpers';
 import testImg from '../images/tester-card.jpg';
+import jonathanTestImg from '../images/jonathan-pi-portal-example.jpg';
+// import Image from '../components/image';
 
 export const query = graphql`
   query EntryQuery($id: String!) {
@@ -37,9 +39,9 @@ const EntryTemplate = props => {
       <GlobalStyle />
       <ModalWrapper>
         <ModalCard>
-          <ModalImageContainer>
+          <ProjectImageContainer>
             <ProjectImage src={testImg} />
-          </ModalImageContainer>
+          </ProjectImageContainer>
           <FlexColumnContainer marginAll="0" style={{ width: '80%' }}>
             <h2
               style={{
@@ -94,4 +96,8 @@ const ProjectImage = styled.img`
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
   box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.25);
+`;
+
+const ProjectImageContainer = styled(ModalImageContainer)`
+  margin: 0 auto;
 `;
