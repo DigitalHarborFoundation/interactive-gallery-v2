@@ -23,7 +23,9 @@ module.exports = {
     },
     {
       resolve: `gatsby-plugin-modal-routing`,
-      options: {},
+      options: {
+        appElement: '#portal',
+      },
       modalProps: {},
     },
     {
