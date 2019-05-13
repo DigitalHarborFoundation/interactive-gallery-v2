@@ -60,5 +60,7 @@ export default ProjectCard;
 const ProjectImage = styled.img`
   width: 100%;
   height: auto;
-  border-radius: 10px;
+  // border-radius: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 `;
