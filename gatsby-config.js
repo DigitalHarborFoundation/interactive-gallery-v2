@@ -22,6 +22,11 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-modal-routing`,
+      options: {},
+      modalProps: {},
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `pages`,
