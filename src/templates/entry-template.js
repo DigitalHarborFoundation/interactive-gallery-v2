@@ -70,7 +70,7 @@ const EntryTemplate = props => {
               style={{
                 color: '#2d2a2a',
                 fontSize: '2rem',
-                lineHeight: '2.4rem',
+                lineHeight: '2.6rem',
                 margin: '0 auto',
                 padding: '4rem 4rem',
               }}
