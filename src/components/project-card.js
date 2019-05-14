@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import { Link } from 'gatsby-plugin-modal-routing';
 import styled from 'styled-components';
 import { GlobalStyle } from './globalStyle';
 import {
@@ -21,6 +21,7 @@ const ProjectCard = props => {
       <Link
         style={{ textDecoration: 'none' }}
         to={`/courses/${props.course}/${props.semester}/${props.youth}`}
+        asModal
       >
         <ImageCard animated>
           <ImageContainer>

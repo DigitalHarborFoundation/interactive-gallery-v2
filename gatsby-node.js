@@ -25,7 +25,7 @@ exports.createPages = ({ graphql, actions }) => {
           path: `/courses/${entry.frontmatter.course}/${
             entry.frontmatter.semester
           }/${entry.frontmatter.youth}`,
-          component: path.resolve(`./src/templates/entry-template.js`),
+          component: path.resolve(`./src/templates/modal-entry-template.js`),
           context: {
             id: entry.id,
           },
