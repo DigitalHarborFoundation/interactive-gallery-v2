@@ -5,6 +5,8 @@
   "version": "0.1.0",
   "author": "Blake Noll <nollblake@gmail.com>",
   "dependencies": {
+    "@reach/dialog": "^0.2.8",
+    "@reach/visually-hidden": "^0.1.4",
     "babel-plugin-styled-components": "^1.10.0",
     "gatsby": "^2.4.2",
     "gatsby-cli": "^2.5.13",

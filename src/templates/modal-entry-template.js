@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { graphql } from 'gatsby';
 import { Link } from 'gatsby';
 import { ModalRoutingContext } from 'gatsby-plugin-modal-routing';
-import { graphql } from 'gatsby';
+import { Dialog } from '@reach/dialog';
+import VisuallyHidden from '@reach/visually-hidden';
 import { GlobalStyle } from '../components/globalStyle';
 import {
   ModalWrapper,
@@ -21,6 +23,35 @@ import testImg from '../images/tester-card.jpg';
 import jonathanTestImg from '../images/jonathan-pi-portal-example.jpg';
 // import Image from '../components/image';
 
+// hook recipe from https://usehooks.com/useKeyPress!
+
+function useKeyPress(targetKey) {
+  const [keyPressed, setKeyPressed] = useState(false);
+
+  function keyDownHandler({ key }) {
+    if (key === targetKey) {
+      setKeyPressed(true);
+    }
+  }
+
+  function keyUpHandler({ key }) {
+    if (key === targetKey) {
+      setKeyPressed(false);
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener('keydown', keyDownHandler);
+    window.addEventListener('keyup', keyUpHandler);
+
+    return () => {
+      window.removeEventListener('keydown', keyDownHandler);
+      window.removeEventListener('keyup', keyUpHandler);
+    };
+  }, []);
+  return keyPressed;
+}
+
 export const query = graphql`
   query ModalEntryQuery($id: String!) {
     ModalEntries: markdownRemark(id: { eq: $id }) {
@@ -37,18 +68,29 @@ export const query = graphql`
 
 const ModalEntryTemplate = props => {
   const { ModalEntries } = props.data;
+  const escPress = useKeyPress('Escape');
+  const testPress = useKeyPress('t');
+
   return (
-    <ModalRoutingContext>
+    <ModalRoutingContext.Consumer>
       {({ modal, closeTo }) => (
         <div>
           {modal ? (
-            <Link to={closeTo} state={{ noScroll: true }}>
-              Close
-            </Link>
+            <>
+              <Link to={closeTo} state={{ noScroll: true }}>
+                Close
+              </Link>
+              <div>
+                <h1>MODAL TEST</h1>
+                <p>{ModalEntries.frontmatter.title}</p>
+                <p>{testPress && '🦄'}</p>
+              </div>
+            </>
           ) : (
             <div>
               <h1>MODAL TEST</h1>
               <p>{ModalEntries.frontmatter.title}</p>
+              <p>{testPress && '🦄'}</p>
             </div>
           )}
 
@@ -56,7 +98,7 @@ const ModalEntryTemplate = props => {
           <Link to="/">Go home!</Link>
         </div>
       )}
-    </ModalRoutingContext>
+    </ModalRoutingContext.Consumer>
   );
 };
 
