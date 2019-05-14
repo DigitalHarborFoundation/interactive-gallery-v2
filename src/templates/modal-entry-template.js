@@ -42,7 +42,9 @@ const ModalEntryTemplate = props => {
       {({ modal, closeTo }) => (
         <div>
           {modal ? (
-            <Link to={closeTo}>Close</Link>
+            <Link to={closeTo} state={{ noScroll: true }}>
+              Close
+            </Link>
           ) : (
             <div>
               <h1>MODAL TEST</h1>
