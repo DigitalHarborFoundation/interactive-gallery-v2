@@ -27,6 +27,9 @@ const Hero = props => (
         <FlexLink to="/courses/independent-study">
           <GhostButton>Independent Study</GhostButton>
         </FlexLink>
+        <FlexLink to="/courses/maker-foundations">
+          <GhostButton>Maker Foundations</GhostButton>
+        </FlexLink>
       </ButtonContainer>
     </CTAContainer>
   </Masthead>
