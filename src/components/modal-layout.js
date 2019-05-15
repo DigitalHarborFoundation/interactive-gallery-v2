@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { push, Link } from 'gatsby';
 import PropTypes from 'prop-types';
-import { Dialog } from '@reach/dialog';
+import { DialogOverlay, DialogContent } from '@reach/dialog';
 import VisuallyHidden from '@reach/visually-hidden';
 
 class ModalLayout extends Component {
@@ -38,14 +38,21 @@ class ModalLayout extends Component {
 
     return (
       <>
-        <Dialog isOpen={open}>
-          <h1>HELLO</h1>
-          <p>PATH: {referringPath}</p>
-          <Link to={`/courses/${referringPath}/`}>
-            <button>BACK</button>
-          </Link>
-          {children}
-        </Dialog>
+        <DialogOverlay
+          style={{ background: 'hsla(0, 100%, 100%, 0.9' }}
+          isOpen={open}
+        >
+          <DialogContent
+            style={{ boxShadow: '0px 10px 50px hsla(0, 0%, 0%, 0.33)' }}
+          >
+            <h1>HELLO</h1>
+            <p>PATH: {referringPath}</p>
+            <button onClick={() => push(`/courses/${referringPath}/`)}>
+              CLOSE?
+            </button>
+            {children}
+          </DialogContent>
+        </DialogOverlay>
       </>
     );
   }

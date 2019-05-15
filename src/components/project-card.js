@@ -22,6 +22,7 @@ const ProjectCard = props => {
       <Link
         style={{ textDecoration: 'none' }}
         to={`/courses/${props.course}/${props.semester}/${props.youth}`}
+        showModal
       >
         <ImageCard animated>
           <ImageContainer>
