@@ -7,6 +7,7 @@ import {
   FlexColumnContainer,
   FlexRowContainer,
 } from '../components/elements/layout-components';
+import Img from 'gatsby-image';
 import { ModalCard } from '../components/elements/cards';
 import { Separator } from '../components/elements/separator';
 import styled from 'styled-components';
@@ -28,6 +29,13 @@ export const query = graphql`
         title
         course
         semester
+        image {
+          childImageSharp {
+            fluid(maxWidth: 500, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
   }
@@ -41,7 +49,10 @@ const EntryTemplate = props => {
       <ModalWrapper>
         <ProjectModalCard>
           <ProjectImageContainer>
-            <ProjectImage src={jonathanTestImg} />
+            <Img
+              fluid={Entries.frontmatter.image.childImageSharp.fluid}
+              alt={Entries.frontmatter.title}
+            />
           </ProjectImageContainer>
           <div style={{ width: '100%' }}>
             <FlexColumnContainer marginAll="0" style={{ width: '100%' }}>
@@ -100,7 +111,7 @@ const ProjectModalCard = styled(ModalCard)`
   min-height: 80vh;
 `;
 
-const ProjectImage = styled.img`
+const ProjectImage = styled(Img)`
   max-width: 100%;
   margin: 4rem 0;
   display: block;

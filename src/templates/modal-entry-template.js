@@ -42,13 +42,14 @@ export const query = graphql`
 
 const ModalEntryTemplate = props => {
   const { ModalEntries } = props.data;
-  const escPress = useKeyPress('Escape');
-  const testPress = useKeyPress('t');
   return (
     <ModalRoutingContext.Consumer>
       {({ modal, closeTo }) =>
         modal ? (
-          <ModalLayout location={location}>{props.children}</ModalLayout>
+          <ModalLayout closeTo={closeTo}>
+            <h1>{ModalEntries.frontmatter.title}</h1>
+            <p>{ModalEntries.frontmatter.youth}</p>
+          </ModalLayout>
         ) : (
           <div>
             <h1>NOT MODAL</h1>

@@ -22,24 +22,25 @@ import jonathanTestImg from '../images/jonathan-pi-portal-example.jpg';
 const ModalLayout = props => {
   return (
     <div
-      onClick={() => navigate('/', { state: { noScroll: true } })}
       style={{
         display: `flex`,
-        position: `relative`,
-        height: `100vh`,
+        flexDirection: `column`,
+        alignItems: `center`,
+        justifyContent: 'center',
+        width: '80%',
       }}
     >
-      <h1>TESTING INSIDE MODAL</h1>
       {props.children}
       <button
-        onClick={() => navigate(`/`, { state: { noScroll: true } })}
+        onClick={() =>
+          navigate(`${props.closeTo}`, { state: { noScroll: true } })
+        }
         style={{
           cursor: `pointer`,
           fontSize: `30px`,
-          position: `absolute`,
         }}
       >
-        CLOSE
+        [ X ]
       </button>
     </div>
   );

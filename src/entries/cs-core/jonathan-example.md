@@ -3,6 +3,7 @@ youth: 'jonathan'
 title: 'Pi Portal Pilot'
 course: 'cs-core'
 semester: '2019spring'
+image: '../../images/jonathan-pi-portal-example.jpg'
 ---
 
 My project is the Pi Portal Pilot.
