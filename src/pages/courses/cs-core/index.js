@@ -36,11 +36,11 @@ const CS_CORE_QUERY = graphql`
 
 // TODO: Make the project list more accessible by adding ul and li elements
 
-const CSCorePage = () => (
+const CSCorePage = props => (
   <StaticQuery
     query={CS_CORE_QUERY}
     render={({ CSCoreEntry }) => (
-      <Layout>
+      <Layout history={props.history} location={props.location}>
         <ContentWrapper>
           <h2>CS Core Entries</h2>
           <GridThreeColumnContainer>
@@ -51,6 +51,7 @@ const CSCorePage = () => (
                 semester={edge.node.frontmatter.semester}
                 title={edge.node.frontmatter.title}
                 image={edge.node.frontmatter.image.childImageSharp.fluid}
+                location={props.location}
                 key={edge.node.id}
               />
             ))}

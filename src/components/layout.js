@@ -10,7 +10,7 @@ import ProjectCard from '../components/project-card';
 import DHFFooter from './dhf-footer';
 import Footer from './footer';
 
-const Layout = ({ children }) => (
+const Layout = ({ children, location, history }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {

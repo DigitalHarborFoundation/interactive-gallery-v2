@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'gatsby';
+import { push, Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import { Dialog } from '@reach/dialog';
 import VisuallyHidden from '@reach/visually-hidden';
@@ -29,18 +29,21 @@ class ModalLayout extends Component {
     }
   }
 
-  render() {
-    const { children, open, showModal, hideModal } = this.props;
+  // if (typeof document !== 'undefined') {
+  //   this.disableScrolling(open);
+  // }
 
-    if (typeof document !== 'undefined') {
-      this.disableScrolling(open);
-    }
+  render() {
+    const { children, open, showModal, hideModal, referringPath } = this.props;
 
     return (
       <>
         <Dialog isOpen={open}>
-          <button onClick={showModal}>Show Modal</button>
-          <button onClick={hideModal}>Close Modal</button>
+          <h1>HELLO</h1>
+          <p>PATH: {referringPath}</p>
+          <Link to={`/courses/${referringPath}/`}>
+            <button>BACK</button>
+          </Link>
           {children}
         </Dialog>
       </>
