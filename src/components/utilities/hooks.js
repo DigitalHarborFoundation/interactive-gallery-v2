@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 
 export function useKeyPress(targetKey) {
+  // hook recipe from https://usehooks.com/useKeyPress!
   const [keyPressed, setKeyPressed] = useState(false);
 
   function keyDownHandler({ key }) {

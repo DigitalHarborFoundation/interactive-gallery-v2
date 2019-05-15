@@ -31,7 +31,7 @@ export const ModalCard = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  width: 80%;
+
   position: relative;
   background: #ffffff;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);

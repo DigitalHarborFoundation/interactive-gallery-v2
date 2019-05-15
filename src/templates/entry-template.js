@@ -51,6 +51,7 @@ const EntryTemplate = props => {
                   fontSize: '3.2rem',
                   lineHeight: '2.4rem',
                   marginBottom: '0',
+                  marginTop: '10vh',
                   paddingBottom: '0',
                 }}
               >
@@ -95,6 +96,8 @@ export default EntryTemplate;
 
 const ProjectModalCard = styled(ModalCard)`
   background: #ffffff;
+  width: 93.75%;
+  min-height: 80vh;
 `;
 
 const ProjectImage = styled.img`
