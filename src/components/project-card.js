@@ -6,6 +6,7 @@ import {
   FlexColumnContainer,
   ImageContainer,
 } from '../components/elements/layout-components';
+import Img from 'gatsby-image';
 import { ImageCard } from '../components/elements/cards';
 import testImg from '../images/tester-card.jpg';
 import { useSiteMetadata } from './utilities/queries';
@@ -24,7 +25,7 @@ const ProjectCard = props => {
       >
         <ImageCard animated>
           <ImageContainer>
-            <ProjectImage src={testImg} alt={props.title} />
+            <Img fluid={props.image} alt={props.title} />
           </ImageContainer>
           <FlexColumnContainer marginAll="4rem 0">
             <p
