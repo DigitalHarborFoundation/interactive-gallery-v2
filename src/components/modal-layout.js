@@ -21,14 +21,27 @@ class ModalLayout extends Component {
     return (
       <>
         <DialogOverlay
-          style={{ background: 'hsla(0, 100%, 100%, 0.9' }}
+          style={{
+            position: `fixed`,
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            backgroundColor: `rgba(0, 0, 0, 0.75)`,
+          }}
           isOpen={open}
           onDismiss={() => {
             push(`/courses/${referringPath}/`);
           }}
         >
           <DialogContent
-            style={{ boxShadow: '0px 10px 50px hsla(0, 0%, 0%, 0.33)' }}
+            style={{
+              maxWidth: '600px',
+              background: 'red',
+              padding: 0,
+              overflow: `auto`,
+              WebkitOverflowScrolling: `touch`,
+            }}
           >
             <h1>HELLO</h1>
             <p>PATH: {referringPath}</p>
