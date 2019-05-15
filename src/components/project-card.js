@@ -25,7 +25,7 @@ const ProjectCard = props => {
       >
         <ImageCard animated>
           <ImageContainer>
-            <Img fluid={props.image} alt={props.title} />
+            <ProjectImage fluid={props.image} alt={props.title} />
           </ImageContainer>
           <FlexColumnContainer marginAll="4rem 0">
             <p
@@ -58,7 +58,7 @@ const ProjectCard = props => {
 
 export default ProjectCard;
 
-const ProjectImage = styled.img`
+const ProjectImage = styled(Img)`
   width: 100%;
   height: auto;
   // border-radius: 10px;

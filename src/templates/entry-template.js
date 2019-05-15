@@ -49,7 +49,7 @@ const EntryTemplate = props => {
       <ModalWrapper>
         <ProjectModalCard>
           <ProjectImageContainer>
-            <Img
+            <ProjectImage
               fluid={Entries.frontmatter.image.childImageSharp.fluid}
               alt={Entries.frontmatter.title}
             />
@@ -113,9 +113,9 @@ const ProjectModalCard = styled(ModalCard)`
 
 const ProjectImage = styled(Img)`
   max-width: 100%;
-  margin: 4rem 0;
-  display: block;
-  object-fit: fill;
+  // margin: 4rem 0;
+  // display: block;
+  // object-fit: fill;
   border-radius: 10px;
   box-shadow: 4px 8px 10px rgba(0, 0, 0, 0.25);
 `;
