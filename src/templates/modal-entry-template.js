@@ -75,26 +75,17 @@ const ModalEntryTemplate = props => {
     <ModalRoutingContext.Consumer>
       {({ modal, closeTo }) => (
         <div>
-          {modal ? (
+          {modal && (
             <>
               <Link to={closeTo} state={{ noScroll: true }}>
                 Close
               </Link>
               <div>
-                <h1>MODAL TEST</h1>
                 <p>{ModalEntries.frontmatter.title}</p>
                 <p>{testPress && '🦄'}</p>
               </div>
             </>
-          ) : (
-            <div>
-              <h1>MODAL TEST</h1>
-              <p>{ModalEntries.frontmatter.title}</p>
-              <p>{testPress && '🦄'}</p>
-            </div>
           )}
-
-          <h2>MODAL PAGE</h2>
           <Link to="/">Go home!</Link>
         </div>
       )}
