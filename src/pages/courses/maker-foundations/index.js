@@ -20,6 +20,13 @@ const MAKER_FOUNDATIONS_QUERY = graphql`
             youth
             semester
             course
+            image {
+              childImageSharp {
+                fluid(maxWidth: 500, quality: 100) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
         }
       }
@@ -43,6 +50,7 @@ const MakerFoundationsPage = () => (
                 youth={edge.node.frontmatter.youth}
                 semester={edge.node.frontmatter.semester}
                 title={edge.node.frontmatter.title}
+                image={edge.node.frontmatter.image.childImageSharp.fluid}
                 key={edge.node.id}
               />
             ))}
