@@ -1,7 +1,11 @@
-/**
- * Implement Gatsby's Browser APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/browser-apis/
- */
+import React from 'react';
 
-// You can delete this file if you're not using it
+import AppProvider from './src/context/provider';
+
+export const wrapRootElement = ({ element }) => (
+  <AppProvider>{element}</AppProvider>
+);
+
+export const onInitialClientRender = () => {
+  window.___GALLERY_INITIAL_RENDER_COMPLETE = true;
+};

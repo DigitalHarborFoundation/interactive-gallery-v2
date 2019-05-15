@@ -1,32 +1,15 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { Consumer } from '../context/createContext';
+import ModalLayout from './modal-layout';
 
-const ModalContainer = props => {
-  const { ModalEntries } = props.data;
-  const escPress = useKeyPress('Escape');
-  const testPress = useKeyPress('t');
-
-  return (
-    <ModalRoutingContext.Consumer>
-      {({ modal, closeTo }) => (
-        <div>
-          {modal && (
-            <>
-              <Link to={closeTo} state={{ noScroll: true }}>
-                Close
-              </Link>
-              <div>
-                <p>{ModalEntries.frontmatter.title}</p>
-                <p>{testPress && '🦄'}</p>
-              </div>
-            </>
-          )}
-          <Link to="/">Go home!</Link>
-        </div>
-      )}
-    </ModalRoutingContext.Consumer>
-  );
-};
+const ModalContainer = ({ children }) => (
+  <Consumer>
+    {({ open, showModal, hideModal }) => (
+      <ModalLayout open={open} showModal={showModal} hideModal={hideModal}>
+        {children}
+      </ModalLayout>
+    )}
+  </Consumer>
+);
 
 export default ModalContainer;

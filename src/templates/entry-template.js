@@ -7,6 +7,7 @@ import {
   FlexColumnContainer,
   FlexRowContainer,
 } from '../components/elements/layout-components';
+import ModalContainer from '../components/modal-container';
 import Img from 'gatsby-image';
 import { ModalCard } from '../components/elements/cards';
 import { Separator } from '../components/elements/separator';
@@ -43,6 +44,7 @@ export const query = graphql`
 
 const EntryTemplate = props => {
   const { Entries } = props.data;
+  let isModal = false;
   return (
     <>
       <GlobalStyle />
