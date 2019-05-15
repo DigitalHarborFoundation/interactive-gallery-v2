@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { graphql } from 'gatsby';
 import { Link } from 'gatsby';
 import { ModalRoutingContext } from 'gatsby-plugin-modal-routing';
+import { useKeyPress } from '../components/utilities/hooks';
 import { Dialog } from '@reach/dialog';
 import VisuallyHidden from '@reach/visually-hidden';
 import { GlobalStyle } from '../components/globalStyle';
@@ -24,33 +25,6 @@ import jonathanTestImg from '../images/jonathan-pi-portal-example.jpg';
 // import Image from '../components/image';
 
 // hook recipe from https://usehooks.com/useKeyPress!
-
-function useKeyPress(targetKey) {
-  const [keyPressed, setKeyPressed] = useState(false);
-
-  function keyDownHandler({ key }) {
-    if (key === targetKey) {
-      setKeyPressed(true);
-    }
-  }
-
-  function keyUpHandler({ key }) {
-    if (key === targetKey) {
-      setKeyPressed(false);
-    }
-  }
-
-  useEffect(() => {
-    window.addEventListener('keydown', keyDownHandler);
-    window.addEventListener('keyup', keyUpHandler);
-
-    return () => {
-      window.removeEventListener('keydown', keyDownHandler);
-      window.removeEventListener('keyup', keyUpHandler);
-    };
-  }, []);
-  return keyPressed;
-}
 
 export const query = graphql`
   query ModalEntryQuery($id: String!) {
