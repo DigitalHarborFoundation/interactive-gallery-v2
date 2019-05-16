@@ -46,17 +46,20 @@ export const query = graphql`
 const EntryDetails = props => {
   const { Entries } = props.data;
   const { modalRender } = props;
+  const { parent } = props;
 
   return (
     <>
       <GlobalStyle />
 
+      {modalRender ? (
+        <ModalContainer referringPath={Entries.frontmatter.course}>
+          <h1>MODAL: {Entries.frontmatter.title}</h1>
+        </ModalContainer>
+      ) : (
+        <h1>NOT INITIAL RENDER SO NOT MODAL</h1>
+      )}
       <ProjectModalCard>
-        {modalRender ? (
-          <h1>MODAL IS TRUE AND PASSED</h1>
-        ) : (
-          <h1>NOT INITIAL RENDER SO NOT MODAL</h1>
-        )}
         <ProjectImageContainer>
           <ProjectImage
             fluid={Entries.frontmatter.image.childImageSharp.fluid}

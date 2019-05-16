@@ -61,7 +61,7 @@ class EntryTemplate extends React.Component {
     }
     return (
       <>
-        <EntryDetails data={data} modalRender={modalRender} />
+        <EntryDetails data={data} modalRender={modalRender} parent={this} />
       </>
     );
   }
