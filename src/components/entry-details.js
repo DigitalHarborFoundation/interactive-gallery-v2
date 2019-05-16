@@ -22,94 +22,71 @@ import testImg from '../images/tester-card.jpg';
 import jonathanTestImg from '../images/jonathan-pi-portal-example.jpg';
 // import Image from '../components/image';
 
-export const query = graphql`
-  query EntryDetailsQuery($id: String!) {
-    Entries: markdownRemark(id: { eq: $id }) {
-      html
-      frontmatter {
-        youth
-        title
-        course
-        semester
-        image {
-          childImageSharp {
-            fluid(maxWidth: 500, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-      }
-    }
-  }
-`;
-
 const EntryDetails = props => {
-  const { Entries } = props.data;
+  const { data } = props;
   const { modalRender } = props;
   const { parent } = props;
 
   return (
     <>
       <GlobalStyle />
-
-      {modalRender ? (
-        <ModalContainer referringPath={Entries.frontmatter.course}>
-          <h1>MODAL: {Entries.frontmatter.title}</h1>
-        </ModalContainer>
-      ) : (
-        <h1>NOT INITIAL RENDER SO NOT MODAL</h1>
-      )}
-      <ProjectModalCard>
-        <ProjectImageContainer>
-          <ProjectImage
-            fluid={Entries.frontmatter.image.childImageSharp.fluid}
-            alt={Entries.frontmatter.title}
-          />
-        </ProjectImageContainer>
-        <div style={{ width: '100%' }}>
-          <FlexColumnContainer marginAll="0" style={{ width: '100%' }}>
-            <h2
-              style={{
-                color: '#000',
-                fontSize: '3.2rem',
-                lineHeight: '2.4rem',
-                marginBottom: '0',
-                marginTop: '10vh',
-                paddingBottom: '0',
-              }}
-            >
-              {capitalizeFirstLetter(Entries.frontmatter.title)}
-            </h2>
-            <FlexRowContainer marginAll="0">
-              <p style={{ color: '#5c5f5f', fontSize: '2rem' }}>
-                {capitalizeFirstLetter(Entries.frontmatter.youth)}
-              </p>
-              <Separator
-                color="#5c5f5f"
-                fontSize="2rem"
-                paddingLeft="1rem"
-                paddingRight="1rem"
-              />
-              <p style={{ color: '#5c5f5f', fontSize: '2rem' }}>
-                {transformSemester(Entries.frontmatter.semester)}
-              </p>
-            </FlexRowContainer>
-            <p
-              style={{
-                color: '#2d2a2a',
-                fontSize: '2rem',
-                lineHeight: '2.6rem',
-                margin: '0 auto',
-                paddingTop: '0',
-                paddingBottom: '4rem',
-                paddingLeft: '4rem',
-                paddingRight: '4rem',
-              }}
-              dangerouslySetInnerHTML={{ __html: Entries.html }}
+      <Layout
+        data={props.data}
+        modalRender={props.modalRender}
+        referringPath={props.data.Entries.frontmatter.course}
+      >
+        <ProjectModalCard>
+          <ProjectImageContainer>
+            <ProjectImage
+              fluid={props.data.Entries.frontmatter.image.childImageSharp.fluid}
+              alt={props.data.Entries.frontmatter.title}
             />
-          </FlexColumnContainer>
-        </div>
-      </ProjectModalCard>
+          </ProjectImageContainer>
+          <div style={{ width: '100%' }}>
+            <FlexColumnContainer marginAll="0" style={{ width: '100%' }}>
+              <h2
+                style={{
+                  color: '#000',
+                  fontSize: '3.2rem',
+                  lineHeight: '2.4rem',
+                  marginBottom: '0',
+                  marginTop: '10vh',
+                  paddingBottom: '0',
+                }}
+              >
+                {capitalizeFirstLetter(data.Entries.frontmatter.title)}
+              </h2>
+              <FlexRowContainer marginAll="0">
+                <p style={{ color: '#5c5f5f', fontSize: '2rem' }}>
+                  {capitalizeFirstLetter(props.data.Entries.frontmatter.youth)}
+                </p>
+                <Separator
+                  color="#5c5f5f"
+                  fontSize="2rem"
+                  paddingLeft="1rem"
+                  paddingRight="1rem"
+                />
+                <p style={{ color: '#5c5f5f', fontSize: '2rem' }}>
+                  {transformSemester(props.data.Entries.frontmatter.semester)}
+                </p>
+              </FlexRowContainer>
+              <p
+                style={{
+                  color: '#2d2a2a',
+                  fontSize: '2rem',
+                  lineHeight: '2.6rem',
+                  margin: '0 auto',
+                  paddingTop: '0',
+                  paddingBottom: '4rem',
+                  paddingLeft: '4rem',
+                  paddingRight: '4rem',
+                }}
+                dangerouslySetInnerHTML={{ __html: props.data.Entries.html }}
+              />
+            </FlexColumnContainer>
+          </div>
+        </ProjectModalCard>
+      </Layout>
     </>
   );
 };

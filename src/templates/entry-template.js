@@ -48,7 +48,6 @@ export const query = graphql`
 class EntryTemplate extends React.Component {
   render() {
     let modalRender = false;
-    const { data } = this.props;
     const isModal = this.props.location && this.props.location.state.isModal;
 
     if (isModal) {
@@ -61,7 +60,11 @@ class EntryTemplate extends React.Component {
     }
     return (
       <>
-        <EntryDetails data={data} modalRender={modalRender} parent={this} />
+        <EntryDetails
+          data={this.props.data}
+          modalRender={modalRender}
+          parent={this}
+        />
       </>
     );
   }

@@ -40,24 +40,22 @@ const CSCorePage = props => (
   <StaticQuery
     query={CS_CORE_QUERY}
     render={({ CSCoreEntry }) => (
-      <Layout history={props.history} location={props.location}>
-        <ContentWrapper>
-          <h2>CS Core Entries</h2>
-          <GridThreeColumnContainer>
-            {CSCoreEntry.edges.map(edge => (
-              <ProjectCard
-                course={edge.node.frontmatter.course}
-                youth={edge.node.frontmatter.youth}
-                semester={edge.node.frontmatter.semester}
-                title={edge.node.frontmatter.title}
-                image={edge.node.frontmatter.image.childImageSharp.fluid}
-                location={props.location}
-                key={edge.node.id}
-              />
-            ))}
-          </GridThreeColumnContainer>
-        </ContentWrapper>
-      </Layout>
+      <ContentWrapper>
+        <h2>CS Core Entries</h2>
+        <GridThreeColumnContainer>
+          {CSCoreEntry.edges.map(edge => (
+            <ProjectCard
+              course={edge.node.frontmatter.course}
+              youth={edge.node.frontmatter.youth}
+              semester={edge.node.frontmatter.semester}
+              title={edge.node.frontmatter.title}
+              image={edge.node.frontmatter.image.childImageSharp.fluid}
+              location={props.location}
+              key={edge.node.id}
+            />
+          ))}
+        </GridThreeColumnContainer>
+      </ContentWrapper>
     )}
   />
 );
