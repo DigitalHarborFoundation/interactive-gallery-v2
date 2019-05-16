@@ -26,7 +26,6 @@ const Layout = ({ children, location, history }) => (
       <>
         <GlobalStyle />
         <AppWrapper>
-          <Hero semester={data.site.siteMetadata.semester} />
           <main>{children}</main>
           <DHFFooter />
           <Footer />
