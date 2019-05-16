@@ -11,7 +11,9 @@ class Layout extends React.Component {
     if (this.props.modalRender) {
       return (
         <>
-          <PageRenderer location={{ pathname: `/courses/cs-core/` }} />
+          <PageRenderer
+            location={{ pathname: `/courses/${this.props.referringPath}` }}
+          />
           <ModalContainer referringPath={this.props.referringPath}>
             <h1>{this.props.data.Entries.frontmatter.title}</h1>
             <p>Referring path: {this.props.referringPath}</p>
