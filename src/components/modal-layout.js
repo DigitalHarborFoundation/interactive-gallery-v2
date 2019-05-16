@@ -61,5 +61,5 @@ const StyledDialogContent = styled(DialogContent)`
   background: papayawhip;
   padding: 0;
   overflow: auto;
-  webkit-overflow-scrolling: touch;
+  -webkit-overflow-scrolling: touch;
 `;
