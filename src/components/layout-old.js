@@ -4,11 +4,17 @@ import { StaticQuery, graphql } from 'gatsby';
 import { GlobalStyle } from './globalStyle';
 import { AppWrapper } from './elements/layout-components';
 import { ImageCard } from '../components/elements/cards';
+import Hero from '../components/hero';
+import ProjectCardGrid from '../components/project-card-grid';
+import ProjectCard from '../components/project-card';
+import DHFHeader from '../components/dhf-header';
+import DHFFooter from './dhf-footer';
+import Footer from './footer';
 
 const Layout = ({ children, location, history }) => (
   <StaticQuery
     query={graphql`
-      query SiteTitleQueryNew {
+      query SiteTitleQuery {
         site {
           siteMetadata {
             title
@@ -20,7 +26,12 @@ const Layout = ({ children, location, history }) => (
     render={data => (
       <>
         <GlobalStyle />
-        <AppWrapper>{children}</AppWrapper>
+        <AppWrapper>
+          <DHFHeader />
+          <main>{children}</main>
+          <DHFFooter />
+          <Footer />
+        </AppWrapper>
       </>
     )}
   />

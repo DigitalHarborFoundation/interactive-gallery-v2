@@ -1,6 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import { GlobalStyle } from '../components/globalStyle';
+import Layout from '../components/layout';
 import {
   ModalWrapper,
   ModalImageContainer,
@@ -19,6 +20,8 @@ import {
 import icon from '../components/elements/icon';
 import testImg from '../images/tester-card.jpg';
 import jonathanTestImg from '../images/jonathan-pi-portal-example.jpg';
+import EntryDetails from '../components/entry-details';
+
 // import Image from '../components/image';
 
 export const query = graphql`
@@ -44,91 +47,21 @@ export const query = graphql`
 
 class EntryTemplate extends React.Component {
   render() {
-    const { Entries } = this.props.data;
-    let isModal = false;
+    let modalRender = false;
+    const { data } = this.props;
+    const isModal = this.props.location && this.props.location.state.isModal;
 
-    if (
-      typeof window !== 'undefined' &&
-      window.___GALLERY_INITIAL_RENDER_COMPLETE
-    ) {
-      isModal = true;
+    if (isModal) {
+      if (
+        typeof window !== 'undefined' &&
+        window.___GALLERY_INITIAL_RENDER_COMPLETE
+      ) {
+        modalRender = true;
+      }
     }
-
     return (
       <>
-        <GlobalStyle />
-        {isModal ? (
-          <ModalContainer referringPath={Entries.frontmatter.course}>
-            <h2>{Entries.frontmatter.title}</h2>
-            <p
-              style={{
-                color: '#2d2a2a',
-                fontSize: '2rem',
-                lineHeight: '2.6rem',
-                margin: '0 auto',
-                paddingTop: '0',
-                paddingBottom: '4rem',
-                paddingLeft: '4rem',
-                paddingRight: '4rem',
-              }}
-              dangerouslySetInnerHTML={{ __html: Entries.html }}
-            />
-          </ModalContainer>
-        ) : (
-          <ModalWrapper>
-            <ProjectModalCard>
-              <ProjectImageContainer>
-                <ProjectImage
-                  fluid={Entries.frontmatter.image.childImageSharp.fluid}
-                  alt={Entries.frontmatter.title}
-                />
-              </ProjectImageContainer>
-              <div style={{ width: '100%' }}>
-                <FlexColumnContainer marginAll="0" style={{ width: '100%' }}>
-                  <h2
-                    style={{
-                      color: '#000',
-                      fontSize: '3.2rem',
-                      lineHeight: '2.4rem',
-                      marginBottom: '0',
-                      marginTop: '10vh',
-                      paddingBottom: '0',
-                    }}
-                  >
-                    {capitalizeFirstLetter(Entries.frontmatter.title)}
-                  </h2>
-                  <FlexRowContainer marginAll="0">
-                    <p style={{ color: '#5c5f5f', fontSize: '2rem' }}>
-                      {capitalizeFirstLetter(Entries.frontmatter.youth)}
-                    </p>
-                    <Separator
-                      color="#5c5f5f"
-                      fontSize="2rem"
-                      paddingLeft="1rem"
-                      paddingRight="1rem"
-                    />
-                    <p style={{ color: '#5c5f5f', fontSize: '2rem' }}>
-                      {transformSemester(Entries.frontmatter.semester)}
-                    </p>
-                  </FlexRowContainer>
-                  <p
-                    style={{
-                      color: '#2d2a2a',
-                      fontSize: '2rem',
-                      lineHeight: '2.6rem',
-                      margin: '0 auto',
-                      paddingTop: '0',
-                      paddingBottom: '4rem',
-                      paddingLeft: '4rem',
-                      paddingRight: '4rem',
-                    }}
-                    dangerouslySetInnerHTML={{ __html: Entries.html }}
-                  />
-                </FlexColumnContainer>
-              </div>
-            </ProjectModalCard>
-          </ModalWrapper>
-        )}
+        <EntryDetails data={data} modalRender={modalRender} />
       </>
     );
   }

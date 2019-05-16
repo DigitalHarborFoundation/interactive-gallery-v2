@@ -3,6 +3,7 @@ import { push, Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import { DialogOverlay, DialogContent } from '@reach/dialog';
 import styled from 'styled-components';
+import Layout from '../components/layout';
 import VisuallyHidden from '@reach/visually-hidden';
 
 class ModalLayout extends Component {
@@ -38,6 +39,7 @@ class ModalLayout extends Component {
             {children}
           </StyledDialogContent>
         </StyledDialogOverlay>
+        <h1>things outside the modal</h1>
       </>
     );
   }

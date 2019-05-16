@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
+
 import styled from 'styled-components';
 import { GlobalStyle } from './globalStyle';
 import {
@@ -22,7 +23,9 @@ const ProjectCard = props => {
       <Link
         style={{ textDecoration: 'none' }}
         to={`/courses/${props.course}/${props.semester}/${props.youth}`}
-        showModal
+        state={{
+          isModal: true,
+        }}
       >
         <ImageCard animated>
           <ImageContainer>
@@ -60,8 +63,6 @@ const ProjectCard = props => {
 export default ProjectCard;
 
 const ProjectImage = styled(Img)`
-  width: 100%;
-  height: auto;
   // border-radius: 10px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
