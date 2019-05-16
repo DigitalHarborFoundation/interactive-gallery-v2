@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { push, Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import { DialogOverlay, DialogContent } from '@reach/dialog';
+import styled from 'styled-components';
 import VisuallyHidden from '@reach/visually-hidden';
 
 class ModalLayout extends Component {
@@ -20,29 +21,13 @@ class ModalLayout extends Component {
 
     return (
       <>
-        <DialogOverlay
-          style={{
-            position: `fixed`,
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0,
-            backgroundColor: `rgba(0, 0, 0, 0.75)`,
-          }}
+        <StyledDialogOverlay
           isOpen={open}
           onDismiss={() => {
             push(`/courses/${referringPath}/`);
           }}
         >
-          <DialogContent
-            style={{
-              maxWidth: '600px',
-              background: 'red',
-              padding: 0,
-              overflow: `auto`,
-              WebkitOverflowScrolling: `touch`,
-            }}
-          >
+          <StyledDialogContent>
             <h1>HELLO</h1>
             <p>PATH: {referringPath}</p>
             <button
@@ -53,11 +38,28 @@ class ModalLayout extends Component {
               CLOSE?
             </button>
             {children}
-          </DialogContent>
-        </DialogOverlay>
+          </StyledDialogContent>
+        </StyledDialogOverlay>
       </>
     );
   }
 }
 
 export default ModalLayout;
+
+const StyledDialogOverlay = styled(DialogOverlay)`
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.75);
+`;
+
+const StyledDialogContent = styled(DialogContent)`
+  max-width: 600px;
+  background: papayawhip;
+  padding: 0;
+  overflow: auto;
+  webkit-overflow-scrolling: touch;
+`;
