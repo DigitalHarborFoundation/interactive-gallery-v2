@@ -1,6 +1,7 @@
 import React from 'react';
 import { Consumer } from '../context/createContext';
 import ModalLayout from './modal-layout';
+import Layout from './layout';
 
 const ModalContainer = ({ children, referringPath }) => (
   <Consumer>

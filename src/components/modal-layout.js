@@ -28,8 +28,6 @@ class ModalLayout extends Component {
           }}
         >
           <StyledDialogContent>
-            <h1>HELLO</h1>
-            <p>PATH: {referringPath}</p>
             <button
               onClick={() => {
                 push(`/courses/${referringPath}/`);

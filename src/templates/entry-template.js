@@ -58,7 +58,22 @@ class EntryTemplate extends React.Component {
       <>
         <GlobalStyle />
         {isModal ? (
-          <ModalContainer referringPath={Entries.frontmatter.course} />
+          <ModalContainer referringPath={Entries.frontmatter.course}>
+            <h2>{Entries.frontmatter.title}</h2>
+            <p
+              style={{
+                color: '#2d2a2a',
+                fontSize: '2rem',
+                lineHeight: '2.6rem',
+                margin: '0 auto',
+                paddingTop: '0',
+                paddingBottom: '4rem',
+                paddingLeft: '4rem',
+                paddingRight: '4rem',
+              }}
+              dangerouslySetInnerHTML={{ __html: Entries.html }}
+            />
+          </ModalContainer>
         ) : (
           <ModalWrapper>
             <ProjectModalCard>
