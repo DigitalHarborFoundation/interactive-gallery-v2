@@ -6,3 +6,9 @@ export const transformSemester = rawSemester => {
     return 'Spring 2019';
   }
 };
+
+export let parseURL = (urlToParse, depth = 1) => {
+  const baseURL = urlToParse;
+  const splitURL = baseURL.split('/');
+  return splitURL[splitURL.length - 2];
+};

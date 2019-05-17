@@ -28,6 +28,7 @@ exports.createPages = ({ graphql, actions }) => {
           component: path.resolve(`./src/templates/entry-template.js`),
           context: {
             id: entry.id,
+            course: entry.course,
           },
         })
       );

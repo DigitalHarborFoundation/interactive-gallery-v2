@@ -5,6 +5,7 @@ import { GlobalStyle } from './globalStyle';
 import { AppWrapper } from './elements/layout-components';
 import { ImageCard } from '../components/elements/cards';
 import ModalContainer from '../components/modal-container';
+import parseURL from '../components/utilities/helpers';
 
 class Layout extends React.Component {
   render() {
@@ -21,12 +22,7 @@ class Layout extends React.Component {
       );
     }
     if (this.props.modalRender === false) {
-      return (
-        <>
-          <h1>NON MODAL RENDER</h1>
-          <h2>TEST</h2>
-        </>
-      );
+      return <>{this.props.children}</>;
     }
   }
 }
