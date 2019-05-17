@@ -48,16 +48,14 @@ export const query = graphql`
 class EntryTemplate extends React.Component {
   render() {
     let modalRender = false;
-    const isModal = this.props.location && this.props.location.state.isModal;
 
-    if (isModal) {
-      if (
-        typeof window !== 'undefined' &&
-        window.___GALLERY_INITIAL_RENDER_COMPLETE
-      ) {
-        modalRender = true;
-      }
+    if (
+      typeof window !== 'undefined' &&
+      window.___GALLERY_INITIAL_RENDER_COMPLETE
+    ) {
+      modalRender = true;
     }
+
     return (
       <React.Fragment>
         <EntryDetails data={this.props.data} modalRender={modalRender} />
