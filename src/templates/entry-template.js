@@ -59,13 +59,9 @@ class EntryTemplate extends React.Component {
       }
     }
     return (
-      <>
-        <EntryDetails
-          data={this.props.data}
-          modalRender={modalRender}
-          parent={this}
-        />
-      </>
+      <React.Fragment>
+        <EntryDetails data={this.props.data} modalRender={modalRender} />
+      </React.Fragment>
     );
   }
 }

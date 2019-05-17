@@ -25,10 +25,9 @@ import jonathanTestImg from '../images/jonathan-pi-portal-example.jpg';
 const EntryDetails = props => {
   const { data } = props;
   const { modalRender } = props;
-  const { parent } = props;
 
   return (
-    <>
+    <React.Fragment>
       <GlobalStyle />
       <Layout
         data={props.data}
@@ -87,7 +86,7 @@ const EntryDetails = props => {
           </div>
         </ProjectModalCard>
       </Layout>
-    </>
+    </React.Fragment>
   );
 };
 
