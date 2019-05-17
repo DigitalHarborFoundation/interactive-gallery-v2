@@ -40,23 +40,21 @@ const FabCorePage = () => (
   <StaticQuery
     query={FAB_CORE_QUERY}
     render={({ FabCoreEntry }) => (
-      <Layout>
-        <ContentWrapper>
-          <h2>Fab Core Entries</h2>
-          <GridThreeColumnContainer>
-            {FabCoreEntry.edges.map(edge => (
-              <ProjectCard
-                course={edge.node.frontmatter.course}
-                youth={edge.node.frontmatter.youth}
-                semester={edge.node.frontmatter.semester}
-                title={edge.node.frontmatter.title}
-                image={edge.node.frontmatter.image.childImageSharp.fluid}
-                key={edge.node.id}
-              />
-            ))}
-          </GridThreeColumnContainer>
-        </ContentWrapper>
-      </Layout>
+      <ContentWrapper>
+        <h2>Fab Core Entries</h2>
+        <GridThreeColumnContainer>
+          {FabCoreEntry.edges.map(edge => (
+            <ProjectCard
+              course={edge.node.frontmatter.course}
+              youth={edge.node.frontmatter.youth}
+              semester={edge.node.frontmatter.semester}
+              title={edge.node.frontmatter.title}
+              image={edge.node.frontmatter.image.childImageSharp.fluid}
+              key={edge.node.id}
+            />
+          ))}
+        </GridThreeColumnContainer>
+      </ContentWrapper>
     )}
   />
 );

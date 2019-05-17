@@ -40,23 +40,21 @@ const IndependentStudyPage = () => (
   <StaticQuery
     query={INDEPENDENT_STUDY_QUERY}
     render={({ IndependentStudyEntry }) => (
-      <Layout>
-        <ContentWrapper>
-          <h2>Independent Study Entries</h2>
-          <GridThreeColumnContainer>
-            {IndependentStudyEntry.edges.map(edge => (
-              <ProjectCard
-                course={edge.node.frontmatter.course}
-                youth={edge.node.frontmatter.youth}
-                semester={edge.node.frontmatter.semester}
-                title={edge.node.frontmatter.title}
-                image={edge.node.frontmatter.image.childImageSharp.fluid}
-                key={edge.node.id}
-              />
-            ))}
-          </GridThreeColumnContainer>
-        </ContentWrapper>
-      </Layout>
+      <ContentWrapper>
+        <h2>Independent Study Entries</h2>
+        <GridThreeColumnContainer>
+          {IndependentStudyEntry.edges.map(edge => (
+            <ProjectCard
+              course={edge.node.frontmatter.course}
+              youth={edge.node.frontmatter.youth}
+              semester={edge.node.frontmatter.semester}
+              title={edge.node.frontmatter.title}
+              image={edge.node.frontmatter.image.childImageSharp.fluid}
+              key={edge.node.id}
+            />
+          ))}
+        </GridThreeColumnContainer>
+      </ContentWrapper>
     )}
   />
 );

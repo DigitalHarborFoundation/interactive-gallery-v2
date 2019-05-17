@@ -40,23 +40,21 @@ const CCBCPage = () => (
   <StaticQuery
     query={CCBC_QUERY}
     render={({ CCBCEntry }) => (
-      <Layout>
-        <ContentWrapper>
-          <h2>CCBC Entries</h2>
-          <GridThreeColumnContainer>
-            {CCBCEntry.edges.map(edge => (
-              <ProjectCard
-                course={edge.node.frontmatter.course}
-                youth={edge.node.frontmatter.youth}
-                semester={edge.node.frontmatter.semester}
-                title={edge.node.frontmatter.title}
-                image={edge.node.frontmatter.image.childImageSharp.fluid}
-                key={edge.node.id}
-              />
-            ))}
-          </GridThreeColumnContainer>
-        </ContentWrapper>
-      </Layout>
+      <ContentWrapper>
+        <h2>CCBC Entries</h2>
+        <GridThreeColumnContainer>
+          {CCBCEntry.edges.map(edge => (
+            <ProjectCard
+              course={edge.node.frontmatter.course}
+              youth={edge.node.frontmatter.youth}
+              semester={edge.node.frontmatter.semester}
+              title={edge.node.frontmatter.title}
+              image={edge.node.frontmatter.image.childImageSharp.fluid}
+              key={edge.node.id}
+            />
+          ))}
+        </GridThreeColumnContainer>
+      </ContentWrapper>
     )}
   />
 );

@@ -40,23 +40,21 @@ const MakerFoundationsPage = () => (
   <StaticQuery
     query={MAKER_FOUNDATIONS_QUERY}
     render={({ MakerFoundationsEntry }) => (
-      <Layout>
-        <ContentWrapper>
-          <h2>Maker Foundations Entries</h2>
-          <GridThreeColumnContainer>
-            {MakerFoundationsEntry.edges.map(edge => (
-              <ProjectCard
-                course={edge.node.frontmatter.course}
-                youth={edge.node.frontmatter.youth}
-                semester={edge.node.frontmatter.semester}
-                title={edge.node.frontmatter.title}
-                image={edge.node.frontmatter.image.childImageSharp.fluid}
-                key={edge.node.id}
-              />
-            ))}
-          </GridThreeColumnContainer>
-        </ContentWrapper>
-      </Layout>
+      <ContentWrapper>
+        <h2>Maker Foundations Entries</h2>
+        <GridThreeColumnContainer>
+          {MakerFoundationsEntry.edges.map(edge => (
+            <ProjectCard
+              course={edge.node.frontmatter.course}
+              youth={edge.node.frontmatter.youth}
+              semester={edge.node.frontmatter.semester}
+              title={edge.node.frontmatter.title}
+              image={edge.node.frontmatter.image.childImageSharp.fluid}
+              key={edge.node.id}
+            />
+          ))}
+        </GridThreeColumnContainer>
+      </ContentWrapper>
     )}
   />
 );
