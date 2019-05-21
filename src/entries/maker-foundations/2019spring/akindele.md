@@ -3,7 +3,7 @@ youth: 'akindele'
 title: 'More Money'
 course: 'maker-foundations'
 semester: '2019spring'
-image: '../../images/maker-foundations-spring2019-akindele.jpg'
+image: '../../../images/maker-foundations-spring2019-akindele.jpg'
 ---
 
 My project is a scratch  game that I use Makey Makey with and linked to glith that have the controles 3d printed

@@ -3,7 +3,7 @@ youth: 'thomas'
 title: 'wight walker'
 course: 'maker-foundations'
 semester: '2019spring'
-image: '../../images/maker-foundations-spring2019-thomas.jpg'
+image: '../../../images/maker-foundations-spring2019-thomas.jpg'
 ---
 
 A 3D printed wight walker from G.O.T 

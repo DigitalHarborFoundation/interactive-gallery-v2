@@ -3,7 +3,7 @@ youth: 'king'
 title: 'wry'
 course: 'maker-foundations'
 semester: '2019spring'
-image: '../../images/maker-foundations-2019spring-king.jpg'
+image: '../../../images/maker-foundations-2019spring-king.jpg'
 ---
 
 my project is a maze type game / collect type game, also a website

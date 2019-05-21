@@ -3,7 +3,7 @@ youth: 'henry'
 title: '3d Printed Pinball Mechanism'
 course: 'ccbc-digifab-cohort'
 semester: '2019spring'
-image: '../../images/ccbc-digifab-cohort-spring2019-henry.jpg'
+image: '../../../images/ccbc-digifab-cohort-spring2019-henry.jpg'
 ---
 
 My project is a pinball machine mechanism. 

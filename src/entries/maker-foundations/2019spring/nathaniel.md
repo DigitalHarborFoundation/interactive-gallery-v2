@@ -3,7 +3,7 @@ youth: 'nathaniel'
 title: 'Glitch Blog'
 course: 'maker-foundations'
 semester: '2019spring'
-image: '../../images/maker-foundations-2019spring-nathaniel.jpg'
+image: '../../../images/maker-foundations-2019spring-nathaniel.jpg'
 ---
 
 My project is a blog about my life and what's going on.

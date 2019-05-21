@@ -3,7 +3,7 @@ youth: 'max'
 title: 'How a Car Works'
 course: 'maker-foundations'
 semester: '2019spring'
-image: '../../images/maker-foundations-spring2019-max.jpg'
+image: '../../../images/maker-foundations-spring2019-max.jpg'
 ---
 
 A website describing how a car works, and how certain parts of the car contribute to helping it run correctly.

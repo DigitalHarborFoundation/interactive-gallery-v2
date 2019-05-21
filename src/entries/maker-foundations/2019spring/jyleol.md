@@ -3,7 +3,7 @@ youth: 'jyleol'
 title: 'piano'
 course: 'maker-foundations'
 semester: '2019spring'
-image: '../../images/maker-foundations-spring2019-jyleol.jpg'
+image: '../../../images/maker-foundations-spring2019-jyleol.jpg'
 ---
 
 a piano

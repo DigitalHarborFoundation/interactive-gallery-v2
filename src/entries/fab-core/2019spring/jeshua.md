@@ -3,7 +3,7 @@ youth: 'jeshua'
 title: 'Connector boy'
 course: 'fab-core'
 semester: '2019spring'
-image: '../../images/fab-core-spring2019-jeshua.jpg'
+image: '../../../images/fab-core-spring2019-jeshua.jpg'
 ---
 
 My project is a toy robot that connects with joints.
