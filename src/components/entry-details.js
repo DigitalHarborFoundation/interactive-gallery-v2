@@ -44,9 +44,7 @@ const EntryDetails = props => {
                 alt={props.data.Entries.frontmatter.title}
               />
             </ProjectImageContainer>
-            <div
-              style={{ width: '100%', background: 'red', overflowY: 'scroll' }}
-            >
+            <div style={{ width: '100%', overflowY: 'scroll' }}>
               <FlexColumnContainer marginAll="0" style={{ width: '100%' }}>
                 <h2
                   style={{
