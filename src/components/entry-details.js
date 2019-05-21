@@ -32,7 +32,9 @@ const EntryDetails = props => {
       <Layout
         data={props.data}
         modalRender={props.modalRender}
-        referringPath={props.data.Entries.frontmatter.course}
+        referringPath={`${props.data.Entries.frontmatter.course}/${
+          props.data.Entries.frontmatter.semester
+        }`}
       >
         <PageWrapper>
           <ProjectModalCard style={{ maxHeight: '80%' }}>
