@@ -10,7 +10,12 @@ import {
 const FAB_CORE_QUERY = graphql`
   query FabCoreQuery {
     FabCoreEntry: allMarkdownRemark(
-      filter: { frontmatter: { course: { eq: "fab-core" } } }
+      filter: {
+        frontmatter: {
+          semester: { in: ["2019spring"] }
+          course: { eq: "fab-core" }
+        }
+      }
     ) {
       edges {
         node {

@@ -10,7 +10,12 @@ import {
 const CS_CORE_QUERY = graphql`
   query CSCoreQuery {
     CSCoreEntry: allMarkdownRemark(
-      filter: { frontmatter: { course: { eq: "cs-core" } } }
+      filter: {
+        frontmatter: {
+          semester: { in: ["2019spring"] }
+          course: { eq: "cs-core" }
+        }
+      }
     ) {
       edges {
         node {

@@ -10,7 +10,12 @@ import {
 const INDEPENDENT_STUDY_QUERY = graphql`
   query IndependentStudyQuery {
     IndependentStudyEntry: allMarkdownRemark(
-      filter: { frontmatter: { course: { eq: "independent-study" } } }
+      filter: {
+        frontmatter: {
+          semester: { in: ["2019spring"] }
+          course: { eq: "independent-study" }
+        }
+      }
     ) {
       edges {
         node {

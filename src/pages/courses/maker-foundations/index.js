@@ -10,7 +10,12 @@ import {
 const MAKER_FOUNDATIONS_QUERY = graphql`
   query MakerFoundationsQuery {
     MakerFoundationsEntry: allMarkdownRemark(
-      filter: { frontmatter: { course: { eq: "maker-foundations" } } }
+      filter: {
+        frontmatter: {
+          semester: { in: ["2019spring"] }
+          course: { eq: "maker-foundations" }
+        }
+      }
     ) {
       edges {
         node {

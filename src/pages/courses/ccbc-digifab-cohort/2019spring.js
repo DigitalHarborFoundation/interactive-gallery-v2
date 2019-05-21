@@ -10,7 +10,12 @@ import {
 const CCBC_QUERY = graphql`
   query CCBCQuery {
     CCBCEntry: allMarkdownRemark(
-      allMarkdownRemark(filter: {frontmatter: {semester: {in: ["2019spring"]}, course: {eq: "ccbc-digifab-cohort"}}}) {
+      filter: {
+        frontmatter: {
+          semester: { in: ["2019spring"] }
+          course: { eq: "ccbc-digifab-cohort" }
+        }
+      }
     ) {
       edges {
         node {
