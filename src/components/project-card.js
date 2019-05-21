@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
-
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 import { GlobalStyle } from './globalStyle';
 import {
   FlexColumnContainer,
@@ -58,6 +58,22 @@ const ProjectCard = props => {
       </Link>
     </>
   );
+};
+
+ProjectCard.propTypes = {
+  image: PropTypes.string.isRequired,
+  youth: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  course: PropTypes.string.isRequired,
+  semester: PropTypes.string.isRequired,
+};
+
+ProjectCard.defaultProps = {
+  image: '/images/tester-card.jpg',
+  youth: 'DHF Youth',
+  title: 'Youth Project',
+  course: 'CS Core',
+  semester: 'Spring 2019',
 };
 
 export default ProjectCard;
