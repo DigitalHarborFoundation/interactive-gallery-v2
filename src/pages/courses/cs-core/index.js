@@ -49,7 +49,7 @@ const CSCorePage = props => (
               youth={edge.node.frontmatter.youth}
               semester={edge.node.frontmatter.semester}
               title={edge.node.frontmatter.title}
-              image={edge.node.frontmatter.image.childImageSharp.fixed}
+              image={edge.node.frontmatter.image.childImageSharp.fluid}
               location={props.location}
               key={edge.node.id}
             />
