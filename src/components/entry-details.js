@@ -35,7 +35,7 @@ const EntryDetails = props => {
         referringPath={props.data.Entries.frontmatter.course}
       >
         <PageWrapper>
-          <ProjectModalCard>
+          <ProjectModalCard style={{ maxHeight: '80%' }}>
             <ProjectImageContainer>
               <ProjectImage
                 fluid={
@@ -44,7 +44,9 @@ const EntryDetails = props => {
                 alt={props.data.Entries.frontmatter.title}
               />
             </ProjectImageContainer>
-            <div style={{ width: '100%' }}>
+            <div
+              style={{ width: '100%', background: 'red', overflowY: 'scroll' }}
+            >
               <FlexColumnContainer marginAll="0" style={{ width: '100%' }}>
                 <h2
                   style={{

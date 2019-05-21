@@ -69,7 +69,7 @@ ProjectCard.propTypes = {
 };
 
 ProjectCard.defaultProps = {
-  image: '/images/tester-card.jpg',
+  image: '../images/tester-card.jpg',
   youth: 'DHF Youth',
   title: 'Youth Project',
   course: 'CS Core',

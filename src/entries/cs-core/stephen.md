@@ -10,7 +10,7 @@ My project is a recreation of John Conway's Game of Life.
 
 First I had to create an array of cells, and assign them states.  Then I had to code the processing for how to update them.
 
-I had a hard time making each cell an object of a class.The simulation generates a lot of interesting patterns.
+I had a hard time making each cell an object of a class.The simulation generates a lot of interesting pattern.
 
 This project has helped me practice my Javascript knowledge. 
 
