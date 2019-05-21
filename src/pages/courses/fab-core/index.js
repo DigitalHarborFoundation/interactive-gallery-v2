@@ -22,7 +22,7 @@ const FAB_CORE_QUERY = graphql`
             course
             image {
               childImageSharp {
-                fluid(maxWidth: 500, quality: 100) {
+                fluid(maxWidth: 300, maxHeight: 200, quality: 100) {
                   ...GatsbyImageSharpFluid
                 }
               }

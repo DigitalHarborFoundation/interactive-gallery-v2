@@ -22,7 +22,7 @@ const CS_CORE_QUERY = graphql`
             course
             image {
               childImageSharp {
-                fluid(maxWidth: 500, maxHeight: 400, quality: 100) {
+                fluid(maxWidth: 300, maxHeight: 200, quality: 100) {
                   ...GatsbyImageSharpFluid
                 }
               }
@@ -49,7 +49,7 @@ const CSCorePage = props => (
               youth={edge.node.frontmatter.youth}
               semester={edge.node.frontmatter.semester}
               title={edge.node.frontmatter.title}
-              image={edge.node.frontmatter.image.childImageSharp.fluid}
+              image={edge.node.frontmatter.image.childImageSharp.fixed}
               location={props.location}
               key={edge.node.id}
             />
