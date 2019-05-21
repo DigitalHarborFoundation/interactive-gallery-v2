@@ -3,7 +3,7 @@ youth: 'stephen'
 title: 'Game of Life'
 course: 'cs-core'
 semester: '2019spring'
-image: '../../images/cs-core-spring2019-stephen.jpg'
+image: '../../../images/cs-core-spring2019-stephen.jpg'
 ---
 
 My project is a recreation of John Conway's Game of Life.

@@ -3,7 +3,7 @@ youth: 'mitchell'
 title: 'Universe Generator'
 course: 'cs-core'
 semester: '2019spring'
-image: '../../images/cs-core-spring2019-mitchell.jpg'
+image: '../../../images/cs-core-spring2019-mitchell.jpg'
 ---
 
 My project is a random generator that produces images of a universe, with planets, stars, asteroids, and more.

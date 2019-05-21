@@ -3,7 +3,7 @@ youth: 'coral'
 title: 'Emoji Comparison'
 course: 'cs-core'
 semester: '2019spring'
-image: '../../images/cs-core-spring2019-coral.jpg'
+image: '../../../images/cs-core-spring2019-coral.jpg'
 ---
 
 My project compares Apple and Android emojis.

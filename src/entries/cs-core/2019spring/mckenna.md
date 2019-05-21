@@ -3,7 +3,7 @@ youth: 'McKenna'
 title: 'Google Maps Website'
 course: 'cs-core'
 semester: '2019spring'
-image: '../../images/cs-core-spring2019-mckenna.jpg'
+image: '../../../images/cs-core-spring2019-mckenna.jpg'
 ---
 
 I made a website about google maps.

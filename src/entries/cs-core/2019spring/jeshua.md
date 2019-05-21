@@ -3,7 +3,7 @@ youth: 'jeshua'
 title: 'Stepping to the beat'
 course: 'cs-core'
 semester: '2019spring'
-image: '../../images/cs-core-spring2019-jeshua.jpg'
+image: '../../../images/cs-core-spring2019-jeshua.jpg'
 ---
 
 I made a walk cycle that syncs with a a music track and the change in speed at the same time.
