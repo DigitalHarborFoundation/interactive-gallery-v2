@@ -10,7 +10,7 @@ import {
 const CCBC_QUERY = graphql`
   query CCBCQuery {
     CCBCEntry: allMarkdownRemark(
-      filter: { frontmatter: { course: { eq: "ccbc-digifab-cohort" } } }
+      allMarkdownRemark(filter: {frontmatter: {semester: {in: ["2019spring"]}, course: {eq: "ccbc-digifab-cohort"}}}) {
     ) {
       edges {
         node {
@@ -36,7 +36,7 @@ const CCBC_QUERY = graphql`
 
 // TODO: Make the project list more accessible by adding ul and li elements
 
-const CCBCPageSpring2019 = () => (
+const CCBCSpring2019Page = () => (
   <StaticQuery
     query={CCBC_QUERY}
     render={({ CCBCEntry }) => (
@@ -59,4 +59,4 @@ const CCBCPageSpring2019 = () => (
   />
 );
 
-export default CCBCPageSpring2019;
+export default CCBCSpring2019Page;
