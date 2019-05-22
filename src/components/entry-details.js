@@ -2,8 +2,9 @@ import React from 'react';
 import { Link } from 'gatsby';
 import { GlobalStyle } from '../components/globalStyle';
 import Layout from '../components/layout';
+import CourseHeader from '../components/course-header';
 import {
-  ModalWrapper as PageWrapper,
+  ModalWrapper,
   ModalImageContainer,
   FlexColumnContainer,
   FlexRowContainer,
@@ -29,6 +30,7 @@ const EntryDetails = props => {
   return (
     <React.Fragment>
       <GlobalStyle />
+      <CourseHeader siteTitle="DHF Interactive Gallery" />
       <Layout
         data={props.data}
         modalRender={props.modalRender}
@@ -92,7 +94,11 @@ const EntryDetails = props => {
               </FlexColumnContainer>
             </div>
             {!modalRender && (
-              <Link to={`/courses/${props.data.Entries.frontmatter.course}`}>
+              <Link
+                to={`/courses/${props.data.Entries.frontmatter.course}/${
+                  props.data.Entries.frontmatter.semester
+                }`}
+              >
                 Back to course page
               </Link>
             )}
@@ -124,4 +130,9 @@ const ProjectImageContainer = styled(ModalImageContainer)`
   margin: auto;
   width: 93.75%;
   padding-left: 4rem;
+`;
+
+const PageWrapper = styled(ModalWrapper)`
+  margin: 0 auto;
+  background: #f0f4f8;
 `;

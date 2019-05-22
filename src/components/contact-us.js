@@ -29,7 +29,7 @@ const ContactWrapper = styled.div`
 
 const ContactHeading = styled.h3`
   font-size: 2.4rem;
-  font-weight: 200;
+  font-weight: 300;
   padding-bottom: 1.5rem;
   margin: 0;
   color: #e5f8ff;
@@ -38,6 +38,7 @@ const ContactHeading = styled.h3`
 const ContactCopy = styled.p`
   font-size: 1.8rem;
   line-height: 2.7rem;
+  font-weight: 400;
   padding: 0;
   margin: 0;
   color: #e5f8ff;

@@ -20,7 +20,7 @@ import SEO from './seo';
 const CoursePage = props => (
   <React.Fragment>
     <GlobalStyle />
-    <AppWrapper>
+    <AppWrapper style={{ backgroundColor: '#F0F4F8' }}>
       <CourseHeader siteTitle="DHF Interactive Gallery" />
       <HeaderFlexRowContainer>
         <ProjectImage
@@ -41,7 +41,14 @@ const CoursePage = props => (
           <CourseDescription>{props.courseDescription}</CourseDescription>
         </CTAContainer>
       </HeaderFlexRowContainer>
-      <ContentWrapper>
+      <ContentWrapper
+        style={{
+          background: '#ffffff',
+          boxShadow:
+            '0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.01)',
+          padding: '2rem',
+        }}
+      >
         <p
           style={{ color: '#5c5f5f', fontSize: '2rem', paddingBottom: '2rem' }}
         >

@@ -36,7 +36,10 @@ class Layout extends React.Component {
               />
             </ProjectImageContainer>
             <div style={{ maxHeight: '80vh', width: '100%' }}>
-              <FlexColumnContainer marginAll="0" style={{ width: '100%' }}>
+              <FlexColumnContainer
+                marginAll="0"
+                style={{ width: '100%', paddingLeft: '2rem' }}
+              >
                 <h2
                   style={{
                     color: '#000',
