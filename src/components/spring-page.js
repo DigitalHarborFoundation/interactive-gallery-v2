@@ -16,7 +16,7 @@ import CourseHeader from './course-header';
 const SpringPage = props => (
   <React.Fragment>
     <GlobalStyle />
-    <AppWrapper style={{ backgroundColor: '#F0F4F8' }}>
+    <AppWrapper style={{ backgroundColor: '#F0F4F8', borderRadius: '5px' }}>
       <CourseHeader siteTitle="DHF Interactive Gallery" />
       <ProjectImage
         src={props.courseImage}
@@ -32,7 +32,7 @@ const SpringPage = props => (
           background: '#ffffff',
           boxShadow:
             '0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.01)',
-          padding: '2rem',
+          padding: '4rem',
         }}
       >
         <p
