@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import { push, Link } from 'gatsby';
 import PropTypes from 'prop-types';
-import { DialogOverlay, DialogContent } from '@reach/dialog';
 import styled from 'styled-components';
-import Layout from '../components/layout';
+import { DialogOverlay, DialogContent } from '@reach/dialog';
 import VisuallyHidden from '@reach/visually-hidden';
 import Icon from '../components/elements/icon';
 
@@ -39,7 +38,6 @@ class ModalLayout extends Component {
           </CloseButton>
           <StyledDialogContent>{children}</StyledDialogContent>
         </StyledDialogOverlay>
-        <h1>things outside the modal</h1>
       </React.Fragment>
     );
   }
@@ -60,10 +58,21 @@ const StyledDialogOverlay = styled(DialogOverlay)`
 `;
 
 const StyledDialogContent = styled(DialogContent)`
-  max-width: 600px;
-  background: papayawhip;
-  padding: 0;
-  overflow: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 93.75%;
+  min-height: 80vh;
+  overflow-y: scroll;
+  background: #ffffff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  z-index: 10;
+
+  @media only screen and (max-width: 1000px) {
+    flex-direction: column;
+  }
   -webkit-overflow-scrolling: touch;
 `;
 
