@@ -33,7 +33,12 @@ const SpringPage = props => (
       />
       <ContentWrapper>
         <p
-          style={{ color: '#5c5f5f', fontSize: '2rem', paddingBottom: '2rem' }}
+          style={{
+            color: '#5c5f5f',
+            fontSize: '2rem',
+            paddingBottom: '2rem',
+            textAlign: 'center',
+          }}
         >
           Now browsing {props.courseName} entries for the {props.courseSemester}{' '}
           cohort. Click on a card to read more about the project.
