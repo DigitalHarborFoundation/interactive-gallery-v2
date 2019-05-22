@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, graphql, StaticQuery } from 'gatsby';
+import { Link } from 'gatsby';
 import styled from 'styled-components';
 import { GlobalStyle } from '../../../components/globalStyle';
 import {
@@ -15,38 +15,6 @@ import DHFFooter from '../../../components/dhf-footer';
 import Footer from '../../../components/footer';
 import CourseHeader from '../../../components/course-header';
 import SEO from '../../../components/seo';
-
-const CS_CORE_QUERY = graphql`
-  query CSCoreQuery {
-    CSCoreEntry: allMarkdownRemark(
-      filter: {
-        frontmatter: {
-          semester: { in: ["2019spring"] }
-          course: { eq: "cs-core" }
-        }
-      }
-    ) {
-      edges {
-        node {
-          id
-          frontmatter {
-            title
-            youth
-            semester
-            course
-            image {
-              childImageSharp {
-                fluid(maxWidth: 300, maxHeight: 200, quality: 100) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-`;
 
 const CSCorePage = () => (
   <React.Fragment>

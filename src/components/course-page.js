@@ -1,62 +1,140 @@
 import React from 'react';
-import { graphql, StaticQuery } from 'gatsby';
-import qs from 'qs';
-import Layout from '../../../../src/components/layout';
-import ProjectCard from '../../../../src/components/project-card';
+import { Link } from 'gatsby';
+import styled from 'styled-components';
+import { GlobalStyle } from './globalStyle';
 import {
+  AppWrapper,
   ContentWrapper,
-  GridThreeColumnContainer,
-} from '../../../components/elements/layout-components';
+  FlexRowContainer,
+  FlexColumnContainer,
+  ImageContainer,
+} from './elements/layout-components';
+import { ImageCard } from './elements/cards';
+import DHFFooter from './dhf-footer';
+import Footer from './footer';
+import CourseHeader from './course-header';
+import SEO from './seo';
 
-export const COURSE_PAGE_QUERY = graphql`
-  query CoursePageQuery($course: String!) {
-    CoursePageEntry: allMarkdownRemark(
-      filter: { frontmatter: { course: { eq: $course } } }
-    ) {
-      edges {
-        node {
-          id
-          frontmatter {
-            title
-            youth
-            semester
-            course
-            image {
-              childImageSharp {
-                fluid(maxWidth: 500, maxHeight: 400, quality: 100) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-`;
-
-// TODO: Make the project list more accessible by adding ul and li elements
-
-const CoursePage = ({ props, data }) => (
-  <Layout location={props.location} modalRender={false}>
-    <ContentWrapper>
-      <h2>CS Core Entries</h2>
-      <h3>LOCATION: {props.location}</h3>
-      <GridThreeColumnContainer>
-        {CoursePageEntry.edges.map(edge => (
-          <ProjectCard
-            course={edge.node.frontmatter.course}
-            youth={edge.node.frontmatter.youth}
-            semester={edge.node.frontmatter.semester}
-            title={edge.node.frontmatter.title}
-            image={edge.node.frontmatter.image.childImageSharp.fluid}
-            location={props.location}
-            key={edge.node.id}
-          />
-        ))}
-      </GridThreeColumnContainer>
-    </ContentWrapper>
-  </Layout>
+const CoursePage = props => (
+  <React.Fragment>
+    <GlobalStyle />
+    <AppWrapper>
+      <CourseHeader siteTitle="DHF Interactive Gallery" />
+      <HeaderFlexRowContainer>
+        <img src={props.courseImage} style={{ width: '50%' }} />
+        <CTAContainer>
+          <SEO title="CS Core" keywords={[`gatsby`, `application`, `react`]} />
+          <CourseTitle>{props.courseTitle}</CourseTitle>
+          <CourseDescription>{props.courseDescription}</CourseDescription>
+        </CTAContainer>
+      </HeaderFlexRowContainer>
+      <ContentWrapper>
+        <p style={{ color: '#5c5f5f', fontSize: '2rem' }}>
+          Currently, there are gallery entries for the Spring 2019 Cohort. Click
+          below to browse the entries.
+        </p>
+        <div style={{ maxWidth: '33%' }}>
+          <Link
+            to="/courses/cs-core/2019spring"
+            style={{ textDecoration: 'none' }}
+          >
+            <ImageCard animated>
+              <ImageContainer>
+                <ProjectImage
+                  src={props.courseImage}
+                  alt="CS Core hero image"
+                  style={{ width: '100%' }}
+                />
+              </ImageContainer>
+              <FlexColumnContainer marginAll="4rem 0">
+                <p
+                  style={{
+                    color: '#000',
+                    fontSize: '3.2rem',
+                    margin: '0',
+                    paddingBottom: '0.25rem',
+                  }}
+                >
+                  {props.courseSemester}
+                </p>
+              </FlexColumnContainer>
+            </ImageCard>
+          </Link>
+        </div>
+      </ContentWrapper>
+      <DHFFooter />
+      <Footer />
+    </AppWrapper>
+  </React.Fragment>
 );
 
 export default CoursePage;
+
+const CourseTitle = styled.h2`
+  font-size: 4rem;
+  font-weight: 400;
+  margin-bottom: 6vh;
+  @media only screen and (max-width: 1000px) {
+  }
+`;
+
+const CTAContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5vh;
+  @media only screen and (max-width: 1000px) {
+    text-align: center;
+  }
+`;
+
+export const ButtonContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 7rem;
+  flex-direction: row;
+  justify-items: center;
+  align-items: center;
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
+
+  @media only screen and (max-width: 1000px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+`;
+
+const CourseDescription = styled.p`
+  font-size: 2rem;
+  line-height: 2.6rem;
+  margin: 0 auto;
+  padding-top: 0;
+  padding-bottom: 4rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  @media only screen and (max-width: 1000px) {
+  }
+`;
+
+const FlexLink = styled(Link)`
+  flex: 1 0 45%;
+  padding: 0 1rem 1rem;
+`;
+
+const HeaderFlexRowContainer = styled(FlexRowContainer)`
+  align-items: center;
+  background: #002432;
+  color: #e5f8ff;
+`;
+
+const MainContent = styled.main`
+  min-height: 60vh;
+`;
+
+const ProjectImage = styled.img`
+  // border-radius: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+`;
