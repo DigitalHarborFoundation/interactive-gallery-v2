@@ -27,7 +27,7 @@ const FooterWrapper = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  background: rgba(45, 42, 42, 0.8);
+  background: #002432;
   width: 100%;
 `;
 

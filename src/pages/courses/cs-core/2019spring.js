@@ -7,9 +7,9 @@ import {
   GridThreeColumnContainer,
 } from '../../../components/elements/layout-components';
 
-const CS_CORE_QUERY = graphql`
-  query CSCoreQuery {
-    CSCoreEntry: allMarkdownRemark(
+const CS_CORE_2019_QUERY = graphql`
+  query CSCore2019Query {
+    CSCore2019Entry: allMarkdownRemark(
       filter: {
         frontmatter: {
           semester: { in: ["2019spring"] }
@@ -43,12 +43,12 @@ const CS_CORE_QUERY = graphql`
 
 const CSCoreSpring2019Page = props => (
   <StaticQuery
-    query={CS_CORE_QUERY}
-    render={({ CSCoreEntry }) => (
+    query={CS_CORE_2019_QUERY}
+    render={({ CSCore2019Entry }) => (
       <ContentWrapper>
         <h2>CS Core Entries</h2>
         <GridThreeColumnContainer>
-          {CSCoreEntry.edges.map(edge => (
+          {CSCore2019Entry.edges.map(edge => (
             <ProjectCard
               course={edge.node.frontmatter.course}
               youth={edge.node.frontmatter.youth}

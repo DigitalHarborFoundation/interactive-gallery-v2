@@ -12,7 +12,7 @@ I make the sprite in pixilart and use scratch for the sound
 
 One challenge I faced was thinking of a project and keeping it
 
-One thing I'd tell someone else about this project is i didnt try
+<!-- One thing I'd tell someone else about this project is i didnt try -->
 
 One new skill I learned was how to resize sprites without having to remake them
 

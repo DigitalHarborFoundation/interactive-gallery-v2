@@ -32,7 +32,7 @@ const ContactHeading = styled.h3`
   font-weight: 200;
   padding-bottom: 1.5rem;
   margin: 0;
-  color: #fafafa;
+  color: #e5f8ff;
 `;
 
 const ContactCopy = styled.p`
@@ -40,7 +40,7 @@ const ContactCopy = styled.p`
   line-height: 2.7rem;
   padding: 0;
   margin: 0;
-  color: #fafafa;
+  color: #e5f8ff;
 `;
 
 const ContactLink = styled.a`

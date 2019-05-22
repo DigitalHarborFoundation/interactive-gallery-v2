@@ -18,7 +18,7 @@ import {
 
 const ProjectCard = props => {
   return (
-    <>
+    <React.Fragment>
       <GlobalStyle />
       <Link
         style={{ textDecoration: 'none' }}
@@ -58,7 +58,7 @@ const ProjectCard = props => {
           </FlexColumnContainer>
         </ImageCard>
       </Link>
-    </>
+    </React.Fragment>
   );
 };
 

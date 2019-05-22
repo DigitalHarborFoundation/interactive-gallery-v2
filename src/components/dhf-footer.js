@@ -21,7 +21,7 @@ const FooterWrapper = styled.div`
   justify-content: space-evenly;
   padding: 3rem 0;
   margin: 0 auto;
-  background: rgba(45, 42, 42, 0.8);
+  background: #002432;
   width: 100%;
 `;
 
@@ -32,7 +32,7 @@ const FooterContentWrapper = styled.div`
   align-items: space-between;
   width: 80%;
   margin: 0 auto;
-  border-bottom: 1px solid #fafafafa;
+  border-bottom: 1px solid #e5f8ff;
   @media only screen and (max-width: 1000px) {
     flex-direction: column;
   }
@@ -43,7 +43,7 @@ const FooterLink = styled.a`
   text-decoration: none;
   transition: all ease-in-out 0.3s;
   &:hover {
-    color: #fafafa;
+    color: #e5f8ff;
     opacity: 0.75;
     cursor: pointer;
   }
@@ -64,5 +64,5 @@ const FooterTagline = styled.span`
   font-size: 2rem;
   font-weight: normal;
   padding: 2.4rem 0;
-  color: #fafafa;
+  color: #e5f8ff;
 `;

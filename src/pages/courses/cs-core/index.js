@@ -1,21 +1,60 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import { Link, graphql, StaticQuery } from 'gatsby';
 import styled from 'styled-components';
 import { GlobalStyle } from '../../../components/globalStyle';
 import {
   AppWrapper,
   ContentWrapper,
+  FlexRowContainer,
+  FlexColumnContainer,
+  ImageContainer,
 } from '../../../components/elements/layout-components';
 import heroImg from '../../../images/cs-core-hero.jpg';
+import { ImageCard } from '../../../components/elements/cards';
 import DHFFooter from '../../../components/dhf-footer';
 import Footer from '../../../components/footer';
+import CourseHeader from '../../../components/course-header';
 import SEO from '../../../components/seo';
+
+const CS_CORE_QUERY = graphql`
+  query CSCoreQuery {
+    CSCoreEntry: allMarkdownRemark(
+      filter: {
+        frontmatter: {
+          semester: { in: ["2019spring"] }
+          course: { eq: "cs-core" }
+        }
+      }
+    ) {
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+            youth
+            semester
+            course
+            image {
+              childImageSharp {
+                fluid(maxWidth: 300, maxHeight: 200, quality: 100) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`;
 
 const CSCorePage = () => (
   <React.Fragment>
     <GlobalStyle />
-    <Masthead>
-      <ContentWrapper>
+    <AppWrapper>
+      <CourseHeader siteTitle="DHF Interactive Gallery" />
+      <HeaderFlexRowContainer>
+        <img src={heroImg} style={{ width: '50%' }} />
         <CTAContainer>
           <SEO title="CS Core" keywords={[`gatsby`, `application`, `react`]} />
           <CourseTitle>CS Core</CourseTitle>
@@ -29,31 +68,51 @@ const CSCorePage = () => (
             our Computer Science Pathway and is a prerequisite to following
             courses.
           </CourseDescription>
-          <Link to="/courses/cs-core/2019spring">Spring 2019 Cohort</Link>
         </CTAContainer>
+      </HeaderFlexRowContainer>
+      <ContentWrapper>
+        <p style={{ color: '#5c5f5f', fontSize: '2rem' }}>
+          Currently, there are gallery entries for the Spring 2019 Cohort. Click
+          below to browse the entries.
+        </p>
+        <div style={{ maxWidth: '33%' }}>
+          <Link
+            to="/courses/cs-core/2019spring"
+            style={{ textDecoration: 'none' }}
+          >
+            <ImageCard animated>
+              <ImageContainer>
+                <ProjectImage
+                  src={heroImg}
+                  alt="CS Core hero image"
+                  style={{ width: '100%' }}
+                />
+              </ImageContainer>
+              <FlexColumnContainer marginAll="4rem 0">
+                <p
+                  style={{
+                    color: '#000',
+                    fontSize: '3.2rem',
+                    margin: '0',
+                    paddingBottom: '0.25rem',
+                  }}
+                >
+                  Spring 2019 Cohort
+                </p>
+              </FlexColumnContainer>
+            </ImageCard>
+          </Link>
+        </div>
       </ContentWrapper>
-    </Masthead>
+      <DHFFooter />
+      <Footer />
+    </AppWrapper>
   </React.Fragment>
 );
 
 export default CSCorePage;
 
-const Masthead = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: 100vh;
-  min-width: 100vw;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(rgba(0, 145, 201, 0.3), rgba(0, 145, 201, 0.3)),
-    url(${heroImg});
-  background-repeat: no-repeat;
-  background-size: cover;
-`;
-
 const CourseTitle = styled.h2`
-  color: #fafafa;
   font-size: 4rem;
   font-weight: 400;
   margin-bottom: 6vh;
@@ -97,7 +156,6 @@ const CourseDescription = styled.p`
   padding-bottom: 4rem;
   padding-left: 4rem;
   padding-right: 4rem;
-  color: #fafafa;
   @media only screen and (max-width: 1000px) {
   }
 `;
@@ -105,4 +163,20 @@ const CourseDescription = styled.p`
 const FlexLink = styled(Link)`
   flex: 1 0 45%;
   padding: 0 1rem 1rem;
+`;
+
+const HeaderFlexRowContainer = styled(FlexRowContainer)`
+  align-items: center;
+  background: #002432;
+  color: #e5f8ff;
+`;
+
+const MainContent = styled.main`
+  min-height: 60vh;
+`;
+
+const ProjectImage = styled.img`
+  // border-radius: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 `;
