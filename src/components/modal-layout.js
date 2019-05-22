@@ -5,6 +5,7 @@ import { DialogOverlay, DialogContent } from '@reach/dialog';
 import styled from 'styled-components';
 import Layout from '../components/layout';
 import VisuallyHidden from '@reach/visually-hidden';
+import Icon from '../components/elements/icon';
 
 class ModalLayout extends Component {
   disableScrolling(open) {
@@ -21,26 +22,25 @@ class ModalLayout extends Component {
     const { children, open, showModal, hideModal, referringPath } = this.props;
 
     return (
-      <>
+      <React.Fragment>
         <StyledDialogOverlay
           isOpen={open}
           onDismiss={() => {
             push(`/courses/${referringPath}/`);
           }}
         >
-          <StyledDialogContent>
-            <button
-              onClick={() => {
-                push(`/courses/${referringPath}/`);
-              }}
-            >
-              CLOSE?
-            </button>
-            {children}
-          </StyledDialogContent>
+          <CloseButton
+            onClick={() => {
+              push(`/courses/${referringPath}/`);
+            }}
+          >
+            <VisuallyHidden>Close</VisuallyHidden>
+            <Icon color="#E96544" type="close" />
+          </CloseButton>
+          <StyledDialogContent>{children}</StyledDialogContent>
         </StyledDialogOverlay>
         <h1>things outside the modal</h1>
-      </>
+      </React.Fragment>
     );
   }
 }
@@ -65,4 +65,22 @@ const StyledDialogContent = styled(DialogContent)`
   padding: 0;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
+`;
+
+const CloseButton = styled.button`
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: none;
+  transition: all ease 0.5s;
+  background: transparent;
+  padding: 1.2rem;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:focus {
+    outline: 0;
+  }
 `;
