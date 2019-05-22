@@ -6,14 +6,14 @@ semester: '2019spring'
 image: '../../../images/maker-foundations-spring2019-jyleol.jpg'
 ---
 
-a piano
+My project is a piano
 
-make the sprite in pixilart and use scratch for the sound 
+I make the sprite in pixilart and use scratch for the sound 
 
-thinking of a project and keeping it
+One challenge I faced was thinking of a project and keeping it
 
-i didnt try
+One thing I'd tell someone else about this project is i didnt try
 
-how to resize sprites without having to remake them
+One new skill I learned was how to resize sprites without having to remake them
 
-have fun
+One thing I'd tell someone else who wanted to make this project is to have fun

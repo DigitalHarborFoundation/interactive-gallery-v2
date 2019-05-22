@@ -12,8 +12,8 @@ i made it by using html for the website and scratch for the game and piskel for 
 
 The challenges i faced were programming the game 
 
-its a really hard game so good luck.
+One thing I'd like to tell people is that its a really hard game so good luck.
 
-how to program in scratch and in website
+I learned how to program in scratch and in website
 
-good luck trying to program
+One thing I'd tell someone else who wanted to make this project is good luck trying to program

@@ -10,11 +10,11 @@ its a series of games that help people like me with a short attention span
 
 i hooked everything up to makey makey piano and made everything conduct electricity
 
-the foil tree would not make any noise nomatter what i did
+One challenge I faced was that the foil tree would not make any noise nomatter what i did
 
-i hope you enjoy the challenge
+One thing I'd like to tell people is that i hope you enjoy the challenge
 
-that i can do more in a whole other field that i would have never gotten to explore without dhf
+Some new skills I learned are that i can do more in a whole other field that i would have never gotten to explore without dhf
 
-stop copying my work
+One thing I'd tell someone else who wanted to make this project is to stop copying my work
 

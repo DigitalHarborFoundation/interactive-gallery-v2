@@ -10,7 +10,7 @@ I made a walk cycle that syncs with a a music track and the change in speed at t
 
 First I made the music and animation. Next i created a prototype in scratch. Finally I converted the prototype from scratch to p5.
 
-I wasn't sure how to sync them in p5, but i managed to accomplish it.
+One problem I faced was that I wasn't sure how to sync them in p5, but i managed to accomplish it.
 
-It took a lot of hard work, but in the end it was worth it.
+One thing I'd tell someone else is that it took a lot of hard work, but in the end it was worth it.
 

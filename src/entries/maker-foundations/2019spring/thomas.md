@@ -6,12 +6,12 @@ semester: '2019spring'
 image: '../../../images/maker-foundations-spring2019-thomas.jpg'
 ---
 
-A 3D printed wight walker from G.O.T 
+My project is a 3D printed wight walker from G.O.T 
 
-tinkercad and piskel
+I made this with tinkercad and piskel
 
-The wight walker design keep deleting. 
+One challenge I faced was that the wight walker design keep deleting. 
 
 I got better with Tinkercad through this project  
 
-That they should also use piskel and tinkercad for their project.
+One thing I'd tell someone else who wanted to make this project is that they should also use piskel and tinkercad for their project.

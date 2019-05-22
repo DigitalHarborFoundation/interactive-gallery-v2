@@ -12,4 +12,4 @@ I first made the arms, legs, body, and head separately. Then i made holes in the
 
 I learned how to make precise objects in tinkercad.
 
-Always make sure you have exact measurements and everything fits together.
+One thing I'd tell someone else who wanted to make this project is to always make sure you have exact measurements and everything fits together.

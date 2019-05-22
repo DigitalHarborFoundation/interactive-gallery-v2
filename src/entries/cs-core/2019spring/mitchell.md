@@ -16,4 +16,4 @@ My project utilizes the random function in **p5.js**, placing random planets, na
 
 I learnt how to utilize the Random Function and learned how to put text onto objects.
 
-Look out for syntax errors and attempt different things, such as other spacial objects, like supernovas, galaxies, and star types, e.g. Giants, Supergiants, Neuron.
+One thing I'd tell someone else making this project is to look out for syntax errors and attempt different things, such as other spacial objects, like supernovas, galaxies, and star types, e.g. Giants, Supergiants, Neuron.

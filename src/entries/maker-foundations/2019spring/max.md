@@ -12,8 +12,8 @@ To make the images of the car, I used TinkerCAD, and to make the website, I used
 
 One challenge I faced was making the car look like the one I based it off of, while still having time to program and make my website.
 
-That it shows how a car works, and how every car part helps it run right.
+I'd like to tell people that it shows how a car works, and how every car part helps it run right.
 
-Lots of Web Development, and also some Designing, too.
+Some new skills I learned were lots of Web Development, and also some Designing, too.
 
-To make a car that they would find interesting. It doesn't need to be a certain car, it can be as simple or as complicated as they'd want it to be.
+One thing I'd tell someone else who wanted to make this project is to make a car that they would find interesting. It doesn't need to be a certain car, it can be as simple or as complicated as they'd want it to be.

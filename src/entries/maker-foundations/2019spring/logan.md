@@ -10,8 +10,8 @@ My project represents color.
 
 I made my handbags with Piskel, and made it come to life with Scratch. 
 
-Creating the bags by using different colors.
+One challenge I faced was creating the bags by using different colors.
 
-That the colors represents life.
+I'd like to tell people that the colors represents life.
 
-Be creative!
+One thing I'd tell someone else who wanted to make this project is to be creative!

@@ -6,12 +6,12 @@ semester: '2019spring'
 image: '../../../images/maker-foundations-2019spring-nuriyyah.jpg'
 ---
 
-In pixel art
+I made this project in pixel art
 
-drawing with the wrong color on accident
+One challenge I faced was drawing with the wrong color on accident
 
-it's a coin
+One thing I'd like to tell people is that it's a coin
 
-how to maneuver with pixel art
+One new thing I learned is how to maneuver with pixel art
 
-look at tutorials before you attempt to do this because it's complicated
+One thing I'd tell someone else who wanted to make this project is to look at tutorials before you attempt to do this because it's complicated

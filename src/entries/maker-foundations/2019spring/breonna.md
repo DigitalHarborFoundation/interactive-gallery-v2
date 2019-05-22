@@ -8,6 +8,6 @@ image: '../../../images/maker-foundations-2019spring-breonna.jpg'
 
 I made it by finding a heart to copy. Then I sized my pixel blocks.
 
-Finding the right color.
+One challenge I faced was finding the right color.
 
-It was really fun to do.
+One thing I'd like to tell someone else about this project is that it was really fun to do.
