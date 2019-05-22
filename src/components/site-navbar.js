@@ -75,9 +75,7 @@ const SiteNavLink = styled(Link)`
 
   &:hover {
     color: #0091c9;
-    text-decoration: none;
     cursor: pointer;
-    border-bottom: none;
   }
   @media only screen and (max-width: 1000px) {
     padding-bottom: 0px;

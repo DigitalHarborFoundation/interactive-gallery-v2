@@ -1,11 +1,14 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import SiteNavbar from '../components/site-navbar';
 
 const CourseHeader = ({ siteTitle }) => (
   <Masthead>
-    <SiteTitle>{siteTitle}</SiteTitle>
+    <Link to="/" style={{ textDecoration: 'none' }}>
+      <SiteTitle>{siteTitle}</SiteTitle>
+    </Link>
     <SiteNavbar />
   </Masthead>
 );

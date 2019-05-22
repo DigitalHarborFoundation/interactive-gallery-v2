@@ -1,11 +1,11 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import CoursePage from '../../../components/course-page';
-import heroImg from '../../../images/cs-core-hero.jpg';
+import heroImg from '../../../images/fab-core-hero.jpg';
 
 const FabCorePage = () => (
   <CoursePage
     courseImage={heroImg}
+    coursePath={`fab-core`}
     courseTitle="Fab Core"
     courseDescription="Fab Core is an introduction to digital fabrication methods and design for fabrication. This course is focused on precision 3D design and printing including hands-on experience with 3D printers.
 

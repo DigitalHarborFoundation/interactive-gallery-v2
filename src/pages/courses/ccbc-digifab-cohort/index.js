@@ -1,11 +1,15 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import CoursePage from '../../../components/course-page';
+import heroImg from '../../../images/ccbc-hero.jpg';
 
 const CCBCPage = () => (
-  <>
-    <h1>CCBC Page</h1>
-    <Link to="/courses/ccbc-digifab-cohort/2019spring">Spring 2019 Cohort</Link>
-  </>
+  <CoursePage
+    courseImage={heroImg}
+    coursePath={`ccbc-digifab-cohort`}
+    courseTitle="CCBC Digifab Cohort"
+    courseDescription="The Fabrication Certification course at DHF is a 9-month long course focused on advanced 2D and 3D design and fabrication techniques. The course features skill-building projects and techniques focused on 3D printing, laser cutting, and CNC milling."
+    courseSemester="Spring 2019 Cohort"
+  />
 );
 
 export default CCBCPage;

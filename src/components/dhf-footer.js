@@ -33,6 +33,7 @@ const FooterContentWrapper = styled.div`
   width: 80%;
   margin: 0 auto;
   border-bottom: 1px solid #e5f8ff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.16), 0 2px 4px rgba(0, 0, 0, 0.23);
   @media only screen and (max-width: 1000px) {
     flex-direction: column;
   }

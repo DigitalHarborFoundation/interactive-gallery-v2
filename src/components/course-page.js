@@ -9,6 +9,8 @@ import {
   FlexColumnContainer,
   ImageContainer,
 } from './elements/layout-components';
+import Img from 'gatsby-image';
+import Image from './image';
 import { ImageCard } from './elements/cards';
 import DHFFooter from './dhf-footer';
 import Footer from './footer';
@@ -21,28 +23,41 @@ const CoursePage = props => (
     <AppWrapper>
       <CourseHeader siteTitle="DHF Interactive Gallery" />
       <HeaderFlexRowContainer>
-        <img src={props.courseImage} style={{ width: '50%' }} />
+        <ProjectImage
+          src={props.courseImage}
+          alt={props.courseTitle}
+          style={{
+            width: '50%',
+            borderTopLeftRadius: '0px',
+            borderTopRightRadius: '0px',
+          }}
+        />
         <CTAContainer>
-          <SEO title="CS Core" keywords={[`gatsby`, `application`, `react`]} />
+          <SEO
+            title={props.courseTitle}
+            keywords={[`gatsby`, `application`, `react`]}
+          />
           <CourseTitle>{props.courseTitle}</CourseTitle>
           <CourseDescription>{props.courseDescription}</CourseDescription>
         </CTAContainer>
       </HeaderFlexRowContainer>
       <ContentWrapper>
-        <p style={{ color: '#5c5f5f', fontSize: '2rem' }}>
+        <p
+          style={{ color: '#5c5f5f', fontSize: '2rem', paddingBottom: '2rem' }}
+        >
           Currently, there are gallery entries for the Spring 2019 Cohort. Click
           below to browse the entries.
         </p>
         <div style={{ maxWidth: '33%' }}>
           <Link
-            to="/courses/cs-core/2019spring"
+            to={`/courses/${props.coursePath}/2019spring`}
             style={{ textDecoration: 'none' }}
           >
             <ImageCard animated>
               <ImageContainer>
                 <ProjectImage
                   src={props.courseImage}
-                  alt="CS Core hero image"
+                  alt={`${props.courseName} hero image`}
                   style={{ width: '100%' }}
                 />
               </ImageContainer>
@@ -108,7 +123,7 @@ export const ButtonContainer = styled.div`
 
 const CourseDescription = styled.p`
   font-size: 2rem;
-  line-height: 2.6rem;
+  line-height: 2.8rem;
   margin: 0 auto;
   padding-top: 0;
   padding-bottom: 4rem;
@@ -127,6 +142,7 @@ const HeaderFlexRowContainer = styled(FlexRowContainer)`
   align-items: center;
   background: #002432;
   color: #e5f8ff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.16), 0 2px 4px rgba(0, 0, 0, 0.23);
 `;
 
 const MainContent = styled.main`
