@@ -6,6 +6,7 @@ import {
   ContentWrapper,
   GridThreeColumnContainer,
 } from '../../../components/elements/layout-components';
+import SpringPage from '../../../components/spring-page';
 
 const MAKER_FOUNDATIONS_QUERY = graphql`
   query MakerFoundationsQuery {
@@ -45,21 +46,22 @@ const MakerFoundationsSpring2019Page = () => (
   <StaticQuery
     query={MAKER_FOUNDATIONS_QUERY}
     render={({ MakerFoundationsEntry }) => (
-      <ContentWrapper>
-        <h2>Maker Foundations Entries</h2>
-        <GridThreeColumnContainer>
-          {MakerFoundationsEntry.edges.map(edge => (
-            <ProjectCard
-              course={edge.node.frontmatter.course}
-              youth={edge.node.frontmatter.youth}
-              semester={edge.node.frontmatter.semester}
-              title={edge.node.frontmatter.title}
-              image={edge.node.frontmatter.image.childImageSharp.fluid}
-              key={edge.node.id}
-            />
-          ))}
-        </GridThreeColumnContainer>
-      </ContentWrapper>
+      <SpringPage courseName="Maker Foundations" courseSemester="Spring 2019">
+        <ContentWrapper>
+          <GridThreeColumnContainer>
+            {MakerFoundationsEntry.edges.map(edge => (
+              <ProjectCard
+                course={edge.node.frontmatter.course}
+                youth={edge.node.frontmatter.youth}
+                semester={edge.node.frontmatter.semester}
+                title={edge.node.frontmatter.title}
+                image={edge.node.frontmatter.image.childImageSharp.fluid}
+                key={edge.node.id}
+              />
+            ))}
+          </GridThreeColumnContainer>
+        </ContentWrapper>
+      </SpringPage>
     )}
   />
 );

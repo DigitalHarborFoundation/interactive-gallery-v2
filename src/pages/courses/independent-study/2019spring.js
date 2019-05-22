@@ -6,6 +6,7 @@ import {
   ContentWrapper,
   GridThreeColumnContainer,
 } from '../../../components/elements/layout-components';
+import SpringPage from '../../../components/spring-page';
 
 const INDEPENDENT_STUDY_QUERY = graphql`
   query IndependentStudyQuery {
@@ -45,21 +46,22 @@ const IndependentStudySpring2019Page = () => (
   <StaticQuery
     query={INDEPENDENT_STUDY_QUERY}
     render={({ IndependentStudyEntry }) => (
-      <ContentWrapper>
-        <h2>Independent Study Entries</h2>
-        <GridThreeColumnContainer>
-          {IndependentStudyEntry.edges.map(edge => (
-            <ProjectCard
-              course={edge.node.frontmatter.course}
-              youth={edge.node.frontmatter.youth}
-              semester={edge.node.frontmatter.semester}
-              title={edge.node.frontmatter.title}
-              image={edge.node.frontmatter.image.childImageSharp.fluid}
-              key={edge.node.id}
-            />
-          ))}
-        </GridThreeColumnContainer>
-      </ContentWrapper>
+      <SpringPage courseName="Independent Study" courseSemester="Spring 2019">
+        <ContentWrapper>
+          <GridThreeColumnContainer>
+            {IndependentStudyEntry.edges.map(edge => (
+              <ProjectCard
+                course={edge.node.frontmatter.course}
+                youth={edge.node.frontmatter.youth}
+                semester={edge.node.frontmatter.semester}
+                title={edge.node.frontmatter.title}
+                image={edge.node.frontmatter.image.childImageSharp.fluid}
+                key={edge.node.id}
+              />
+            ))}
+          </GridThreeColumnContainer>
+        </ContentWrapper>
+      </SpringPage>
     )}
   />
 );

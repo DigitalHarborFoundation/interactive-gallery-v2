@@ -40,8 +40,6 @@ const CS_CORE_2019_QUERY = graphql`
   }
 `;
 
-// TODO: Make the project list more accessible by adding ul and li elements
-
 const CSCoreSpring2019Page = props => (
   <StaticQuery
     query={CS_CORE_2019_QUERY}

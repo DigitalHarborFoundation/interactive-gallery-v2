@@ -21,7 +21,7 @@ const SpringPage = props => (
   <React.Fragment>
     <GlobalStyle />
     <AppWrapper>
-      <CourseHeader notFixed siteTitle="DHF Interactive Gallery" />
+      <CourseHeader siteTitle="DHF Interactive Gallery" />
       <ProjectImage
         src={props.courseImage}
         alt={props.courseTitle}
@@ -36,7 +36,7 @@ const SpringPage = props => (
           style={{ color: '#5c5f5f', fontSize: '2rem', paddingBottom: '2rem' }}
         >
           Now browsing {props.courseName} entries for the {props.courseSemester}{' '}
-          cohort
+          cohort. Click on a card to read more about the project.
         </p>
         {props.children}
       </ContentWrapper>

@@ -28,9 +28,6 @@ const Masthead = styled.div`
   justify-content: space-between;
   align-items: center;
   background: #ffffff;
-  /* background: #0091c9; */
-  /* border-bottom: 2px solid rgba(0, 0, 0, 0.1); */
-  /* margin-bottom: 2rem; */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.16), 0 2px 4px rgba(0, 0, 0, 0.23);
 
   @media only screen and (min-width: 1000px) {
