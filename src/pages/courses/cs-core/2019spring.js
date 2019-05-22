@@ -6,6 +6,7 @@ import {
   ContentWrapper,
   GridThreeColumnContainer,
 } from '../../../components/elements/layout-components';
+import SpringPage from '../../../components/spring-page';
 
 const CS_CORE_2019_QUERY = graphql`
   query CSCore2019Query {
@@ -45,22 +46,23 @@ const CSCoreSpring2019Page = props => (
   <StaticQuery
     query={CS_CORE_2019_QUERY}
     render={({ CSCore2019Entry }) => (
-      <ContentWrapper>
-        <h2>CS Core Entries</h2>
-        <GridThreeColumnContainer>
-          {CSCore2019Entry.edges.map(edge => (
-            <ProjectCard
-              course={edge.node.frontmatter.course}
-              youth={edge.node.frontmatter.youth}
-              semester={edge.node.frontmatter.semester}
-              title={edge.node.frontmatter.title}
-              image={edge.node.frontmatter.image.childImageSharp.fluid}
-              location={props.location}
-              key={edge.node.id}
-            />
-          ))}
-        </GridThreeColumnContainer>
-      </ContentWrapper>
+      <SpringPage courseName="CS Core" courseSemester="Spring 2019">
+        <ContentWrapper>
+          <GridThreeColumnContainer>
+            {CSCore2019Entry.edges.map(edge => (
+              <ProjectCard
+                course={edge.node.frontmatter.course}
+                youth={edge.node.frontmatter.youth}
+                semester={edge.node.frontmatter.semester}
+                title={edge.node.frontmatter.title}
+                image={edge.node.frontmatter.image.childImageSharp.fluid}
+                location={props.location}
+                key={edge.node.id}
+              />
+            ))}
+          </GridThreeColumnContainer>
+        </ContentWrapper>
+      </SpringPage>
     )}
   />
 );
