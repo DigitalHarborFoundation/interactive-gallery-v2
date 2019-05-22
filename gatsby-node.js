@@ -24,7 +24,7 @@ exports.createPages = ({ graphql, actions }) => {
         createPage({
           path: `/courses/${entry.frontmatter.course}/${
             entry.frontmatter.semester
-          }/${entry.frontmatter.youth}`,
+          }/${entry.frontmatter.youth}`.toLowerCase(),
           component: path.resolve(`./src/templates/entry-template.js`),
           context: {
             id: entry.id,

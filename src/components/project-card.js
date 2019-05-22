@@ -22,7 +22,9 @@ const ProjectCard = props => {
       <GlobalStyle />
       <Link
         style={{ textDecoration: 'none' }}
-        to={`/courses/${props.course}/${props.semester}/${props.youth}`}
+        to={`/courses/${props.course}/${props.semester}/${
+          props.youth
+        }`.toLowerCase()}
         state={{
           isModal: true,
         }}
