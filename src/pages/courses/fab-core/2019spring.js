@@ -48,7 +48,6 @@ const FabCoreSpring2019Page = () => (
     render={({ FabCoreEntry }) => (
       <SpringPage courseName="Fab Core" courseSemester="Spring 2019">
         <ContentWrapper>
-          <h2>Fab Core Entries</h2>
           <GridThreeColumnContainer>
             {FabCoreEntry.edges.map(edge => (
               <ProjectCard

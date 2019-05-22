@@ -1,11 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link, navigate, PageRenderer } from 'gatsby';
-import { GlobalStyle } from './globalStyle';
-import { AppWrapper } from './elements/layout-components';
 import { ModalCard, ImageCard } from '../components/elements/cards';
 import ModalContainer from '../components/modal-container';
-import parseURL from '../components/utilities/helpers';
 import {
   ModalWrapper as PageWrapper,
   ModalImageContainer,
@@ -19,10 +16,6 @@ import {
   capitalizeFirstLetter,
   transformSemester,
 } from '../components/utilities/helpers';
-import icon from '../components/elements/icon';
-import testImg from '../images/tester-card.jpg';
-import jonathanTestImg from '../images/jonathan-pi-portal-example.jpg';
-// import Image from '../components/image';
 
 class Layout extends React.Component {
   render() {
@@ -117,13 +110,6 @@ Layout.propTypes = {
 
 export default Layout;
 
-const ProjectModalCard = styled(ModalCard)`
-  background: #ffffff;
-  width: 93.75%;
-  min-height: 80vh;
-  max-height: 80vh;
-`;
-
 const ProjectImage = styled(Img)`
   max-width: 100%;
   max-height: 400px;
@@ -132,7 +118,7 @@ const ProjectImage = styled(Img)`
 `;
 
 const ProjectImageContainer = styled(ModalImageContainer)`
-  margin: 2rem auto;
+  margin: 1rem auto;
   width: 93.75%;
   padding-left: 4rem;
 `;
