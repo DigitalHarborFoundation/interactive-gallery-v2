@@ -42,9 +42,7 @@ class Layout extends React.Component {
                 alt={this.props.data.Entries.frontmatter.title}
               />
             </ProjectImageContainer>
-            <div
-              style={{ maxHeight: '80vh', width: '100%', overflowY: 'scroll' }}
-            >
+            <div style={{ maxHeight: '80vh', width: '100%' }}>
               <FlexColumnContainer marginAll="0" style={{ width: '100%' }}>
                 <h2
                   style={{
