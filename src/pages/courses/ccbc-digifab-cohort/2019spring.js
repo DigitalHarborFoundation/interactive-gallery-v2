@@ -6,6 +6,7 @@ import {
   ContentWrapper,
   GridThreeColumnContainer,
 } from '../../../components/elements/layout-components';
+import SpringPage from '../../../components/spring-page';
 
 const CCBC_QUERY = graphql`
   query CCBCQuery {
@@ -45,21 +46,22 @@ const CCBCSpring2019Page = () => (
   <StaticQuery
     query={CCBC_QUERY}
     render={({ CCBCEntry }) => (
-      <ContentWrapper>
-        <h2>CCBC Entries</h2>
-        <GridThreeColumnContainer>
-          {CCBCEntry.edges.map(edge => (
-            <ProjectCard
-              course={edge.node.frontmatter.course}
-              youth={edge.node.frontmatter.youth}
-              semester={edge.node.frontmatter.semester}
-              title={edge.node.frontmatter.title}
-              image={edge.node.frontmatter.image.childImageSharp.fluid}
-              key={edge.node.id}
-            />
-          ))}
-        </GridThreeColumnContainer>
-      </ContentWrapper>
+      <SpringPage courseName="CCBC Digifab Cohort" courseSemester="Spring 2019">
+        <ContentWrapper>
+          <GridThreeColumnContainer>
+            {CCBCEntry.edges.map(edge => (
+              <ProjectCard
+                course={edge.node.frontmatter.course}
+                youth={edge.node.frontmatter.youth}
+                semester={edge.node.frontmatter.semester}
+                title={edge.node.frontmatter.title}
+                image={edge.node.frontmatter.image.childImageSharp.fluid}
+                key={edge.node.id}
+              />
+            ))}
+          </GridThreeColumnContainer>
+        </ContentWrapper>
+      </SpringPage>
     )}
   />
 );
