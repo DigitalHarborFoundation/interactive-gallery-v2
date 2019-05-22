@@ -121,19 +121,18 @@ const ProjectModalCard = styled(ModalCard)`
   background: #ffffff;
   width: 93.75%;
   min-height: 80vh;
+  max-height: 80vh;
 `;
 
 const ProjectImage = styled(Img)`
   max-width: 100%;
-  // margin: 4rem 0;
-  // display: block;
-  // object-fit: fill;
+  max-height: 400px;
   border-radius: 10px;
   box-shadow: 4px 8px 10px rgba(0, 0, 0, 0.25);
 `;
 
 const ProjectImageContainer = styled(ModalImageContainer)`
-  margin: auto;
+  margin: 2rem auto;
   width: 93.75%;
   padding-left: 4rem;
 `;

@@ -63,8 +63,9 @@ const StyledDialogContent = styled(DialogContent)`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 93.75%;
+  width: 80%;
   min-height: 80vh;
+  max-height: 80vh;
   overflow-y: scroll;
   background: #ffffff;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
