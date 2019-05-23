@@ -20,11 +20,6 @@ const HomeNavbar = props => (
           About
         </SiteNavLink>
       </SiteNavEntry>
-      <SiteNavEntry>
-        <SiteNavLink color="#ffffff" activeStyle={activeStyles} to="/contact">
-          Contact Us
-        </SiteNavLink>
-      </SiteNavEntry>
     </SiteNavList>
   </SiteNavContainer>
 );

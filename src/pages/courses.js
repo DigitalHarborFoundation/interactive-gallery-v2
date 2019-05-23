@@ -81,7 +81,10 @@ const CourseLandingPage = props => (
               </FlexColumnContainer>
             </ImageCard>
           </Link>
-          <Link to="/courses/independent-study" style={{ textDecoration: 'none' }}>
+          <Link
+            to="/courses/independent-study"
+            style={{ textDecoration: 'none' }}
+          >
             <ImageCard animated>
               <ImageContainer>
                 <ProjectImage
@@ -104,7 +107,10 @@ const CourseLandingPage = props => (
               </FlexColumnContainer>
             </ImageCard>
           </Link>
-          <Link to="/courses/ccbc-digifab-cohort" style={{ textDecoration: 'none' }}>
+          <Link
+            to="/courses/ccbc-digifab-cohort"
+            style={{ textDecoration: 'none' }}
+          >
             <ImageCard animated>
               <ImageContainer>
                 <ProjectImage
@@ -127,7 +133,10 @@ const CourseLandingPage = props => (
               </FlexColumnContainer>
             </ImageCard>
           </Link>
-          <Link to="/courses/maker-foundations" style={{ textDecoration: 'none' }}>
+          <Link
+            to="/courses/maker-foundations"
+            style={{ textDecoration: 'none' }}
+          >
             <ImageCard animated>
               <ImageContainer>
                 <ProjectImage
