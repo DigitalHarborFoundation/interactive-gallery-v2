@@ -56,6 +56,9 @@ const StyledDialogOverlay = styled(DialogOverlay)`
   bottom: 0;
   z-index: 2000;
   background: rgba(0, 0, 0, 0.85);
+  @media only screen and (max-width: 1000px) {
+    width: 100%;
+  }
 `;
 
 const StyledDialogContent = styled(DialogContent)`
@@ -74,6 +77,7 @@ const StyledDialogContent = styled(DialogContent)`
 
   @media only screen and (max-width: 1000px) {
     flex-direction: column;
+    width: 100%;
   }
   -webkit-overflow-scrolling: touch;
 `;

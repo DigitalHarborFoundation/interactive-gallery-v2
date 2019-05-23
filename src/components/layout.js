@@ -124,4 +124,9 @@ const ProjectImageContainer = styled(ModalImageContainer)`
   margin: 1rem auto;
   width: 93.75%;
   padding-left: 4rem;
+  @media only screen and (max-width: 1000px) {
+    width: 100%;
+    margin-top: 14rem;
+    padding: 0;
+  }
 `;
