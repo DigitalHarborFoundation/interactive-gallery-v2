@@ -13,7 +13,7 @@ import {
 import { ImageCard } from '../components/elements/cards';
 import DHFFooter from '../components/dhf-footer';
 import Footer from '../components/footer';
-import DHFHeader from '../components/dhf-header';
+import CourseHeader from '../components/course-header';
 import heroImg from '../images/hero-img.jpg';
 
 const SubmitProjectPage = props => (
@@ -21,7 +21,7 @@ const SubmitProjectPage = props => (
     <GlobalStyle />
     <AppWrapper>
       <Masthead>
-        <DHFHeader isTransparent />
+        <CourseHeader />
 
         <StyledContentWrapper>
           <CTAContainer>

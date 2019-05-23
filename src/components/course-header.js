@@ -5,11 +5,11 @@ import PropTypes from 'prop-types';
 import SiteNavbar from '../components/site-navbar';
 import VisuallyHidden from '@reach/visually-hidden';
 
-const CourseHeader = ({ siteTitle }) => (
+const CourseHeader = () => (
   <Masthead>
     <Link to="/" style={{ textDecoration: 'none' }}>
       <VisuallyHidden>Home</VisuallyHidden>
-      <SiteTitle>{siteTitle}</SiteTitle>
+      <SiteTitle>DHF Interactive Gallery</SiteTitle>
     </Link>
     <SiteNavbar />
   </Masthead>

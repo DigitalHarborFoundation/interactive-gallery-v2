@@ -3,12 +3,12 @@ import { Link } from 'gatsby';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import heroImg from '../images/hero-img.jpg';
-import DHFHeader from '../components/dhf-header';
+import CourseHeader from '../components/course-header';
 import { GhostButton } from './elements/buttons';
 
 const Hero = props => (
   <Masthead>
-    <DHFHeader isTransparent />
+    <CourseHeader />
     <CTAContainer>
       <ProjectTitle>Interactive Project Gallery</ProjectTitle>
       <ProjectSubTitle>

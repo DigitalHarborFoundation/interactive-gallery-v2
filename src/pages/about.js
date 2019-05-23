@@ -13,7 +13,7 @@ import {
 import { ImageCard } from '../components/elements/cards';
 import DHFFooter from '../components/dhf-footer';
 import Footer from '../components/footer';
-import DHFHeader from '../components/dhf-header';
+import CourseHeader from '../components/course-header';
 import heroImg from '../images/hero-img.jpg';
 import SEO from '../components/seo';
 
@@ -23,7 +23,7 @@ const AboutPage = props => (
     <AppWrapper>
       <SEO title="About" keywords={[`gatsby`, `application`, `react`]} />
       <Masthead>
-        <DHFHeader isTransparent />
+        <CourseHeader />
         <StyledContentWrapper>
           <CTAContainer>
             <CTACopy>
