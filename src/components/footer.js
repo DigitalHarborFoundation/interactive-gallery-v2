@@ -9,7 +9,7 @@ const Footer = () => (
         <FooterLink
           href="https://digitalharbor.org"
           target="_blank"
-          rel="nofollow"
+          rel="noopener"
         >
           Digital Harbor Foundation.
         </FooterLink>
