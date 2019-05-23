@@ -27,7 +27,6 @@ const CoursePage = props => (
           src={props.courseImage}
           alt={props.courseTitle}
           style={{
-            width: '50%',
             borderTopLeftRadius: '0px',
             borderTopRightRadius: '0px',
           }}
@@ -56,34 +55,25 @@ const CoursePage = props => (
           Currently, there are gallery entries for the Spring 2019 Cohort. Click
           below to browse the entries.
         </p>
-        <div style={{ maxWidth: '33%' }}>
+        <ProjectWrapper>
           <Link
             to={`/courses/${props.coursePath}/2019spring`}
             style={{ textDecoration: 'none' }}
           >
-            <ImageCard animated>
-              <ImageContainer>
+            <ImageCard style={{ width: '100%' }} animated>
+              <ResponsiveImageContainer>
                 <ProjectImage
                   src={props.courseImage}
                   alt={`${props.courseName} hero image`}
                   style={{ width: '100%' }}
                 />
-              </ImageContainer>
+              </ResponsiveImageContainer>
               <FlexColumnContainer marginAll="4rem 0">
-                <p
-                  style={{
-                    color: '#000',
-                    fontSize: '3.2rem',
-                    margin: '0',
-                    paddingBottom: '0.25rem',
-                  }}
-                >
-                  {props.courseSemester}
-                </p>
+                <CardTitle>{props.courseSemester}</CardTitle>
               </FlexColumnContainer>
             </ImageCard>
           </Link>
-        </div>
+        </ProjectWrapper>
       </ContentWrapper>
       <DHFFooter />
       <Footer />
@@ -98,6 +88,7 @@ const CourseTitle = styled.h2`
   font-weight: 400;
   margin-bottom: 6vh;
   @media only screen and (max-width: 1000px) {
+    margin-bottom: 1vh;
   }
 `;
 
@@ -109,23 +100,7 @@ const CTAContainer = styled.div`
   margin-top: 5vh;
   @media only screen and (max-width: 1000px) {
     text-align: center;
-  }
-`;
-
-export const ButtonContainer = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 7rem;
-  flex-direction: row;
-  justify-items: center;
-  align-items: center;
-  margin-left: -0.5rem;
-  margin-right: -0.5rem;
-
-  @media only screen and (max-width: 1000px) {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    margin-top: 1vh;
   }
 `;
 
@@ -138,6 +113,7 @@ const CourseDescription = styled.p`
   padding-left: 4rem;
   padding-right: 4rem;
   @media only screen and (max-width: 1000px) {
+    text-align: left;
   }
 `;
 
@@ -151,6 +127,10 @@ const HeaderFlexRowContainer = styled(FlexRowContainer)`
   background: #002432;
   color: #e5f8ff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.16), 0 2px 4px rgba(0, 0, 0, 0.23);
+
+  @media only screen and (max-width: 1000px) {
+    flex-direction: column;
+  }
 `;
 
 const MainContent = styled.main`
@@ -161,4 +141,31 @@ const ProjectImage = styled.img`
   // border-radius: 10px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+  width: 50%;
+  @media only screen and (max-width: 1000px) {
+    width: 100%;
+  }
+`;
+
+const ResponsiveImageContainer = styled(ImageContainer)`
+  width: 100%;
+`;
+
+const ProjectWrapper = styled.div`
+  max-width: 33%;
+  @media only screen and (max-width: 1000px) {
+    max-width: 100%;
+  }
+`;
+
+const CardTitle = styled.p`
+  color: #000;
+  font-size: 3.2rem;
+  margin: 0;
+  padding-bottom: 0.25rem;
+
+  @media only screen and (max-width: 1000px) {
+    font-size: 2rem;
+    padding-bottom: 0;
+  }
 `;

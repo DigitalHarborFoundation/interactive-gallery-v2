@@ -22,33 +22,17 @@ const SpringPage = props => (
         src={props.courseImage}
         alt={props.courseTitle}
         style={{
-          width: '50%',
           borderTopLeftRadius: '0px',
           borderTopRightRadius: '0px',
         }}
       />
-      <ContentWrapper
-        style={{
-          background: '#ffffff',
-          boxShadow:
-            '0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.01)',
-          padding: '4rem',
-          borderRadius: '3px',
-        }}
-      >
-        <p
-          style={{
-            color: '#5c5f5f',
-            fontSize: '2rem',
-            paddingBottom: '2rem',
-            textAlign: 'center',
-          }}
-        >
+      <CardContentWrapper>
+        <PageCopy>
           Now browsing {props.courseName} entries for the {props.courseSemester}{' '}
           cohort. Click on a card to read more about the project.
-        </p>
+        </PageCopy>
         {props.children}
-      </ContentWrapper>
+      </CardContentWrapper>
       <DHFFooter />
       <Footer />
     </AppWrapper>
@@ -61,4 +45,30 @@ const ProjectImage = styled.img`
   // border-radius: 10px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+  width: 50%;
+  @media only screen and (max-width: 1000px) {
+    width: 100%;
+  }
+`;
+
+const CardContentWrapper = styled(ContentWrapper)`
+  background: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.01);
+  padding: 4rem;
+  border-radius: 3px;
+
+  @media only screen and (max-width: 1000px) {
+    padding: 0;
+  }
+`;
+
+const PageCopy = styled.p`
+  color: #5c5f5f;
+  font-size: 2rem;
+  padding-bottom: 2rem;
+  text-align: center;
+  @media only screen and (max-width: 1000px) {
+    padding: 2rem;
+    text-align: left;
+  }
 `;
