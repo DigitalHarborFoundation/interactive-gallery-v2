@@ -14,6 +14,10 @@ export const Button = styled.button`
   margin-left: ${props => props.onRight && '2.4rem'};
   margin-right: ${props => props.onLeft && '2.4rem'};
 
+  &:hover {
+    cursor: pointer;
+  }
+
   &:focus {
     outline: 0;
   }
