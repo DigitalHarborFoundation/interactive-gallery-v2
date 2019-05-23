@@ -26,6 +26,8 @@ const IndexPage = ({ children }) => (
         <AppWrapper>
           <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
           <Hero semester={data.site.siteMetadata.semester} />
+          <DHFFooter />
+          <Footer />
         </AppWrapper>
       </>
     )}
