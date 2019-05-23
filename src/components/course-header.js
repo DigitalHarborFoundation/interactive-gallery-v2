@@ -3,12 +3,16 @@ import { Link } from 'gatsby';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import SiteNavbar from '../components/site-navbar';
+import VisuallyHidden from '@reach/visually-hidden';
 
 const CourseHeader = ({ siteTitle }) => (
   <Masthead>
-    <Link to="/" style={{ textDecoration: 'none' }}>
-      <SiteTitle>{siteTitle}</SiteTitle>
-    </Link>
+    <VisuallyHidden>
+      Home
+      <Link to="/" style={{ textDecoration: 'none' }}>
+        <SiteTitle>{siteTitle}</SiteTitle>
+      </Link>
+    </VisuallyHidden>
     <SiteNavbar />
   </Masthead>
 );

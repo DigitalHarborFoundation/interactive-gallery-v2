@@ -14,7 +14,7 @@ const HomeNavbar = props => (
         <SiteNavLinkCTA
           color="#ffffff"
           activeStyle={activeStyles}
-          to="/courses/cs-core"
+          to="/submit-project"
         >
           Submit a Project
         </SiteNavLinkCTA>
