@@ -8,7 +8,7 @@ import VisuallyHidden from '@reach/visually-hidden';
 const CourseHeader = ({ siteTitle }) => (
   <Masthead>
     <VisuallyHidden>
-      Home
+      Close
       <Link to="/" style={{ textDecoration: 'none' }}>
         <SiteTitle>{siteTitle}</SiteTitle>
       </Link>

@@ -8,10 +8,9 @@ import { GhostButton } from './elements/buttons';
 
 const Hero = props => (
   <Masthead>
-    <DHFHeader />
+    <DHFHeader isTransparent />
     <CTAContainer>
       <ProjectTitle>Interactive Project Gallery</ProjectTitle>
-
       <ProjectSubTitle>
         Click on a course to view youth projects from {props.semester}
       </ProjectSubTitle>

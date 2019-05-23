@@ -11,11 +11,7 @@ const HomeNavbar = props => (
   <SiteNavContainer>
     <SiteNavList>
       <SiteNavEntry>
-        <SiteNavLinkCTA
-          color="#ffffff"
-          activeStyle={activeStyles}
-          to="/submit-project"
-        >
+        <SiteNavLinkCTA color="#ffffff" to="/submit-project">
           Submit a Project
         </SiteNavLinkCTA>
       </SiteNavEntry>

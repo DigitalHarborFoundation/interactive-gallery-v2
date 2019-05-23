@@ -4,8 +4,8 @@ import styled from 'styled-components';
 import SiteLogo from './site-logo';
 import HomeNavbar from './home-navbar';
 
-const DHFHeader = () => (
-  <HeaderWrapper>
+const DHFHeader = props => (
+  <HeaderWrapper isSticky={props.isSticky} isTransparent={props.isTransparent}>
     <Link to="/">
       <SiteLogo />
     </Link>
@@ -22,7 +22,8 @@ const HeaderWrapper = styled.header`
   justify-content: space-between;
   padding: 0 4rem;
   width: 100%;
-
+  ${props => props.isSticky && 'position: sticky; top: 0; left:0'}
+  background: ${props => (props.isTransparent ? 'transparent' : '#0091c9')};
   a {
     text-decoration: none;
   }

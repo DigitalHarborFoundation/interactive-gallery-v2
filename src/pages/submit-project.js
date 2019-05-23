@@ -13,154 +13,39 @@ import {
 import { ImageCard } from '../components/elements/cards';
 import DHFFooter from '../components/dhf-footer';
 import Footer from '../components/footer';
-import CourseHeader from '../components/course-header';
-import csHeroImg from '../images/cs-core-hero.jpg';
-import fabHeroImg from '../images/fab-core-hero.jpg';
-import indHeroImg from '../images/independent-study-hero.jpg';
-import ccbcHeroImg from '../images/ccbc-hero.jpg';
-import makerFoundationsHero from '../images/hero-img.jpg';
+import DHFHeader from '../components/dhf-header';
+import heroImg from '../images/hero-img.jpg';
 
 const SubmitProjectPage = props => (
   <React.Fragment>
     <GlobalStyle />
     <AppWrapper>
-      <CourseHeader siteTitle="DHF Interactive Gallery" />
-      <ContentWrapper>
-        <p
-          style={{ color: '#5c5f5f', fontSize: '2rem', paddingBottom: '2rem' }}
-        >
-          {' '}
-          There are currently five courses for the current semester. Click on a
-          card to navigate to the individual course page, or use the links in
-          the site's header.
-        </p>
-        <GridThreeColumnContainer>
-          <Link to="/courses/cs-core" style={{ textDecoration: 'none' }}>
-            <ImageCard animated>
-              <ImageContainer>
-                <ProjectImage
-                  src={csHeroImg}
-                  alt="CS Core"
-                  style={{ width: '100%' }}
-                />
-              </ImageContainer>
-              <FlexColumnContainer marginAll="4rem 0">
-                <p
-                  style={{
-                    color: '#000',
-                    fontSize: '3.2rem',
-                    margin: '0',
-                    paddingBottom: '0.25rem',
-                  }}
-                >
-                  CS Core
-                </p>
-              </FlexColumnContainer>
-            </ImageCard>
-          </Link>
-          <Link to="/courses/fab-core" style={{ textDecoration: 'none' }}>
-            <ImageCard animated>
-              <ImageContainer>
-                <ProjectImage
-                  src={fabHeroImg}
-                  alt="Fab Core"
-                  style={{ width: '100%' }}
-                />
-              </ImageContainer>
-              <FlexColumnContainer marginAll="4rem 0">
-                <p
-                  style={{
-                    color: '#000',
-                    fontSize: '3.2rem',
-                    margin: '0',
-                    paddingBottom: '0.25rem',
-                  }}
-                >
-                  Fab Core
-                </p>
-              </FlexColumnContainer>
-            </ImageCard>
-          </Link>
-          <Link
-            to="/courses/independent-study"
-            style={{ textDecoration: 'none' }}
-          >
-            <ImageCard animated>
-              <ImageContainer>
-                <ProjectImage
-                  src={indHeroImg}
-                  alt="Independent Study"
-                  style={{ width: '100%' }}
-                />
-              </ImageContainer>
-              <FlexColumnContainer marginAll="4rem 0">
-                <p
-                  style={{
-                    color: '#000',
-                    fontSize: '3.2rem',
-                    margin: '0',
-                    paddingBottom: '0.25rem',
-                  }}
-                >
-                  Independent Study
-                </p>
-              </FlexColumnContainer>
-            </ImageCard>
-          </Link>
-          <Link
-            to="/courses/ccbc-digifab-cohort"
-            style={{ textDecoration: 'none' }}
-          >
-            <ImageCard animated>
-              <ImageContainer>
-                <ProjectImage
-                  src={ccbcHeroImg}
-                  alt="CCBC Digifab Cohort"
-                  style={{ width: '100%' }}
-                />
-              </ImageContainer>
-              <FlexColumnContainer marginAll="4rem 0">
-                <p
-                  style={{
-                    color: '#000',
-                    fontSize: '3.2rem',
-                    margin: '0',
-                    paddingBottom: '0.25rem',
-                  }}
-                >
-                  CCBC Digifab Cohort
-                </p>
-              </FlexColumnContainer>
-            </ImageCard>
-          </Link>
-          <Link
-            to="/courses/maker-foundations"
-            style={{ textDecoration: 'none' }}
-          >
-            <ImageCard animated>
-              <ImageContainer>
-                <ProjectImage
-                  src={makerFoundationsHero}
-                  alt="Maker Foundations"
-                  style={{ width: '100%' }}
-                />
-              </ImageContainer>
-              <FlexColumnContainer marginAll="4rem 0">
-                <p
-                  style={{
-                    color: '#000',
-                    fontSize: '3.2rem',
-                    margin: '0',
-                    paddingBottom: '0.25rem',
-                  }}
-                >
-                  Maker Foundations
-                </p>
-              </FlexColumnContainer>
-            </ImageCard>
-          </Link>
-        </GridThreeColumnContainer>
-      </ContentWrapper>
+      <Masthead>
+        <DHFHeader isTransparent />
+
+        <StyledContentWrapper>
+          <CTAContainer>
+            <CTACopy>
+              If you're interested in submitting an entry and haven't yet,
+              you're still able to do so!
+            </CTACopy>
+            <CTACopy>Log in to your DHF youth email.</CTACopy>
+            <CTACopy>
+              Click on this link:{' '}
+              <a
+                style={{ textDecoration: 'none', color: '#e96544' }}
+                href="https://dhf.io/galleryentry"
+              >
+                dhf.io/galleryentry
+              </a>
+            </CTACopy>
+            <CTACopy>
+              Answer the questions and upload a project photo. Once your project
+              is reviewed it will be added to the gallery!
+            </CTACopy>
+          </CTAContainer>
+        </StyledContentWrapper>
+      </Masthead>
       <DHFFooter />
       <Footer />
     </AppWrapper>
@@ -168,6 +53,24 @@ const SubmitProjectPage = props => (
 );
 
 export default SubmitProjectPage;
+
+const StyledContentWrapper = styled(ContentWrapper)`
+max-width: 50%;
+@media only screen and (max-width: 1000px) {
+max-width: 100%;
+`;
+
+const Masthead = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  min-width: 100vw;
+  background: linear-gradient(rgba(0, 145, 201, 0.6), rgba(0, 145, 201, 0.2)),
+    url(${heroImg});
+  background-repeat: no-repeat;
+  background-size: cover;
+`;
 
 const CourseTitle = styled.h2`
   font-size: 4rem;
@@ -181,27 +84,31 @@ const CTAContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
   margin-top: 5vh;
+  /* border: 1px solid #e5f8ff; */
+  border-radius: 10px;
+  padding: 1rem 4rem;
+  background: rgba(0, 0, 0, 0.4);
+  /* background: #e5f8ff; */
+  /* background: rgba(229, 248, 255, 0.6); */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.16), 0 2px 4px rgba(0, 0, 0, 0.23);
   @media only screen and (max-width: 1000px) {
-    text-align: center;
+    text-align: left;
   }
 `;
 
-export const ButtonContainer = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 7rem;
-  flex-direction: row;
-  justify-items: center;
-  align-items: center;
-  margin-left: -0.5rem;
-  margin-right: -0.5rem;
-
+const CTACopy = styled.p`
+  font-size: 3rem;
+  font-weight: 300;
+  margin-top: 3vh;
+  margin-bottom: 5vh;
+  color: #e5f8ff;
+  /* color: #002432; */
   @media only screen and (max-width: 1000px) {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    font-size: 2rem;
+    line-height: 3rem;
+    font-weight: bolder;
   }
 `;
 
