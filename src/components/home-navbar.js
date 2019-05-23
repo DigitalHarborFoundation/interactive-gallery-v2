@@ -16,30 +16,13 @@ const HomeNavbar = props => (
         </SiteNavLinkCTA>
       </SiteNavEntry>
       <SiteNavEntry>
-        <SiteNavLink
-          color="#ffffff"
-          activeStyle={activeStyles}
-          to="/courses/cs-core"
-        >
+        <SiteNavLink color="#ffffff" activeStyle={activeStyles} to="/about">
           About
         </SiteNavLink>
       </SiteNavEntry>
       <SiteNavEntry>
-        <SiteNavLink
-          color="#ffffff"
-          activeStyle={activeStyles}
-          to="/courses/cs-core"
-        >
-          About
-        </SiteNavLink>
-      </SiteNavEntry>
-      <SiteNavEntry>
-        <SiteNavLink
-          color="#ffffff"
-          activeStyle={activeStyles}
-          to="/courses/cs-core"
-        >
-          About
+        <SiteNavLink color="#ffffff" activeStyle={activeStyles} to="/contact">
+          Contact Us
         </SiteNavLink>
       </SiteNavEntry>
     </SiteNavList>
@@ -51,7 +34,6 @@ export default HomeNavbar;
 const SiteNavContainer = styled.div`
   display: flex;
   flex-direction: row;
-
   align-items: center;
   margin-right: 2rem;
 
