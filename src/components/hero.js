@@ -91,17 +91,18 @@ const ProjectTitle = styled.h1`
   font-weight: 300;
   color: #e5f8ff;
   margin-bottom: 6vh;
-
+  text-shadow: 2px 2px 6px #002432;
   @media only screen and (max-width: 1000px) {
   }
 `;
 
-const ProjectSubTitle = styled.h3`
+const ProjectSubTitle = styled.p`
   font-size: 3rem;
   font-weight: 400;
   margin-top: 3vh;
   margin-bottom: 5vh;
   color: #e5f8ff;
+  text-shadow: 2px 2px 6px #002432;
   @media only screen and (max-width: 1000px) {
   }
 `;
