@@ -29,6 +29,7 @@ const SiteLogoContainer = styled.div`
   margin: 0px;
   padding: 0px;
 `;
+
 const SiteLogoFigure = styled.figure`
   margin: 0px;
   padding: 0px;

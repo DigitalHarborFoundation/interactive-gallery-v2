@@ -5,24 +5,24 @@ import SiteLogo from './site-logo';
 import HomeNavbar from './home-navbar';
 
 const DHFHeader = () => (
-  <LogoWrapper>
+  <HeaderWrapper>
     <Link to="/">
       <SiteLogo />
     </Link>
-    <DHFTitle>DHF Interactive Gallery</DHFTitle>
     <HomeNavbar />
-  </LogoWrapper>
+  </HeaderWrapper>
 );
 
 export default DHFHeader;
 
-const LogoWrapper = styled.div`
+const HeaderWrapper = styled.header`
   display: flex;
   flex-direction: row;
-  align-items: space-between;
+  align-items: center;
   justify-content: space-between;
-  padding-left: 2rem;
+  padding: 0 4rem;
   width: 100%;
+
   a {
     text-decoration: none;
   }
@@ -31,7 +31,7 @@ const LogoWrapper = styled.div`
   }
 `;
 const DHFTitle = styled.h1`
-  font-size: 5rem;
+  font-size: 4.8rem;
   font-weight: 400;
   color: #e5f8ff;
   margin-bottom: 6vh;

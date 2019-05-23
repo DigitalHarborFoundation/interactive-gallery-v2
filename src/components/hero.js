@@ -10,11 +10,8 @@ const Hero = props => (
   <Masthead>
     <DHFHeader />
     <CTAContainer>
-      {/*
-      <ProjectTitle>
-        Digital Harbor Foundation Interactive Project Gallery
-      </ProjectTitle>
-    */}
+      <ProjectTitle>Interactive Project Gallery</ProjectTitle>
+
       <ProjectSubTitle>
         Click on a course to view youth projects from {props.semester}
       </ProjectSubTitle>

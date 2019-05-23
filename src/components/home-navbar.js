@@ -11,6 +11,33 @@ const HomeNavbar = props => (
   <SiteNavContainer>
     <SiteNavList>
       <SiteNavEntry>
+        <SiteNavLinkCTA
+          color="#ffffff"
+          activeStyle={activeStyles}
+          to="/courses/cs-core"
+        >
+          Submit a Project
+        </SiteNavLinkCTA>
+      </SiteNavEntry>
+      <SiteNavEntry>
+        <SiteNavLink
+          color="#ffffff"
+          activeStyle={activeStyles}
+          to="/courses/cs-core"
+        >
+          About
+        </SiteNavLink>
+      </SiteNavEntry>
+      <SiteNavEntry>
+        <SiteNavLink
+          color="#ffffff"
+          activeStyle={activeStyles}
+          to="/courses/cs-core"
+        >
+          About
+        </SiteNavLink>
+      </SiteNavEntry>
+      <SiteNavEntry>
         <SiteNavLink
           color="#ffffff"
           activeStyle={activeStyles}
@@ -28,7 +55,7 @@ export default HomeNavbar;
 const SiteNavContainer = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: center;
+
   align-items: center;
   margin-right: 2rem;
 
@@ -79,5 +106,18 @@ const SiteNavLink = styled(Link)`
   }
   @media only screen and (max-width: 1000px) {
     padding-bottom: 0px;
+  }
+`;
+
+const SiteNavLinkCTA = styled(SiteNavLink)`
+  background: #002432;
+  color: #e5f8ff;
+  border-radius: 10px;
+  padding: 16px;
+  transition: all 0.5s ease;
+
+  &:hover {
+    background: #e5f8ff;
+    color: #002432;
   }
 `;
