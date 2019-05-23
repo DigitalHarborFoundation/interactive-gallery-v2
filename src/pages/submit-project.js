@@ -55,9 +55,10 @@ const SubmitProjectPage = props => (
 export default SubmitProjectPage;
 
 const StyledContentWrapper = styled(ContentWrapper)`
-max-width: 50%;
-@media only screen and (max-width: 1000px) {
-max-width: 100%;
+  max-width: 50%;
+  @media only screen and (max-width: 1000px) {
+    max-width: 100%;
+  }
 `;
 
 const Masthead = styled.div`
