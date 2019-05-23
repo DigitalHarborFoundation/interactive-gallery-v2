@@ -128,7 +128,7 @@ const ProjectImageContainer = styled(ModalImageContainer)`
   padding-top: 10rem;
   @media only screen and (max-width: 1000px) {
     width: 100%;
-    margin-top: 14rem;
+
     padding: 0;
   }
 `;
@@ -137,6 +137,9 @@ const ProjectImage = styled(Img)`
   max-width: 100%;
   border-radius: 10px;
   box-shadow: 4px 8px 10px rgba(0, 0, 0, 0.25);
+  @media only screen and (max-width: 1000px) {
+    max-height: 50%;
+  }
 `;
 
 const PageWrapper = styled(ModalWrapper)`
