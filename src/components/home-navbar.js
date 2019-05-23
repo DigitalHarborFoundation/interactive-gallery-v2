@@ -64,6 +64,7 @@ const SiteNavContainer = styled.div`
     padding-bottom: 2rem;
     padding-left: 2rem;
     padding-right: 2rem;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.4);
   }
 `;
 
@@ -82,6 +83,7 @@ const SiteNavEntry = styled.li`
     padding-right: 2rem;
     display: inline-block;
     width: 100%;
+    padding-top: 2rem;
   }
 `;
 
@@ -109,11 +111,15 @@ const SiteNavLinkCTA = styled(SiteNavLink)`
   background: #002432;
   color: #e5f8ff;
   border-radius: 10px;
-  padding: 16px;
+  padding: 1.6rem;
   transition: all 0.5s ease;
 
   &:hover {
     background: #e5f8ff;
     color: #002432;
+  }
+
+  @media only screen and (max-width: 1000px) {
+    padding: 1rem;
   }
 `;

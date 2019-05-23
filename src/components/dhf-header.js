@@ -29,8 +29,10 @@ const HeaderWrapper = styled.header`
   }
 
   @media only screen and (max-width: 1000px) {
+    flex-direction: column;
   }
 `;
+
 const DHFTitle = styled.h1`
   font-size: 4.8rem;
   font-weight: 400;
