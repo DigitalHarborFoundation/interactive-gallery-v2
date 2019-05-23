@@ -10,25 +10,29 @@ const Hero = props => (
   <Masthead>
     <DHFHeader />
     <CTAContainer>
-      <ProjectTitle>Interactive Project Gallery</ProjectTitle>
+      {/*
+      <ProjectTitle>
+        Digital Harbor Foundation Interactive Project Gallery
+      </ProjectTitle>
+    */}
       <ProjectSubTitle>
         Click on a course to view youth projects from {props.semester}
       </ProjectSubTitle>
       <ButtonContainer>
         <FlexLink to="/courses/cs-core">
-          <GhostButton>CS Core</GhostButton>
+          <GhostButton animated>CS Core</GhostButton>
         </FlexLink>
         <FlexLink to="/courses/fab-core">
-          <GhostButton>Fab Core</GhostButton>
+          <GhostButton animated>Fab Core</GhostButton>
         </FlexLink>
         <FlexLink to="/courses/ccbc-digifab-cohort">
-          <GhostButton>CCBC Digifab Cohort</GhostButton>
+          <GhostButton animated>CCBC Digifab Cohort</GhostButton>
         </FlexLink>
         <FlexLink to="/courses/independent-study">
-          <GhostButton>Independent Study</GhostButton>
+          <GhostButton animated>Independent Study</GhostButton>
         </FlexLink>
         <FlexLink to="/courses/maker-foundations">
-          <GhostButton>Maker Foundations</GhostButton>
+          <GhostButton animated>Maker Foundations</GhostButton>
         </FlexLink>
       </ButtonContainer>
     </CTAContainer>
@@ -49,11 +53,9 @@ const Masthead = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 80vh;
+  min-height: 100vh;
   min-width: 100vw;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(rgba(0, 145, 201, 0.3), rgba(0, 145, 201, 0.3)),
+  background: linear-gradient(rgba(0, 145, 201, 0.6), rgba(0, 145, 201, 0.2)),
     url(${heroImg});
   background-repeat: no-repeat;
   background-size: cover;
@@ -64,8 +66,8 @@ const CTAContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 5vh;
-
+  max-width: 80%;
+  margin-top: 10vh;
   @media only screen and (max-width: 1000px) {
     text-align: center;
   }
@@ -88,10 +90,10 @@ export const ButtonContainer = styled.div`
   }
 `;
 
-const ProjectTitle = styled.h2`
-  font-size: 4rem;
+const ProjectTitle = styled.h1`
+  font-size: 5rem;
   font-weight: 400;
-  color: #fafafa;
+  color: #e5f8ff;
   margin-bottom: 6vh;
 
   @media only screen and (max-width: 1000px) {
@@ -101,9 +103,9 @@ const ProjectTitle = styled.h2`
 const ProjectSubTitle = styled.h3`
   font-size: 3rem;
   font-weight: 300;
-  margin-top: 5vh;
+  margin-top: 3vh;
   margin-bottom: 5vh;
-  color: #fafafa;
+  color: #e5f8ff;
   @media only screen and (max-width: 1000px) {
   }
 `;

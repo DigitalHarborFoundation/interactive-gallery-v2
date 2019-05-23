@@ -19,6 +19,7 @@ import {
 
 class Layout extends React.Component {
   render() {
+    let windowWidth = window.innerWidth;
     if (this.props.modalRender) {
       return (
         <React.Fragment>
@@ -101,9 +102,7 @@ class Layout extends React.Component {
         </React.Fragment>
       );
     }
-    if (this.props.modalRender === false) {
-      return <React.Fragment>{this.props.children}</React.Fragment>;
-    }
+    return <React.Fragment>{this.props.children}</React.Fragment>;
   }
 }
 

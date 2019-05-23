@@ -7,47 +7,23 @@ const activeStyles = {
   fontWeight: 'bold',
 };
 
-const SiteNavbar = props => (
+const HomeNavbar = props => (
   <SiteNavContainer>
     <SiteNavList>
       <SiteNavEntry>
         <SiteNavLink
-          color={props.color}
-          hoverColor={props.hoverColor}
+          color="#ffffff"
           activeStyle={activeStyles}
           to="/courses/cs-core"
         >
-          CS Core
-        </SiteNavLink>
-      </SiteNavEntry>
-      <SiteNavEntry>
-        <SiteNavLink activeStyle={activeStyles} to="/courses/fab-core">
-          Fab Core
-        </SiteNavLink>
-      </SiteNavEntry>
-      <SiteNavEntry>
-        <SiteNavLink activeStyle={activeStyles} to="/courses/independent-study">
-          Independent Study
-        </SiteNavLink>
-      </SiteNavEntry>
-      <SiteNavEntry>
-        <SiteNavLink
-          activeStyle={activeStyles}
-          to="/courses/ccbc-digifab-cohort"
-        >
-          CCBC Digifab Cohort
-        </SiteNavLink>
-      </SiteNavEntry>
-      <SiteNavEntry>
-        <SiteNavLink activeStyle={activeStyles} to="/courses/maker-foundations">
-          Maker Foundations
+          About
         </SiteNavLink>
       </SiteNavEntry>
     </SiteNavList>
   </SiteNavContainer>
 );
 
-export default SiteNavbar;
+export default HomeNavbar;
 
 const SiteNavContainer = styled.div`
   display: flex;
@@ -65,7 +41,6 @@ const SiteNavContainer = styled.div`
     padding-bottom: 2rem;
     padding-left: 2rem;
     padding-right: 2rem;
-    border-top: 2px solid rgba(0, 0, 0, 0.3);
   }
 `;
 
@@ -93,12 +68,13 @@ const SiteNavLink = styled(Link)`
   margin-bottom: 0px;
   margin-left: 0px;
   color: ${props => props.color || '#002432'};
-  font-size: 1.5rem;
+  font-size: 1.8rem;
+  font-weight: 400;
   text-decoration: none;
   transition: color 0.5s ease;
 
   &:hover {
-    color: ${props => props.hoverColor || '#0091c9'};
+    color: ${props => props.hoverColor || '#002432'};
     cursor: pointer;
   }
   @media only screen and (max-width: 1000px) {

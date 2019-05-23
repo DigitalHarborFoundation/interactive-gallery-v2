@@ -1,12 +1,16 @@
-import { Link } from 'gatsby';
 import React from 'react';
+import { Link } from 'gatsby';
 import styled from 'styled-components';
+import SiteLogo from './site-logo';
+import HomeNavbar from './home-navbar';
 
 const DHFHeader = () => (
   <LogoWrapper>
     <Link to="/">
-      <DHFTitle>Digital Harbor Foundation</DHFTitle>
+      <SiteLogo />
     </Link>
+    <DHFTitle>DHF Interactive Gallery</DHFTitle>
+    <HomeNavbar />
   </LogoWrapper>
 );
 
@@ -15,12 +19,10 @@ export default DHFHeader;
 const LogoWrapper = styled.div`
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  background: rgba(45, 42, 42, 0.8);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  align-items: space-between;
+  justify-content: space-between;
+  padding-left: 2rem;
   width: 100%;
-
   a {
     text-decoration: none;
   }
@@ -28,13 +30,13 @@ const LogoWrapper = styled.div`
   @media only screen and (max-width: 1000px) {
   }
 `;
-
 const DHFTitle = styled.h1`
-  font-size: 4.8rem;
-  font-weight: 300;
-  letter-spacing: 0.15rem;
-  color: #fafafa;
+  font-size: 5rem;
+  font-weight: 400;
+  color: #e5f8ff;
+  margin-bottom: 6vh;
+
   @media only screen and (max-width: 1000px) {
-    padding: 0 1rem;
+    font-size: 2rem;
   }
 `;

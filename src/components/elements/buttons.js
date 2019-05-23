@@ -37,15 +37,33 @@ export const Button = styled.button`
 
 export const GhostButton = styled(Button)`
   border: 2px solid;
-  border-color: ${props => props.primaryColor || '#fafafa'};
+  font-weight: 400;
+  border-color: ${props => props.primaryColor || '#e5f8ff'};
   background-color: rgba(196, 196, 196, 0);
-  color: ${props => props.primaryColor || '#fafafa'};
+  color: ${props => props.primaryColor || '#e5f8ff'};
+  transition: all ease 0.3s;
+
+  &:hover {
+    border: 3px solid;
+    font-weight: bolder;
+    border-color: ${props => props.hoverColor || '#002432'};
+    color: ${props => props.hoverColor || '#002432'};
+    cursor: pointer;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  ${props =>
+    props.animated &&
+    'transition: all 0.5s ease-in-out; :hover {box-shadow: rgba(39, 44, 49, 0.07) 8px 28px 50px, rgba(39, 44, 49, 0.04) 1px 6px 12px; transform: translate3D(0, -1px, 0) scale(1.04)}'}
+`;
+
+export const GhostButtonSolid = styled(Button)`
+  color: #002432;
+  background: #e5f8ff;
   transition: all ease 0.5s;
 
   &:hover {
-    border: 2px solid;
-    border-color: ${props => props.hoverColor || '#e96544'};
-    color: ${props => props.hoverColor || '#e96544'};
+    background: #002432;
+    color: #e5f8ff;
     cursor: pointer;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
