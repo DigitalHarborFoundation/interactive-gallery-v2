@@ -75,6 +75,7 @@ const SiteNavLink = styled(Link)`
   margin-bottom: 0px;
   margin-left: 0px;
   color: ${props => props.color || '#002432'};
+  text-shadow: 1px 1px 6px #002432;
   font-size: 1.8rem;
   font-weight: 400;
   text-decoration: none;

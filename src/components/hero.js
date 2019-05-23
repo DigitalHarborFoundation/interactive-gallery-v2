@@ -55,6 +55,14 @@ const Masthead = styled.div`
     url(${heroImg});
   background-repeat: no-repeat;
   background-size: cover;
+
+  @media only screen and (max-width: 1000px) {
+    background: url(${heroImg});
+    background-repeat: no-repeat;
+    background-color: #002432;
+    background-size: 100%;
+    background-position: top 33% bottom 66%;
+  }
 `;
 
 const CTAContainer = styled.div`
