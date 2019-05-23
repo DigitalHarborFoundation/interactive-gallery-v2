@@ -7,12 +7,10 @@ import VisuallyHidden from '@reach/visually-hidden';
 
 const CourseHeader = ({ siteTitle }) => (
   <Masthead>
-    <VisuallyHidden>
-      Close
-      <Link to="/" style={{ textDecoration: 'none' }}>
-        <SiteTitle>{siteTitle}</SiteTitle>
-      </Link>
-    </VisuallyHidden>
+    <Link to="/" style={{ textDecoration: 'none' }}>
+      <VisuallyHidden>Home</VisuallyHidden>
+      <SiteTitle>{siteTitle}</SiteTitle>
+    </Link>
     <SiteNavbar />
   </Masthead>
 );

@@ -3,10 +3,12 @@ import { Link } from 'gatsby';
 import styled from 'styled-components';
 import SiteLogo from './site-logo';
 import HomeNavbar from './home-navbar';
+import VisuallyHidden from '@reach/visually-hidden';
 
 const DHFHeader = props => (
   <HeaderWrapper isSticky={props.isSticky} isTransparent={props.isTransparent}>
     <Link to="/">
+      <VisuallyHidden>Home</VisuallyHidden>
       <SiteLogo />
     </Link>
     <HomeNavbar />
