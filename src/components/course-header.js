@@ -40,7 +40,7 @@ const Masthead = styled.div`
 
   @media only screen and (max-width: 1000px) {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
   }
@@ -58,7 +58,7 @@ const SiteTitle = styled.p`
   margin-bottom: 0;
 
   @media only screen and (max-width: 1000px) {
-    font-size: 1.5rem;
-    margin-left: 50px;
+    font-size: 2rem;
+    padding-bottom: 1rem;
   }
 `;
