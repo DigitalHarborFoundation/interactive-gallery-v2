@@ -31,6 +31,7 @@ const Masthead = styled.div`
   align-items: center;
   background: #ffffff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.16), 0 2px 4px rgba(0, 0, 0, 0.23);
+  padding-bottom: 1rem;
 
   @media only screen and (min-width: 1000px) {
     position: sticky;
