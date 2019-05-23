@@ -9,6 +9,7 @@ import {
   FlexColumnContainer,
   FlexRowContainer,
 } from '../components/elements/layout-components';
+import { SolidButton } from '../components/elements/buttons';
 import ModalContainer from '../components/modal-container';
 import Img from 'gatsby-image';
 import { ModalCard } from '../components/elements/cards';
@@ -94,13 +95,15 @@ const EntryDetails = props => {
               </FlexColumnContainer>
             </div>
             {!modalRender && (
-              <Link
-                to={`/courses/${props.data.Entries.frontmatter.course}/${
-                  props.data.Entries.frontmatter.semester
-                }`}
-              >
-                Back to course page
-              </Link>
+              <div style={{ padding: '2rem' }}>
+                <Link
+                  to={`/courses/${props.data.Entries.frontmatter.course}/${
+                    props.data.Entries.frontmatter.semester
+                  }`}
+                >
+                  <SolidButton>Back to course page</SolidButton>
+                </Link>
+              </div>
             )}
           </ProjectModalCard>
         </PageWrapper>
@@ -114,27 +117,26 @@ export default EntryDetails;
 const ProjectModalCard = styled(ModalCard)`
   background: #ffffff;
   width: 93.75%;
+  margin-top: 5vh;
   min-height: 80vh;
-`;
-
-const ProjectImage = styled(Img)`
-  max-width: 100%;
-  // margin: 4rem 0;
-  // display: block;
-  // object-fit: fill;
-  border-radius: 10px;
-  box-shadow: 4px 8px 10px rgba(0, 0, 0, 0.25);
 `;
 
 const ProjectImageContainer = styled(ModalImageContainer)`
   margin: 1rem auto;
   width: 93.75%;
   padding-left: 4rem;
+  padding-top: 10rem;
   @media only screen and (max-width: 1000px) {
     width: 100%;
     margin-top: 14rem;
     padding: 0;
   }
+`;
+
+const ProjectImage = styled(Img)`
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 4px 8px 10px rgba(0, 0, 0, 0.25);
 `;
 
 const PageWrapper = styled(ModalWrapper)`

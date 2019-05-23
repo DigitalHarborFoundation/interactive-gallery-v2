@@ -68,3 +68,18 @@ export const GhostButtonSolid = styled(Button)`
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
 `;
+
+export const SolidButton = styled(Button)`
+  color: #0091c9;
+  background: #e5f8ff;
+  border: 2px solid #0091c9;
+  transition: all ease 0.5s;
+  text-transform: none;
+
+  &:hover {
+    background: #0091c9;
+    color: #e5f8ff;
+    border: 2px solid #0091c9;
+    border-radius: 20px;
+  }
+`;
