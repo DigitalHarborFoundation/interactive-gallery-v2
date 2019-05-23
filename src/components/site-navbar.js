@@ -11,12 +11,10 @@ const SiteNavbar = props => (
   <SiteNavContainer>
     <SiteNavList>
       <SiteNavEntry>
-        <SiteNavLinkCTA color="#ffffff" to="/submit-project">
-          Submit a Project
-        </SiteNavLinkCTA>
+        <SiteNavLinkCTA to="/submit-project">Submit a Project</SiteNavLinkCTA>
       </SiteNavEntry>
       <SiteNavEntry>
-        <SiteNavLink color="#ffffff" activeStyle={activeStyles} to="/about">
+        <SiteNavLink activeStyle={activeStyles} to="/about">
           About
         </SiteNavLink>
       </SiteNavEntry>
@@ -117,15 +115,19 @@ const SiteNavLink = styled(Link)`
 `;
 
 const SiteNavLinkCTA = styled(SiteNavLink)`
-  background: #002432;
-  color: #e5f8ff;
+  background: #fcece8;
+  color: #e86544;
+  border: 2px solid #e86544;
   border-radius: 10px;
-  padding: 1.6rem;
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-weight: bolder;
   transition: all 0.5s ease;
 
   &:hover {
-    background: #e5f8ff;
-    color: #002432;
+    background: #e86544;
+    border: 2px solid #e86544;
+    color: #fcece8;
   }
 
   @media only screen and (max-width: 1000px) {
