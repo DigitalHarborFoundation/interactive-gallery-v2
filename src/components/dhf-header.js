@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
 import SiteLogo from './site-logo';
+import SiteNavbar from './site-navbar';
 import HomeNavbar from './home-navbar';
 import VisuallyHidden from '@reach/visually-hidden';
 
@@ -11,6 +12,7 @@ const DHFHeader = props => (
       <VisuallyHidden>Home</VisuallyHidden>
       <SiteLogo />
     </Link>
+
     <HomeNavbar />
   </HeaderWrapper>
 );

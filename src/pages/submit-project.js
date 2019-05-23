@@ -102,7 +102,7 @@ const CTACopy = styled.p`
   font-size: 3rem;
   font-weight: 300;
   margin-top: 3vh;
-  margin-bottom: 5vh;
+  margin-bottom: 3vh;
   color: #e5f8ff;
   /* color: #002432; */
   @media only screen and (max-width: 1000px) {
