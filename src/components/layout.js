@@ -39,7 +39,7 @@ class Layout extends React.Component {
   };
 
   next = () => {
-    if (this.props.modalRender this.props.data.Entries.frontmatter.next) {
+    if (this.props.modalRender && this.props.data.Entries.frontmatter.next) {
       push(this.props.data.Entries.frontmatter.next);
     }
   };
