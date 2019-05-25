@@ -3,6 +3,8 @@ youth: 'jyleol'
 title: 'piano'
 course: 'maker-foundations'
 semester: '2019spring'
+prev: '/courses/maker-foundations/2019spring/jadon'
+next: '/courses/maker-foundations/2019spring/king'
 image: '../../../images/maker-foundations-spring2019-jyleol.jpg'
 ---
 

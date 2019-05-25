@@ -3,6 +3,8 @@ youth: 'Bella'
 title: 'laser cut and 3D printed flower'
 course: 'fab-core'
 semester: '2019spring'
+prev: '/courses/fab-core/2019spring/alexandra'
+next: '/courses/fab-core/2019spring/duncan'
 image: '../../../images/fab-core-2019spring-bella.jpg'
 ---
 

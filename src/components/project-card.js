@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
@@ -6,15 +6,15 @@ import { GlobalStyle } from './globalStyle';
 import {
   FlexColumnContainer,
   ImageContainer,
-} from '../components/elements/layout-components';
+} from './elements/layout-components';
 import Img from 'gatsby-image';
-import { ImageCard } from '../components/elements/cards';
+import { ImageCard } from './elements/cards';
 import testImg from '../images/tester-card.jpg';
 import { useSiteMetadata } from './utilities/queries';
-import {
-  capitalizeFirstLetter,
-  transformSemester,
-} from '../components/utilities/helpers';
+import { capitalizeFirstLetter, transformSemester } from './utilities/helpers';
+import { CSCoreSpring2019TOC } from '../config';
+
+const toc = CSCoreSpring2019TOC;
 
 const ProjectCard = props => {
   return (
@@ -55,6 +55,8 @@ const ProjectCard = props => {
             >
               {transformSemester(props.semester)}
             </p>
+            <p>{props.currentSlug}</p>
+            <p>{props.nextSlug}</p>
           </FlexColumnContainer>
         </ImageCard>
       </Link>

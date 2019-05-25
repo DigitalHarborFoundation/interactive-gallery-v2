@@ -3,6 +3,8 @@ youth: 'Maya'
 title: '3D Dragons (with music)'
 course: 'independent-study'
 semester: '2019spring'
+prev: '/courses/independent-study/2019spring/maya'
+next: '/courses/independent-study/2019spring/maya'
 image: '../../../images/independent-study-2019spring-maya.jpg'
 ---
 

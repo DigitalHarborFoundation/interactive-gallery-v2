@@ -3,6 +3,8 @@ youth: 'Raabiah'
 title: "Raabiah's Touchy Tick"
 course: 'maker-foundations'
 semester: '2019spring'
+prev: '/courses/maker-foundations/2019spring/nuriyyah'
+next: '/courses/maker-foundations/2019spring/thomas'
 image: '../../../images/maker-foundations-2019spring-raabiah.jpg'
 ---
 

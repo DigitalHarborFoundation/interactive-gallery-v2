@@ -3,6 +3,8 @@ youth: 'max'
 title: 'How a Car Works'
 course: 'maker-foundations'
 semester: '2019spring'
+prev: '/courses/maker-foundations/2019spring/logan'
+next: '/courses/maker-foundations/2019spring/nathaniel'
 image: '../../../images/maker-foundations-spring2019-max.jpg'
 ---
 

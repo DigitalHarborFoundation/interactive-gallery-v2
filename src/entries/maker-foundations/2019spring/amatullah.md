@@ -3,6 +3,8 @@ youth: 'Amatullah'
 title: 'Robot Repair'
 course: 'maker-foundations'
 semester: '2019spring'
+prev: '/courses/maker-foundations/2019spring/akindele'
+next: '/courses/maker-foundations/2019spring/breonna'
 image: '../../../images/maker-foundations-2019spring-amatullah.jpg'
 ---
 

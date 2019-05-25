@@ -3,6 +3,8 @@ youth: 'zion'
 title: 'Pinball'
 course: 'ccbc-digifab-cohort'
 semester: '2019spring'
+prev: '/courses/ccbc-digifab-cohort/2019spring/messiah'
+next: '/courses/ccbc-digifab-cohort/2019spring/henry'
 image: '../../../images/ccbc-digifab-cohort-spring2019-zion.jpg'
 ---
 

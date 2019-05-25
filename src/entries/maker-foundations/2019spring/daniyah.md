@@ -3,6 +3,8 @@ youth: "Da'Niyah"
 title: 'Personal Website'
 course: 'maker-foundations'
 semester: '2019spring'
+prev: '/courses/maker-foundations/2019spring/breonna'
+next: '/courses/maker-foundations/2019spring/elijah'
 image: '../../../images/maker-foundations-2019spring-daniyah.jpg'
 ---
 

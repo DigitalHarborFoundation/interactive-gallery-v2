@@ -3,6 +3,8 @@ youth: 'Rory'
 title: '2D designs'
 course: 'fab-core'
 semester: '2019spring'
+prev: '/courses/fab-core/2019spring/noah'
+next: '/courses/fab-core/2019spring/william'
 image: '../../../images/fab-core-2019spring-rory.jpg'
 ---
 

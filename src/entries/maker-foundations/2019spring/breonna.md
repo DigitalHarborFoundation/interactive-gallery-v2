@@ -3,6 +3,8 @@ youth: 'Breonna'
 title: 'Pixel Heart'
 course: 'maker-foundations'
 semester: '2019spring'
+prev: '/courses/maker-foundations/2019spring/amatullah'
+next: "/courses/maker-foundations/2019spring/da'niyah"
 image: '../../../images/maker-foundations-2019spring-breonna.jpg'
 ---
 

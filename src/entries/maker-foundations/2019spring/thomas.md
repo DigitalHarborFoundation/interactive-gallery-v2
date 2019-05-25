@@ -3,6 +3,8 @@ youth: 'thomas'
 title: 'wight walker'
 course: 'maker-foundations'
 semester: '2019spring'
+prev: '/courses/maker-foundations/2019spring/raabiah'
+next: '/courses/maker-foundations/2019spring/zoe'
 image: '../../../images/maker-foundations-spring2019-thomas.jpg'
 ---
 

@@ -3,6 +3,8 @@ youth: 'jack'
 title: 'Fallingwater'
 course: 'maker-foundations'
 semester: '2019spring'
+prev: '/courses/maker-foundations/2019spring/elijah'
+next: '/courses/maker-foundations/2019spring/jadon'
 image: '../../../images/maker-foundations-2019spring-jack.jpg'
 ---
 

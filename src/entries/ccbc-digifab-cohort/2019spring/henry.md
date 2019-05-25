@@ -3,6 +3,8 @@ youth: 'henry'
 title: '3d Printed Pinball Mechanism'
 course: 'ccbc-digifab-cohort'
 semester: '2019spring'
+prev: '/courses/ccbc-digifab-cohort/2019spring/zion'
+next: '/courses/ccbc-digifab-cohort/2019spring/messiah'
 image: '../../../images/ccbc-digifab-cohort-spring2019-henry.jpg'
 ---
 

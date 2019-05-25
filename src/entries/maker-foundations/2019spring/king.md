@@ -3,6 +3,8 @@ youth: 'king'
 title: 'wry'
 course: 'maker-foundations'
 semester: '2019spring'
+prev: '/courses/maker-foundations/2019spring/jyleol'
+next: '/courses/maker-foundations/2019spring/logan'
 image: '../../../images/maker-foundations-2019spring-king.jpg'
 ---
 

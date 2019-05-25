@@ -3,6 +3,8 @@ youth: 'Duncan'
 title: 'Connector Boat'
 course: 'fab-core'
 semester: '2019spring'
+prev: '/courses/fab-core/2019spring/bella'
+next: '/courses/fab-core/2019spring/jeshua'
 image: '../../../images/fab-core-2019spring-duncan.jpg'
 ---
 

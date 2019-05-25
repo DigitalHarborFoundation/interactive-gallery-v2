@@ -3,6 +3,8 @@ youth: 'Nuriyyah'
 title: 'nugget'
 course: 'maker-foundations'
 semester: '2019spring'
+prev: '/courses/maker-foundations/2019spring/nathaniel'
+next: '/courses/maker-foundations/2019spring/raabiah'
 image: '../../../images/maker-foundations-2019spring-nuriyyah.jpg'
 ---
 

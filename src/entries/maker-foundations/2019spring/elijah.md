@@ -3,6 +3,8 @@ youth: 'elijah'
 title: 'The Gamer Project'
 course: 'maker-foundations'
 semester: '2019spring'
+prev: "/courses/maker-foundations/2019spring/da'niyah"
+next: '/courses/maker-foundations/2019spring/jack'
 image: '../../../images/maker-foundations-2019spring-elijah.jpg'
 ---
 

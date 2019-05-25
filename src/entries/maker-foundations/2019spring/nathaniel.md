@@ -3,6 +3,8 @@ youth: 'nathaniel'
 title: 'Glitch Blog'
 course: 'maker-foundations'
 semester: '2019spring'
+prev: '/courses/maker-foundations/2019spring/max'
+next: '/courses/maker-foundations/2019spring/nuriyyah'
 image: '../../../images/maker-foundations-2019spring-nathaniel.jpg'
 ---
 

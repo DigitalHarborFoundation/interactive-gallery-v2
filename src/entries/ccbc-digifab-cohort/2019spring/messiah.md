@@ -3,6 +3,8 @@ youth: 'Messiah'
 title: 'Bear Mask'
 course: 'ccbc-digifab-cohort'
 semester: '2019spring'
+prev: '/courses/ccbc-digifab-cohort/2019spring/henry'
+next: '/courses/ccbc-digifab-cohort/2019spring/zion'
 image: '../../../images/ccbc-digifab-cohort-2019spring-messiah.jpg'
 ---
 

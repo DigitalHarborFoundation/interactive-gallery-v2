@@ -1,8 +1,10 @@
 ---
-youth: 'McKenna'
+youth: 'mcKenna'
 title: 'Google Maps Website'
 course: 'cs-core'
 semester: '2019spring'
+prev: '/courses/cs-core/2019spring/jeshua'
+next: '/courses/cs-core/2019spring/mitchell'
 image: '../../../images/cs-core-spring2019-mckenna.jpg'
 ---
 

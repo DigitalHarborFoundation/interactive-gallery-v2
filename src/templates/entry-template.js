@@ -33,6 +33,8 @@ export const query = graphql`
         title
         course
         semester
+        prev
+        next
         image {
           childImageSharp {
             fluid(maxWidth: 500, quality: 100) {

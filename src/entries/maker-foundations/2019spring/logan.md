@@ -3,6 +3,8 @@ youth: 'logan'
 title: 'Custom Multicolored Bags'
 course: 'maker-foundations'
 semester: '2019spring'
+prev: '/courses/maker-foundations/2019spring/king'
+next: '/courses/maker-foundations/2019spring/max'
 image: '../../../images/maker-foundations-spring2019-logan.jpg'
 ---
 

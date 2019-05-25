@@ -3,6 +3,8 @@ youth: 'coral'
 title: 'Emoji Comparison'
 course: 'cs-core'
 semester: '2019spring'
+prev: '/courses/cs-core/2019spring/stephen'
+next: '/courses/cs-core/2019spring/ezekiel'
 image: '../../../images/cs-core-spring2019-coral.jpg'
 ---
 

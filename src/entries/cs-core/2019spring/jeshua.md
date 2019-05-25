@@ -3,6 +3,8 @@ youth: 'jeshua'
 title: 'Stepping to the beat'
 course: 'cs-core'
 semester: '2019spring'
+prev: '/courses/cs-core/2019spring/jade'
+next: '/courses/cs-core/2019spring/mckenna'
 image: '../../../images/cs-core-spring2019-jeshua.jpg'
 ---
 
@@ -13,4 +15,3 @@ First I made the music and animation. Next i created a prototype in scratch. Fin
 One problem I faced was that I wasn't sure how to sync them in p5, but i managed to accomplish it.
 
 One thing I'd tell someone else is that it took a lot of hard work, but in the end it was worth it.
-

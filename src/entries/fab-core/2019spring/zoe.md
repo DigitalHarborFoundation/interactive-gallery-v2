@@ -3,6 +3,8 @@ youth: 'Zoe'
 title: 'Three wheeled car'
 course: 'fab-core'
 semester: '2019spring'
+prev: '/courses/fab-core/2019spring/william'
+next: '/courses/fab-core/2019spring/alexandra'
 image: '../../../images/fab-core-2019spring-zoe.jpg'
 ---
 

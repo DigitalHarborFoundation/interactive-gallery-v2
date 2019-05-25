@@ -3,6 +3,8 @@ youth: 'Zoe'
 title: 'Museum of Nonsense'
 course: 'maker-foundations'
 semester: '2019spring'
+prev: '/courses/maker-foundations/2019spring/thomas'
+next: '/courses/maker-foundations/2019spring/akindele'
 image: '../../../images/maker-foundations-2019spring-zoe.jpg'
 ---
 

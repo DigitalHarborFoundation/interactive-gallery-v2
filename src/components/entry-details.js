@@ -23,6 +23,7 @@ import icon from '../components/elements/icon';
 import testImg from '../images/tester-card.jpg';
 import jonathanTestImg from '../images/jonathan-pi-portal-example.jpg';
 // import Image from '../components/image';
+import { CSCoreSpring2019TOC } from '../config';
 
 const EntryDetails = props => {
   const { data } = props;

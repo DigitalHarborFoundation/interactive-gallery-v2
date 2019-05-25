@@ -3,6 +3,8 @@ youth: 'Noah'
 title: 'Multi-level House'
 course: 'fab-core'
 semester: '2019spring'
+prev: '/courses/fab-core/2019spring/jeshua'
+next: '/courses/fab-core/2019spring/rory'
 image: '../../../images/fab-core-2019spring-noah.jpg'
 ---
 

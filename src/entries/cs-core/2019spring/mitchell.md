@@ -3,6 +3,8 @@ youth: 'mitchell'
 title: 'Universe Generator'
 course: 'cs-core'
 semester: '2019spring'
+prev: '/courses/cs-core/2019spring/mckenna'
+next: '/courses/cs-core/2019spring/stephen'
 image: '../../../images/cs-core-spring2019-mitchell.jpg'
 ---
 

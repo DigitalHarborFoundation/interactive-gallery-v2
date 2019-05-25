@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link, navigate, PageRenderer } from 'gatsby';
+import { push, Link, navigate, PageRenderer } from 'gatsby';
 import { ModalCard, ImageCard } from '../components/elements/cards';
 import ModalContainer from '../components/modal-container';
 import {
@@ -17,7 +17,33 @@ import {
   transformSemester,
 } from '../components/utilities/helpers';
 
+import mousetrap from 'mousetrap';
+
 class Layout extends React.Component {
+  componentDidMount() {
+    mousetrap.bind(`left`, () => this.previous());
+    mousetrap.bind(`right`, () => this.next());
+    mousetrap.bind(`space`, () => this.next());
+  }
+
+  componentWillUnmount() {
+    mousetrap.unbind(`left`);
+    mousetrap.unbind(`right`);
+    mousetrap.unbind(`space`);
+  }
+
+  previous = () => {
+    if (this.props.modalRender && this.props.data.Entries.frontmatter.prev) {
+      return push(this.props.data.Entries.frontmatter.prev);
+    }
+  };
+
+  next = () => {
+    if (this.props.modalRender this.props.data.Entries.frontmatter.next) {
+      push(this.props.data.Entries.frontmatter.next);
+    }
+  };
+
   render() {
     if (this.props.modalRender) {
       return (
@@ -94,6 +120,12 @@ class Layout extends React.Component {
                       __html: this.props.data.Entries.html,
                     }}
                   />
+                  {/* <Link to={this.props.data.Entries.frontmatter.prev}>
+                    Prev
+                  </Link>
+                  <Link to={this.props.data.Entries.frontmatter.next}>
+                    Next
+                  </Link> */}
                 </div>
               </FlexColumnContainer>
             </div>

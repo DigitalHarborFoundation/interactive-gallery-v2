@@ -3,6 +3,8 @@ youth: 'akindele'
 title: 'More Money'
 course: 'maker-foundations'
 semester: '2019spring'
+prev: '/courses/maker-foundations/2019spring/zoe'
+next: '/courses/maker-foundations/2019spring/amatullah'
 image: '../../../images/maker-foundations-spring2019-akindele.jpg'
 ---
 

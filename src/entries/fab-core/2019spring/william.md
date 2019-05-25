@@ -3,6 +3,8 @@ youth: 'William'
 title: 'Baby-Thulhu T-Shirt'
 course: 'fab-core'
 semester: '2019spring'
+prev: '/courses/fab-core/2019spring/rory'
+next: '/courses/fab-core/2019spring/zoe'
 image: '../../../images/fab-core-2019spring-william.jpg'
 ---
 

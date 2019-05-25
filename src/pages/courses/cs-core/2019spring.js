@@ -1,6 +1,6 @@
 import React from 'react';
 import { graphql, StaticQuery } from 'gatsby';
-import Layout from '../../../../src/components/layout';
+
 import ProjectCard from '../../../../src/components/project-card';
 import {
   ContentWrapper,
@@ -17,6 +17,7 @@ const CS_CORE_2019_QUERY = graphql`
           course: { eq: "cs-core" }
         }
       }
+      sort: { fields: frontmatter___youth, order: ASC }
     ) {
       edges {
         node {
@@ -39,7 +40,6 @@ const CS_CORE_2019_QUERY = graphql`
     }
   }
 `;
-
 const CSCoreSpring2019Page = props => (
   <StaticQuery
     query={CS_CORE_2019_QUERY}
@@ -55,7 +55,6 @@ const CSCoreSpring2019Page = props => (
                 title={edge.node.frontmatter.title}
                 image={edge.node.frontmatter.image.childImageSharp.fluid}
                 location={props.location}
-                key={edge.node.id}
               />
             ))}
           </GridThreeColumnContainer>

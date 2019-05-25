@@ -3,6 +3,8 @@ youth: 'Alexandra'
 title: 'Astroid curves'
 course: 'fab-core'
 semester: '2019spring'
+prev: '/courses/fab-core/2019spring/zoe'
+next: '/courses/fab-core/2019spring/bella'
 image: '../../../images/fab-core-2019spring-alexandra.jpg'
 ---
 

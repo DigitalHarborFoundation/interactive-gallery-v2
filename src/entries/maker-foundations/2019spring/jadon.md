@@ -3,6 +3,8 @@ youth: 'Jadon'
 title: 'Everlasting Battle'
 course: 'maker-foundations'
 semester: '2019spring'
+prev: '/courses/maker-foundations/2019spring/jack'
+next: '/courses/maker-foundations/2019spring/jyleol'
 image: '../../../images/maker-foundations-2019spring-jadon.jpg'
 ---
 
