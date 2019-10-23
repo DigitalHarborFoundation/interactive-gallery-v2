@@ -97,7 +97,7 @@ export const ButtonContainer = styled.div`
 const ProjectTitle = styled.h1`
   font-size: 5rem;
   font-weight: 300;
-  color: #e5f8ff;
+  color: #f0f4f8;
   margin-bottom: 6vh;
   text-shadow: 2px 2px 6px #002432;
   @media only screen and (max-width: 1000px) {
@@ -109,7 +109,7 @@ const ProjectSubTitle = styled.p`
   font-weight: 400;
   margin-top: 3vh;
   margin-bottom: 5vh;
-  color: #e5f8ff;
+  color: #f0f4f8;
   text-shadow: 2px 2px 6px #002432;
   @media only screen and (max-width: 1000px) {
   }

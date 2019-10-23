@@ -30,7 +30,6 @@ module.exports = {
     {
       resolve: `gatsby-plugin-modal-routing`,
       options: {
-        // appElement: '#portal',
         modalProps: {
           shouldCloseOnOverlayClick: true,
           shouldCloseOnEsc: true,
@@ -92,7 +91,6 @@ module.exports = {
         icon: `src/images/favicon.ico`, // This path is relative to the root of the site.
       },
     },
-    `gatsby-plugin-modal-routing`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-offline`,
   ],
