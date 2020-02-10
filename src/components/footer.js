@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const Footer = () => (
   <FooterWrapper>
     <FooterTagline>
-      <FooterRights>© 2019</FooterRights>
+      <FooterRights>© {new Date().getFullYear()}</FooterRights>
       <FooterLinkContainer>
         <FooterLink
           href="https://digitalharbor.org"
